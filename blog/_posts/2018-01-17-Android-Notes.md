@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Android Notes"
 date:   2018-01-17 03:20:06 -0500
 categories: Tech
@@ -128,3 +128,10 @@ A *chain* is a group of elements that are linked to each other with bi-direction
 
 
 ## Lesson 3
+
+### 1. Logging
+
+A good practice is to have the class name as the TAG in logs.
+
+<u>Log levels</u>: *WTF*, ERROR, WARN, INFO, DEBUG, VERBOSE
+
