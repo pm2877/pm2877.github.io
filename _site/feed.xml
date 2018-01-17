@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2018-01-17T15:39:11-05:00</updated><id>http://localhost:4000/blog/</id><title type="html">Techie Notes</title><subtitle>A place for all my tech notes</subtitle><author><name>Parth Mehta</name><email>parth.mehta@columbia.edu</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-01-17T03:20:06-05:00</published><updated>2018-01-17T03:20:06-05:00</updated><id>http://localhost:4000/blog/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Parth Mehta</name><email>parth.mehta@columbia.edu</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Android Notes</title><link href="http://localhost:4000/blog/tech/Android-Notes/" rel="alternate" type="text/html" title="Android Notes" /><published>2018-01-17T03:20:06-05:00</published><updated>2018-01-17T03:20:06-05:00</updated><id>http://localhost:4000/blog/tech/Android-Notes</id><content type="html" xml:base="http://localhost:4000/blog/tech/Android-Notes/">&lt;h2 id=&quot;general-notes&quot;&gt;General Notes&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Important project settings can be found in File —&amp;gt; Project Structure —&amp;gt; app —&amp;gt; flavors&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;HAXM&lt;/strong&gt; is the kernel driver used for hardware virtualization by AVDs on Windows and Mac&lt;/p&gt;
+
+    &lt;p&gt;​&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;lesson-2&quot;&gt;Lesson 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-what-happens-when-you-hit-run-in-android-studio&quot;&gt;1. What happens when you hit run in Android Studio?&lt;/h3&gt;
+
+&lt;p&gt;When you hit run in Android studio, first the code is compiled into byte code that can be run in the run time on the device. Gradle builds this code and packages this byte code along with the application’s resources into an &lt;strong&gt;android application package&lt;/strong&gt; (.apk) file (apk is a specialized zip format). Android studio then signs it and pushes it to the device using the android debug bridge (adb).&lt;/p&gt;
+
+&lt;h3 id=&quot;2-what-is-gradle&quot;&gt;2. What is Gradle?&lt;/h3&gt;
+
+&lt;p&gt;Gradle is the build system of choice for Android Studio. Because of that, there’s various functionality available within the platform. When you make a project, there are a few gradle build scripts automatically generated for you. Gradle scripts are also run before running the project, if anything has changed since the last build. A gradle task represents a single, atomic piece of work for a build.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-components&quot;&gt;3. Components&lt;/h3&gt;
+
+&lt;p&gt;An Android Application is a collection of components that interact with each other. There are 4 types of components that make up an app:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Activity - window that your app uses to receive events from the system&lt;/li&gt;
+  &lt;li&gt;Service&lt;/li&gt;
+  &lt;li&gt;Content Providers&lt;/li&gt;
+  &lt;li&gt;Broadcast Receivers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;Android knows about each of these because they are registered in the **android manifest.**&lt;/u&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-activity&quot;&gt;4. Activity&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An activity is a single focused thing that the user can do. Activities are responsible for creating the window that your application uses to draw and receive events from the system.&lt;/li&gt;
+  &lt;li&gt;From the user’s perspective, an application is a series of linked activities, starting from the one that is started from the launcher.&lt;/li&gt;
+  &lt;li&gt;An activity is registered with the launcher by specifying an intent filter in the application —&amp;gt; activity tag in the android manifest file.&lt;/li&gt;
+  &lt;li&gt;An activity creates views to show the user information, and to let the user interact with the activity. An activity determines what views to create (and where to put them), by reading an XML layout file. &lt;code class=&quot;highlighter-rouge&quot;&gt;setContentView(R.layout.activity_main)&lt;/code&gt; &lt;strong&gt;causes the XML layout to be inflated, converting everything in the XML file to a heirarchy of view objects in memory.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-views&quot;&gt;5. Views&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Views are a class in the Android UI framework. They occupy a rectangular area on the screen and are responsible for drawing and handling events.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There are two major categories of views: UI Components and Container Views.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Examples of Container Views:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/Users/Parth/Desktop/screenshots/Screen Shot 2018-01-15 at 8.38.09 PM.png&quot; alt=&quot;Screen Shot 2018-01-15 at 8.38.09 PM&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6-how-do-the-xml-layouts-relate-to-the-java-activites&quot;&gt;6. How do the XML Layouts relate to the Java Activites?&lt;/h3&gt;
+
+&lt;p&gt;After you create your XML Layout you need to associate it with your activity. This is done in the onCreate method of the Activity using the method setContentView. You pass a reference to the layout file as R.layout.name_of_layout&lt;/p&gt;
+
+&lt;h3 id=&quot;7-the-r-class&quot;&gt;7. The R Class&lt;/h3&gt;
+
+&lt;p&gt;When your application is compiled the R class is generated. It creates constants that allow you to dynamically identify the various contents of the res folder, including layouts.&lt;/p&gt;
+
+&lt;h3 id=&quot;8-setcontentview&quot;&gt;8. setContentView()&lt;/h3&gt;
+
+&lt;p&gt;So what is the setContentView method doing? It inflates the layout. Essentially what happens is that Android reads your XML file and generates Java objects for each of the tags in your layout file. You can then edit these objects in the Java code by calling methods on the Java objects.&lt;/p&gt;
+
+&lt;h3 id=&quot;9-responsive-design&quot;&gt;9. Responsive Design&lt;/h3&gt;
+
+&lt;p&gt;The android UI needs to scale to different resolutions and device widths used by various devices. FrameLayout, ConstraintLayout and LinearLayout are the 3 basic layouts we should be using. Always use the simplest layout that gets the job done.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FrameLayout: use for simple layouts when we have only one child view. (example a list view which would fill the entire screen content area)&lt;/li&gt;
+  &lt;li&gt;LinearLayout: use for stacking views horizontally or vertically against each other, and to break up the display proporationally between them.&lt;/li&gt;
+  &lt;li&gt;ConstraintLayout: This is a more complicated, but a very powerful layout. We can position each child view relative to the parent or relative to each other.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;10-constraintlayout-basics&quot;&gt;10. ConstraintLayout Basics&lt;/h3&gt;
+
+&lt;p&gt;Useful links:&lt;/p&gt;
+
+&lt;p&gt;https://codelabs.developers.google.com/codelabs/constraint-layout/#8&lt;/p&gt;
+
+&lt;p&gt;https://developer.android.com/training/constraint-layout/index.html&lt;/p&gt;
+
+&lt;h4 id=&quot;a-use-a-baseline-constraint&quot;&gt;a. Use a baseline constraint&lt;/h4&gt;
+
+&lt;p&gt;By using a baseline constraint, you can vertically align elements that have text, such as a TextView, EditText, or Button, so that the text baselines are aligned. Use baseline constraints to align elements that use different text sizes. Baseline constraints are also useful for aligning the text baselines of elements of different sizes.  Click the &lt;strong&gt;ab&lt;/strong&gt; button to show the text baseline. Then click and drag from the TextView’s baseline, which is blinking in green, to the baseline of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Plain Text&lt;/code&gt; element, as shown in the following animated figure&lt;/p&gt;
+
+&lt;h4 id=&quot;b-the-infer-constraints-tool&quot;&gt;b. The Infer Constraints tool&lt;/h4&gt;
+
+&lt;p&gt;The Infer Constraints tool &lt;em&gt;infers&lt;/em&gt;, or figures out, the constraints you need to match a rough layout of elements. It works by taking into account the positions and sizes of the elements. Drag elements to the layout in the positions you want them, and use the Infer Constraints tool to automatically create the constraint connections.&lt;/p&gt;
+
+&lt;h5 id=&quot;--whats-the-difference-between-inference-and-autoconnect&quot;&gt;- What’s the difference between Inference and Autoconnect?&lt;/h5&gt;
+
+&lt;p&gt;The Infer Constraints &lt;img src=&quot;https://codelabs.developers.google.com/codelabs/constraint-layout/img/762af6efa02c9471.png&quot; alt=&quot;img&quot; /&gt; tool calculates and sets constraints for &lt;em&gt;all&lt;/em&gt; of the elements in a layout, rather than just the selected element. It bases its calculations on inferred relationships between the elements.The Autoconnect &lt;img src=&quot;https://codelabs.developers.google.com/codelabs/constraint-layout/img/dd3846009e393c48.png&quot; alt=&quot;img&quot; /&gt; tool creates constraint connections for a selected element to the element’s parent.&lt;/p&gt;
+
+&lt;h4 id=&quot;c-use-ratios-to-size-elements&quot;&gt;c. Use ratios to size elements&lt;/h4&gt;
+
+&lt;p&gt;You can quickly resize elements by aspect ratio if at least one of the element’s dimensions is set to match constraints.&lt;/p&gt;
+
+&lt;h4 id=&quot;d-constrain-to-a-guideline&quot;&gt;d. Constrain to a guideline&lt;/h4&gt;
+
+&lt;p&gt;You can add a vertical or horizontal guideline to which you can constrain views, and the guideline will be invisible to app users. You can position the guideline within the layout based on either dp units or percent, relative to the layout’s edge.&lt;/p&gt;
+
+&lt;p&gt;To create a guideline, click &lt;strong&gt;Guidelines&lt;/strong&gt; in the toolbar, and then click either &lt;strong&gt;Add Vertical Guideline&lt;/strong&gt; or &lt;strong&gt;Add Horizontal Guideline&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Drag the dotted line to reposition it and click the circle at the edge of the guideline to toggle the measurement mode.&lt;/p&gt;
+
+&lt;h4 id=&quot;e-use-barriers-to-align-elements-that-dynamically-vary-in-size&quot;&gt;e. Use barriers to align elements that dynamically vary in size&lt;/h4&gt;
+
+&lt;p&gt;Barriers allow you to specify a constraint based on multiple UI elements. You’ll want to use barriers any time that multiple elements could dynamically change their size based on user input or language.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;barrierDirection&lt;/code&gt; is an attribute that controls how the barrier is positioned relative to the referenced views.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A constraint to a barrier is just like a constraint to another element. However, users don’t see barriers, and barriers don’t add a level to the app’s view hierarchy, which means they don’t affect performance.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;f-use-chains-to-position-multiple-elements&quot;&gt;f. Use chains to position multiple elements&lt;/h4&gt;
+
+&lt;p&gt;A &lt;em&gt;chain&lt;/em&gt; is a group of elements that are linked to each other with bi-directional position constraints. When you create a chain, you can position all of the elements as a group. For example, you can center all of your chained elements as if they were a single element. Some chain modes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Packed: The elements are packed together, as shown above.&lt;/li&gt;
+  &lt;li&gt;Spread: The elements are spread out over the available space.&lt;/li&gt;
+  &lt;li&gt;Spread inside: Similar to Spread, but the endpoints of the chain are not spread out.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-3&quot;&gt;Lesson 3&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-logging&quot;&gt;1. Logging&lt;/h3&gt;
+
+&lt;p&gt;A good practice is to have the class name as the TAG in logs.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Log levels&lt;/u&gt;: &lt;em&gt;WTF&lt;/em&gt;, ERROR, WARN, INFO, DEBUG, VERBOSE&lt;/p&gt;</content><author><name>Parth Mehta</name><email>parth.mehta@columbia.edu</email></author><summary type="html"></summary></entry></feed>
