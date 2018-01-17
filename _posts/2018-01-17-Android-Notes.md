@@ -4,9 +4,11 @@ title:  "Android Notes"
 date:   2018-01-17 03:20:06 -0500
 categories: Tech
 toc: true
-toc_label: "My Custom Table of Contents Label"
+toc_label: "On this page"
 toc_icon: "gear"
 ---
+***Notes taken during Grow with google Android Dev course on Udacity***
+
 {:toc}
 
 ## General Notes
@@ -19,15 +21,15 @@ toc_icon: "gear"
 
 ## Lesson 2
 
-### 1. What happens when you hit run in Android Studio?
+### What happens when you hit run in Android Studio?
 
 When you hit run in Android studio, first the code is compiled into byte code that can be run in the run time on the device. Gradle builds this code and packages this byte code along with the application's resources into an **android application package** (.apk) file (apk is a specialized zip format). Android studio then signs it and pushes it to the device using the android debug bridge (adb).
 
-### 2. What is Gradle?
+### What is Gradle?
 
 Gradle is the build system of choice for Android Studio. Because of that, there's various functionality available within the platform. When you make a project, there are a few gradle build scripts automatically generated for you. Gradle scripts are also run before running the project, if anything has changed since the last build. A gradle task represents a single, atomic piece of work for a build.
 
-### 3. Components
+### Components
 
 An Android Application is a collection of components that interact with each other. There are 4 types of components that make up an app:
 
@@ -38,14 +40,14 @@ An Android Application is a collection of components that interact with each oth
 
 <u>Android knows about each of these because they are registered in the **android manifest.**</u>
 
-### 4. Activity
+### Activity
 
 - An activity is a single focused thing that the user can do. Activities are responsible for creating the window that your application uses to draw and receive events from the system.
 - From the user's perspective, an application is a series of linked activities, starting from the one that is started from the launcher.
 - An activity is registered with the launcher by specifying an intent filter in the application —> activity tag in the android manifest file.
 - An activity creates views to show the user information, and to let the user interact with the activity. An activity determines what views to create (and where to put them), by reading an XML layout file. `setContentView(R.layout.activity_main)` **causes the XML layout to be inflated, converting everything in the XML file to a heirarchy of view objects in memory.**
 
-### 5. Views
+### Views
 
 - Views are a class in the Android UI framework. They occupy a rectangular area on the screen and are responsible for drawing and handling events.
 
@@ -53,21 +55,21 @@ An Android Application is a collection of components that interact with each oth
 
 - Examples of Container Views:
 
-  ![Screen Shot 2018-01-15 at 8.38.09 PM](/Users/Parth/Desktop/screenshots/Screen Shot 2018-01-15 at 8.38.09 PM.png)
+  ![containerView Examples](/images/containerViews.png)
 
-### 6. How do the XML Layouts relate to the Java Activites?
+### How do the XML Layouts relate to the Java Activites?
 
 After you create your XML Layout you need to associate it with your activity. This is done in the onCreate method of the Activity using the method setContentView. You pass a reference to the layout file as R.layout.name_of_layout
 
-### 7. The R Class
+### The R Class
 
 When your application is compiled the R class is generated. It creates constants that allow you to dynamically identify the various contents of the res folder, including layouts.
 
-### 8. setContentView()
+### setContentView()
 
 So what is the setContentView method doing? It inflates the layout. Essentially what happens is that Android reads your XML file and generates Java objects for each of the tags in your layout file. You can then edit these objects in the Java code by calling methods on the Java objects.
 
-### 9. Responsive Design
+### Responsive Design
 
 The android UI needs to scale to different resolutions and device widths used by various devices. FrameLayout, ConstraintLayout and LinearLayout are the 3 basic layouts we should be using. Always use the simplest layout that gets the job done.
 
@@ -76,13 +78,13 @@ The android UI needs to scale to different resolutions and device widths used by
 - ConstraintLayout: This is a more complicated, but a very powerful layout. We can position each child view relative to the parent or relative to each other.
 
 
-### 10. ConstraintLayout Basics
+### ConstraintLayout Basics
 
 Useful links: 
 
-https://codelabs.developers.google.com/codelabs/constraint-layout/#8
+[google codelabs](https://codelabs.developers.google.com/codelabs/constraint-layout/#8)
 
-https://developer.android.com/training/constraint-layout/index.html
+[building responsive UI with constraint layout](https://developer.android.com/training/constraint-layout/index.html)
 
 #### a. Use a baseline constraint
 
@@ -129,7 +131,7 @@ A *chain* is a group of elements that are linked to each other with bi-direction
 
 ## Lesson 3
 
-### 1. Logging
+### Logging
 
 A good practice is to have the class name as the TAG in logs.
 
