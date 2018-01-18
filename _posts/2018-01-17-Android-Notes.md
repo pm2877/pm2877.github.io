@@ -5,7 +5,8 @@ date:   2018-01-17 03:20:06 -0500
 categories: Tech
 toc: true
 toc_label: "On this page"
-toc_icon: "gear"
+toc_icon: "list"
+excerpt: "Notes taken during 'Grow with Google - Android Development course' on Udacity (Work in Progress..)"
 ---
 ***Notes taken during Grow with google Android Dev course on Udacity***
 

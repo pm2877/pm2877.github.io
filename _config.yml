@@ -100,7 +100,7 @@ analytics:
 # Site Author
 author:
   name             : "Parth Mehta"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Developer | Machine Learning | Columbia University"
   location         : "New York"
   email            : parth.mehta@columbia.edu
@@ -265,7 +265,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
 

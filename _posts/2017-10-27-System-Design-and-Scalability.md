@@ -5,7 +5,7 @@ date:   2017-10-27 08:10:06 -0500
 categories: Tech
 toc: true
 toc_label: "On this page"
-toc_icon: "gear"
+toc_icon: "list"
 ---
 
 > The idea of these questions is to have a discussion about the problem at hand. What’s important for the interviewer is the process, which you use to tackle the problem.

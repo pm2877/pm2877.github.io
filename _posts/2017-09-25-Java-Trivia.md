@@ -5,7 +5,7 @@ date:   2017-09-25 10:13:06 -0500
 categories: Tech
 toc: true
 toc_label: "On this page"
-toc_icon: "gear"
+toc_icon: "list"
 ---
 
 Notes taken from: [JavaTpoint](https://www.javatpoint.com/corejava-interview-questions)
