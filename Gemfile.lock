@@ -44,6 +44,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.6.0)
       octokit (~> 4.2)
+    jekyll-include-cache (0.2.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -71,11 +73,12 @@ GEM
       jekyll (~> 3.5)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    minimal-mistakes-jekyll (4.13.0)
+    minimal-mistakes-jekyll (4.15.2)
       jekyll (~> 3.7)
       jekyll-data (~> 1.0)
       jekyll-feed (~> 0.10)
       jekyll-gist (~> 1.5)
+      jekyll-include-cache (~> 0.1)
       jekyll-paginate (~> 1.1)
       jekyll-sitemap (~> 1.2)
       jemoji (~> 0.10)
@@ -114,7 +117,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-toc
   minima (~> 2.0)
-  minimal-mistakes-jekyll (= 4.13.0)
+  minimal-mistakes-jekyll
   tzinfo-data
 
 BUNDLED WITH
