@@ -30,7 +30,7 @@ name                     : "Parth Mehta"
 description              : "A place for all my tech notes"
 url                      : "https://pm2877.github.io"
 baseurl                  : ""
-repository               : pm2877/pm2877.github.io"
+repository               : "pm2877/pm2877.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -272,8 +272,7 @@ defaults:
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.13.0
 plugins:
   - jekyll-feed
 

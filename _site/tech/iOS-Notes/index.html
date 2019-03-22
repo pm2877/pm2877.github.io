@@ -1,9 +1,9 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
-  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
 <html lang="en" class="no-js">
   <head>
@@ -62,7 +62,7 @@
 
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
+      "@context": "http://schema.org",
       "@type": "Person",
       "name": "Parth Mehta",
       "url": "http://localhost:4000",
@@ -81,7 +81,9 @@
 
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
 
-<!-- https://t.co/dKP3o1e -->
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -91,7 +93,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<!--[if IE ]>
+<!--[if lte IE 9]>
   <style>
     /* old IE unsupported flexbox fixes */
     .greedy-nav .site-title {
@@ -105,7 +107,6 @@
     }
   </style>
 <![endif]-->
-
 
 
     <!-- start custom head snippets -->
@@ -122,27 +123,21 @@
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
 
-    
-
-<div class="masthead">
+    <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        
         <a class="site-title" href="/">Techie Notes</a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
-            </li></ul>
+        <ul class="visible-links"></ul>
         
         <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
           <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
             <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
           </svg>
         </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
+          <span class="visually-hidden">Toggle Menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -163,7 +158,7 @@
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person">
 
   
     <div class="author__avatar">
@@ -190,7 +185,7 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New York</span>
         </li>
       
@@ -212,7 +207,7 @@
 
       
         <li>
-          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs">
             <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
           </a>
         </li>
@@ -224,7 +219,7 @@
 
       
         <li>
-          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs">
             <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
           </a>
         </li>
@@ -240,7 +235,7 @@
 
       
         <li>
-          <a href="https://github.com/pm2877" itemprop="sameAs" rel="nofollow noopener noreferrer">
+          <a href="https://github.com/pm2877" itemprop="sameAs">
             <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
           </a>
         </li>
@@ -274,7 +269,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -287,7 +282,7 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="iOS Notes">
     <meta itemprop="description" content="Notes taken during iOS training course with Big Nerd Ranch">
     <meta itemprop="datePublished" content="March 22, 2019">
@@ -321,109 +316,109 @@
       <li><a href="#general-notes">General Notes</a></li>
       <li><a href="#mvc">MVC</a></li>
       <li><a href="#swift-basics">Swift Basics</a>
-     -  <a href="#optionals-and-optional-binding">Optionals and Optional Binding</a>
-     -  <a href="#collections-array">Collections: Array</a>
-     -  <a href="#collections-dictionary">Collections: Dictionary</a>
-     -  <a href="#control-flow-conditional-statements">Control Flow: Conditional Statements</a>
-     -  <a href="#control-flow-for-in-loop">Control Flow: For-in Loop</a>
-     -  <a href="#functions">Functions</a>
-     -  <a href="#closures">Closures</a>
-     -  <a href="#structs">Structs</a>
-     -  <a href="#classes">Classes</a>
-     -  <a href="#properties">Properties</a>
-     -  <a href="#protocols">Protocols</a>
-     -  <a href="#extensions">Extensions</a>
-     -  <a href="#generics">Generics</a></li>
+      - {:.} <a href="#optionals-and-optional-binding">Optionals and Optional Binding</a>
+      - {:.} <a href="#collections-array">Collections: Array</a>
+      - {:.} <a href="#collections-dictionary">Collections: Dictionary</a>
+      - {:.} <a href="#control-flow-conditional-statements">Control Flow: Conditional Statements</a>
+      - {:.} <a href="#control-flow-for-in-loop">Control Flow: For-in Loop</a>
+      - {:.} <a href="#functions">Functions</a>
+      - {:.} <a href="#closures">Closures</a>
+      - {:.} <a href="#structs">Structs</a>
+      - {:.} <a href="#classes">Classes</a>
+      - {:.} <a href="#properties">Properties</a>
+      - {:.} <a href="#protocols">Protocols</a>
+      - {:.} <a href="#extensions">Extensions</a>
+      - {:.} <a href="#generics">Generics</a></li>
       <li><a href="#views-basics">Views Basics</a>
-     -  <a href="#views">Views</a>
-     -  <a href="#the-view-hierarchy">The View Hierarchy</a>
-     -  <a href="#views-and-frames">Views and Frames</a>
-     -  <a href="#creating-a-view-programmatically">Creating a view programmatically.</a>
-     -  <a href="#frame-vs-bounds">Frame Vs. Bounds</a>
-     -  <a href="#what-other-information-does-a-view-have">What other information does a view have?</a>
-     -  <a href="#auto-layout">Auto Layout</a>
-     -  <a href="#constraints-menu">Constraints Menu</a>
-     -  <a href="#align-menu">Align Menu</a></li>
+      - {:.} <a href="#views">Views</a>
+      - {:.} <a href="#the-view-hierarchy">The View Hierarchy</a>
+      - {:.} <a href="#views-and-frames">Views and Frames</a>
+      - {:.} <a href="#creating-a-view-programmatically">Creating a view programmatically.</a>
+      - {:.} <a href="#frame-vs-bounds">Frame Vs. Bounds</a>
+      - {:.} <a href="#what-other-information-does-a-view-have">What other information does a view have?</a>
+      - {:.} <a href="#auto-layout">Auto Layout</a>
+      - {:.} <a href="#constraints-menu">Constraints Menu</a>
+      - {:.} <a href="#align-menu">Align Menu</a></li>
       <li><a href="#view-controller">View Controller</a>
-     -  <a href="#the-view-of-a-view-controller">The View of a View Controller</a>
-     -  <a href="#how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</a>
-     -  <a href="#tab-bar-controllers">Tab Bar Controllers</a>
-     -  <a href="#tab-bar-items">Tab bar items</a>
-     -  <a href="#accessing-subviews">Accessing subviews</a>
-     -  <a href="#interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</a>
-     -  <a href="#programmatic-view-composition">Programmatic View Composition</a>
-     -  <a href="#programmatic-constraints">Programmatic Constraints</a>
-         -  <a href="#layout-margin-guides">Layout Margin Guides</a>
-         -  <a href="#layout-safe-area-guides">Layout Safe Area Guides</a>
-         -  <a href="#controls">Controls</a>
-         -  <a href="#control-events">Control Events</a>
-     -  <a href="#q-when-exactly-is-the-loadview-method-called">Q. When exactly is the loadview() method called?</a></li>
+      - {:.} <a href="#the-view-of-a-view-controller">The View of a View Controller</a>
+      - {:.} <a href="#how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</a>
+      - {:.} <a href="#tab-bar-controllers">Tab Bar Controllers</a>
+      - {:.} <a href="#tab-bar-items">Tab bar items</a>
+      - {:.} <a href="#accessing-subviews">Accessing subviews</a>
+      - {:.} <a href="#interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</a>
+      - {:.} <a href="#programmatic-view-composition">Programmatic View Composition</a>
+      - {:.} <a href="#programmatic-constraints">Programmatic Constraints</a>
+          - {:.} <a href="#layout-margin-guides">Layout Margin Guides</a>
+          - {:.} <a href="#layout-safe-area-guides">Layout Safe Area Guides</a>
+          - {:.} <a href="#controls">Controls</a>
+          - {:.} <a href="#control-events">Control Events</a>
+      - {:.} <a href="#q-when-exactly-is-the-loadview-method-called">Q. When exactly is the loadview() method called?</a></li>
       <li><a href="#text-input--delegation">Text Input &amp; Delegation</a>
-     -  <a href="#conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</a></li>
+      - {:.} <a href="#conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</a></li>
       <li><a href="#internalization-and-localization">Internalization and Localization</a>
-     -  <a href="#some-formatters-to-keep-in-mind">Some formatters to keep in Mind</a>
-     -  <a href="#nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</a></li>
+      - {:.} <a href="#some-formatters-to-keep-in-mind">Some formatters to keep in Mind</a>
+      - {:.} <a href="#nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</a></li>
       <li><a href="#table-views">Table Views</a>
-     -  <a href="#custom-initializers-for-classes">Custom Initializers for classes</a>
-     -  <a href="#dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</a>
-     -  <a href="#data-source-methods">Data Source Methods</a>
-     -  <a href="#uitableviewcells">UITableViewCells</a>
-     -  <a href="#reusing-uitableviewcells">Reusing UITableViewCells</a>
-     -  <a href="#editing-table-views">Editing Table Views</a>
-         -  <a href="#editing-mode">Editing Mode</a>
-         -  <a href="#adding-and-deleting-items">Adding and Deleting Items</a>
-     -  <a href="#design-patterns">Design Patterns</a></li>
+      - {:.} <a href="#custom-initializers-for-classes">Custom Initializers for classes</a>
+      - {:.} <a href="#dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</a>
+      - {:.} <a href="#data-source-methods">Data Source Methods</a>
+      - {:.} <a href="#uitableviewcells">UITableViewCells</a>
+      - {:.} <a href="#reusing-uitableviewcells">Reusing UITableViewCells</a>
+      - {:.} <a href="#editing-table-views">Editing Table Views</a>
+          - {:.} <a href="#editing-mode">Editing Mode</a>
+          - {:.} <a href="#adding-and-deleting-items">Adding and Deleting Items</a>
+      - {:.} <a href="#design-patterns">Design Patterns</a></li>
       <li><a href="#subclassing-uitableviewcell">Subclassing UITableViewCell</a>
-     -  <a href="#customizing-the-cell">Customizing the Cell</a>
-     -  <a href="#dynamic-type">Dynamic Type</a>
-     -  <a href="#responding-to-user-changes">Responding to user changes</a>
-         -  <a href="#bad-cell-constraints">Bad Cell Constraints</a>
-         -  <a href="#better-cell-constraints">Better Cell constraints</a></li>
+      - {:.} <a href="#customizing-the-cell">Customizing the Cell</a>
+      - {:.} <a href="#dynamic-type">Dynamic Type</a>
+      - {:.} <a href="#responding-to-user-changes">Responding to user changes</a>
+          - {:.} <a href="#bad-cell-constraints">Bad Cell Constraints</a>
+          - {:.} <a href="#better-cell-constraints">Better Cell constraints</a></li>
       <li><a href="#stack-views">Stack Views</a>
-     -  <a href="#properties-of-stackview">Properties of StackView</a>
-     -  <a href="#hiding-views-inside-stackview">Hiding Views inside Stackview</a>
-     -  <a href="#implicit-constraints">Implicit Constraints</a>
-         -  <a href="#content-hugging-priorities">Content hugging priorities</a>
-         -  <a href="#content-compression-resistance-priorities">Content compression resistance priorities</a></li>
+      - {:.} <a href="#properties-of-stackview">Properties of StackView</a>
+      - {:.} <a href="#hiding-views-inside-stackview">Hiding Views inside Stackview</a>
+      - {:.} <a href="#implicit-constraints">Implicit Constraints</a>
+          - {:.} <a href="#content-hugging-priorities">Content hugging priorities</a>
+          - {:.} <a href="#content-compression-resistance-priorities">Content compression resistance priorities</a></li>
       <li><a href="#segues">Segues</a>
-     -  <a href="#passing-data-around">Passing Data Around</a></li>
+      - {:.} <a href="#passing-data-around">Passing Data Around</a></li>
       <li><a href="#uinavigationcontroller">UINavigationController</a>
-     -  <a href="#appearing-and-disappearing-views">Appearing and Disappearing Views</a>
-     -  <a href="#first-responder-status">First Responder Status</a>
-     -  <a href="#uinavigationbar">UINavigationBar</a></li>
+      - {:.} <a href="#appearing-and-disappearing-views">Appearing and Disappearing Views</a>
+      - {:.} <a href="#first-responder-status">First Responder Status</a>
+      - {:.} <a href="#uinavigationbar">UINavigationBar</a></li>
       <li><a href="#saving-loading-and-error-handling">Saving, Loading and Error Handling</a>
-     -  <a href="#property-lists">Property Lists</a>
-     -  <a href="#error-handling">Error Handling</a>
-     -  <a href="#application-sandbox">Application Sandbox</a>
-     -  <a href="#constructing-a-file-url">Constructing a file URL</a>
-     -  <a href="#persisting-the-items">Persisting the Items</a>
-     -  <a href="#loading-the-items">Loading the Items</a></li>
+      - {:.} <a href="#property-lists">Property Lists</a>
+      - {:.} <a href="#error-handling">Error Handling</a>
+      - {:.} <a href="#application-sandbox">Application Sandbox</a>
+      - {:.} <a href="#constructing-a-file-url">Constructing a file URL</a>
+      - {:.} <a href="#persisting-the-items">Persisting the Items</a>
+      - {:.} <a href="#loading-the-items">Loading the Items</a></li>
       <li><a href="#application-states-and-transitions">Application States and Transitions</a>
-     -  <a href="#application-states-flow-chart">Application states flow chart</a>
-     -  <a href="#q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</a>
-     -  <a href="#q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</a>
-     -  <a href="#q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</a></li>
+      - {:.} <a href="#application-states-flow-chart">Application states flow chart</a>
+      - {:.} <a href="#q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</a>
+      - {:.} <a href="#q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</a>
+      - {:.} <a href="#q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</a></li>
       <li><a href="#the-application-bundle">The Application Bundle</a></li>
       <li><a href="#modals-and-popovers">Modals and Popovers</a>
-     -  <a href="#alert-controllers">Alert controllers</a>
-         -  <a href="#presenting-programmatically">Presenting programmatically</a>
-         -  <a href="#dismissing">Dismissing</a>
-         -  <a href="#completion-closure">Completion closure</a></li>
+      - {:.} <a href="#alert-controllers">Alert controllers</a>
+          - {:.} <a href="#presenting-programmatically">Presenting programmatically</a>
+          - {:.} <a href="#dismissing">Dismissing</a>
+          - {:.} <a href="#completion-closure">Completion closure</a></li>
       <li><a href="#permissions">Permissions</a>
-     -  <a href="#caching-in-the-data-store">Caching in the data store</a></li>
+      - {:.} <a href="#caching-in-the-data-store">Caching in the data store</a></li>
       <li><a href="#-mark">// MARK:</a></li>
       <li><a href="#size-classes">Size classes</a>
-     -  <a href="#modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</a>
-     -  <a href="#varying-constraints-for-different-size-classes">Varying constraints for different size classes</a></li>
+      - {:.} <a href="#modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</a>
+      - {:.} <a href="#varying-constraints-for-different-size-classes">Varying constraints for different size classes</a></li>
       <li><a href="#web-services">Web Services</a>
-     -  <a href="#building-the-url">Building the URL</a>
-     -  <a href="#access-control">Access Control</a>
-     -  <a href="#sending-the-request">Sending the Request</a>
-     -  <a href="#the-main-thread">The Main Thread</a></li>
+      - {:.} <a href="#building-the-url">Building the URL</a>
+      - {:.} <a href="#access-control">Access Control</a>
+      - {:.} <a href="#sending-the-request">Sending the Request</a>
+      - {:.} <a href="#the-main-thread">The Main Thread</a></li>
       <li><a href="#collection-views">Collection Views</a>
-     -  <a href="#creating-a-uicollectionview">Creating a UICollectionView</a>
-     -  <a href="#uicollectionviewdatasource">UICollectionViewDataSource</a>
-     -  <a href="#customizing-a-collection-layout">Customizing a Collection Layout</a></li>
+      - {:.} <a href="#creating-a-uicollectionview">Creating a UICollectionView</a>
+      - {:.} <a href="#uicollectionviewdatasource">UICollectionViewDataSource</a>
+      - {:.} <a href="#customizing-a-collection-layout">Customizing a Collection Layout</a></li>
     </ul>
   </li>
 </ul>
@@ -1844,8 +1839,6 @@ importantly, it specifies the URL of the server for the request, but it also has
 
       <section class="page__share">
   
-    <h4 class="page__share-title">Share on</h4>
-  
 
   <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=iOS+Notes%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Notes%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
@@ -1876,7 +1869,7 @@ importantly, it specifies the URL of the server for the request, but it also has
   
   
     <div class="page__related">
-      <h4 class="page__related-title">You may also enjoy</h4>
+      <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
         
           
@@ -1884,7 +1877,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -1905,14 +1898,13 @@ importantly, it specifies the URL of the server for the request, but it also has
 </p>
   </article>
 </div>
-
         
           
 
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -1933,14 +1925,13 @@ importantly, it specifies the URL of the server for the request, but it also has
   The idea of these questions is to have a discussion about the problem at hand. What’s important for the interviewer is the process, which you use to tackl...</p>
   </article>
 </div>
-
         
           
 
 
 
 <div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -1962,21 +1953,18 @@ importantly, it specifies the URL of the server for the request, but it also has
 </p>
   </article>
 </div>
-
         
       </div>
     </div>
   
   
 </div>
-
     </div>
 
     
       <div class="search-content">
         <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
     <div id="results" class="results"></div></div>
-
       </div>
     
 
@@ -1987,8 +1975,6 @@ importantly, it specifies the URL of the server for the request, but it also has
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
     
 
     
@@ -2004,7 +1990,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 
     
   <script src="/assets/js/main.min.js"></script>
-  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
 
 
