@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.9.0 by Michael Rose
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
   Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
@@ -9,49 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
+<!-- begin _includes/seo.html --><title>iOS Notes - Techie Notes</title>
+<meta name="description" content="Notes taken during iOS training course with Big Nerd Ranch">
 
 
 
-
-
-
-
-
-
-<title>iOS Notes - Techie Notes</title>
-
-
-
-
-<meta name="description" content="iOS Training - Big Nerd Ranch">
-
-
-
-
-<meta name="author" content="Parth Mehta">
-
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Techie Notes">
 <meta property="og:title" content="iOS Notes">
+<meta property="og:url" content="http://localhost:4000/tech/iOS-Notes/">
 
 
-  <link rel="canonical" href="http://localhost:4000/tech/iOS-Notes/">
-  <meta property="og:url" content="http://localhost:4000/tech/iOS-Notes/">
-
-
-
-  <meta property="og:description" content="iOS Training - Big Nerd Ranch">
-
-
-
-
-
-
-
-
-
-
+  <meta property="og:description" content="Notes taken during iOS training course with Big Nerd Ranch">
 
 
 
@@ -59,7 +29,7 @@
 
   <meta name="twitter:site" content="@parth94mehta">
   <meta name="twitter:title" content="iOS Notes">
-  <meta name="twitter:description" content="iOS Training - Big Nerd Ranch">
+  <meta name="twitter:description" content="Notes taken during iOS training course with Big Nerd Ranch">
   <meta name="twitter:url" content="http://localhost:4000/tech/iOS-Notes/">
 
   
@@ -68,22 +38,21 @@
   
 
   
-    <meta name="twitter:creator" content="@Parth Mehta">
-  
 
 
 
-  
-
-  
-
-
-
-
-
-  <meta property="og:type" content="article">
   <meta property="article:published_time" content="2019-03-22T08:13:06-07:00">
 
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/iOS-Notes/">
 
 
 
@@ -93,11 +62,11 @@
 
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Parth Mehta",
-      "url" : "http://localhost:4000",
-      "sameAs" : null
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Parth Mehta",
+      "url": "http://localhost:4000",
+      "sameAs": null
     }
   </script>
 
@@ -107,10 +76,10 @@
 
 
 
-<!-- end SEO -->
+<!-- end _includes/seo.html -->
 
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -122,7 +91,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
 <!--[if lte IE 9]>
   <style>
@@ -142,9 +111,10 @@
 
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
+
   </head>
 
   <body class="layout--single">
@@ -157,15 +127,10 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/">Techie Notes</a>
-        <ul class="visible-links">
-          
-            
-            <li class="masthead__menu-item">
+        <a class="site-title" href="/">Techie Notes</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
               <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
-            </li>
-          
-        </ul>
+            </li></ul>
         
         <button class="search__toggle" type="button">
           <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
@@ -173,8 +138,8 @@
           </svg>
         </button>
         
-        <button class="greedy-nav__toggle" type="button">
-          <span class="visually-hidden">Toggle Menu</span>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -182,6 +147,7 @@
     </div>
   </div>
 </div>
+
 
     <div class="initial-content">
       
@@ -193,6 +159,7 @@
   <div class="sidebar sticky">
   
 
+
 <div itemscope itemtype="http://schema.org/Person">
 
   
@@ -200,7 +167,7 @@
       
 
       
-        <img src="http://localhost:4000/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
+        <img src="/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
       
     </div>
   
@@ -223,6 +190,8 @@
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New York</span>
         </li>
+      
+
       
 
       
@@ -317,14 +286,14 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="iOS Notes">
-    <meta itemprop="description" content="iOS Training - Big Nerd Ranch">
+    <meta itemprop="description" content="Notes taken during iOS training course with Big Nerd Ranch">
     <meta itemprop="datePublished" content="March 22, 2019">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">iOS Notes
+          <h1 id="page-title" class="page__title" itemprop="headline">iOS Notes
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -340,31 +309,120 @@
 
       <section class="page__content" itemprop="text">
         
-          <aside class="sidebar__right">
+          <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-list"></i> On this page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#general-notes">General Notes</a></li>
-  <li><a href="#mvc">MVC</a></li>
-  <li><a href="#swift-basics">Swift Basics</a></li>
-  <li><a href="#views-basics">Views Basics</a></li>
-  <li><a href="#view-controller">View Controller</a></li>
-  <li><a href="#text-input--delegation">Text Input &amp; Delegation</a></li>
-  <li><a href="#internalization-and-localization">Internalization and Localization</a></li>
-  <li><a href="#table-views">Table Views</a></li>
-  <li><a href="#subclassing-uitableviewcell">Subclassing UITableViewCell</a></li>
-  <li><a href="#stack-views">Stack Views</a></li>
-  <li><a href="#segues">Segues</a></li>
-  <li><a href="#uinavigationcontroller">UINavigationController</a></li>
-  <li><a href="#saving-loading-and-error-handling">Saving, Loading and Error Handling</a></li>
-  <li><a href="#application-states-and-transitions">Application States and Transitions</a></li>
-  <li><a href="#the-application-bundle">The Application Bundle</a></li>
-  <li><a href="#modals-and-popovers">Modals and Popovers</a></li>
-  <li><a href="#permissions">Permissions</a></li>
-  <li><a href="#-mark">// MARK:</a></li>
-  <li><a href="#size-classes">Size classes</a></li>
-  <li><a href="#web-services">Web Services</a></li>
-  <li><a href="#collection-views">Collection Views</a></li>
+  <li><a href="#ios-training---big-nerd-ranch">iOS Training - Big Nerd Ranch</a>
+    <ul>
+      <li><a href="#general-notes">General Notes</a></li>
+      <li><a href="#mvc">MVC</a></li>
+      <li><a href="#swift-basics">Swift Basics</a>
+     -  <a href="#optionals-and-optional-binding">Optionals and Optional Binding</a>
+     -  <a href="#collections-array">Collections: Array</a>
+     -  <a href="#collections-dictionary">Collections: Dictionary</a>
+     -  <a href="#control-flow-conditional-statements">Control Flow: Conditional Statements</a>
+     -  <a href="#control-flow-for-in-loop">Control Flow: For-in Loop</a>
+     -  <a href="#functions">Functions</a>
+     -  <a href="#closures">Closures</a>
+     -  <a href="#structs">Structs</a>
+     -  <a href="#classes">Classes</a>
+     -  <a href="#properties">Properties</a>
+     -  <a href="#protocols">Protocols</a>
+     -  <a href="#extensions">Extensions</a>
+     -  <a href="#generics">Generics</a></li>
+      <li><a href="#views-basics">Views Basics</a>
+     -  <a href="#views">Views</a>
+     -  <a href="#the-view-hierarchy">The View Hierarchy</a>
+     -  <a href="#views-and-frames">Views and Frames</a>
+     -  <a href="#creating-a-view-programmatically">Creating a view programmatically.</a>
+     -  <a href="#frame-vs-bounds">Frame Vs. Bounds</a>
+     -  <a href="#what-other-information-does-a-view-have">What other information does a view have?</a>
+     -  <a href="#auto-layout">Auto Layout</a>
+     -  <a href="#constraints-menu">Constraints Menu</a>
+     -  <a href="#align-menu">Align Menu</a></li>
+      <li><a href="#view-controller">View Controller</a>
+     -  <a href="#the-view-of-a-view-controller">The View of a View Controller</a>
+     -  <a href="#how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</a>
+     -  <a href="#tab-bar-controllers">Tab Bar Controllers</a>
+     -  <a href="#tab-bar-items">Tab bar items</a>
+     -  <a href="#accessing-subviews">Accessing subviews</a>
+     -  <a href="#interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</a>
+     -  <a href="#programmatic-view-composition">Programmatic View Composition</a>
+     -  <a href="#programmatic-constraints">Programmatic Constraints</a>
+         -  <a href="#layout-margin-guides">Layout Margin Guides</a>
+         -  <a href="#layout-safe-area-guides">Layout Safe Area Guides</a>
+         -  <a href="#controls">Controls</a>
+         -  <a href="#control-events">Control Events</a>
+     -  <a href="#q-when-exactly-is-the-loadview-method-called">Q. When exactly is the loadview() method called?</a></li>
+      <li><a href="#text-input--delegation">Text Input &amp; Delegation</a>
+     -  <a href="#conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</a></li>
+      <li><a href="#internalization-and-localization">Internalization and Localization</a>
+     -  <a href="#some-formatters-to-keep-in-mind">Some formatters to keep in Mind</a>
+     -  <a href="#nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</a></li>
+      <li><a href="#table-views">Table Views</a>
+     -  <a href="#custom-initializers-for-classes">Custom Initializers for classes</a>
+     -  <a href="#dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</a>
+     -  <a href="#data-source-methods">Data Source Methods</a>
+     -  <a href="#uitableviewcells">UITableViewCells</a>
+     -  <a href="#reusing-uitableviewcells">Reusing UITableViewCells</a>
+     -  <a href="#editing-table-views">Editing Table Views</a>
+         -  <a href="#editing-mode">Editing Mode</a>
+         -  <a href="#adding-and-deleting-items">Adding and Deleting Items</a>
+     -  <a href="#design-patterns">Design Patterns</a></li>
+      <li><a href="#subclassing-uitableviewcell">Subclassing UITableViewCell</a>
+     -  <a href="#customizing-the-cell">Customizing the Cell</a>
+     -  <a href="#dynamic-type">Dynamic Type</a>
+     -  <a href="#responding-to-user-changes">Responding to user changes</a>
+         -  <a href="#bad-cell-constraints">Bad Cell Constraints</a>
+         -  <a href="#better-cell-constraints">Better Cell constraints</a></li>
+      <li><a href="#stack-views">Stack Views</a>
+     -  <a href="#properties-of-stackview">Properties of StackView</a>
+     -  <a href="#hiding-views-inside-stackview">Hiding Views inside Stackview</a>
+     -  <a href="#implicit-constraints">Implicit Constraints</a>
+         -  <a href="#content-hugging-priorities">Content hugging priorities</a>
+         -  <a href="#content-compression-resistance-priorities">Content compression resistance priorities</a></li>
+      <li><a href="#segues">Segues</a>
+     -  <a href="#passing-data-around">Passing Data Around</a></li>
+      <li><a href="#uinavigationcontroller">UINavigationController</a>
+     -  <a href="#appearing-and-disappearing-views">Appearing and Disappearing Views</a>
+     -  <a href="#first-responder-status">First Responder Status</a>
+     -  <a href="#uinavigationbar">UINavigationBar</a></li>
+      <li><a href="#saving-loading-and-error-handling">Saving, Loading and Error Handling</a>
+     -  <a href="#property-lists">Property Lists</a>
+     -  <a href="#error-handling">Error Handling</a>
+     -  <a href="#application-sandbox">Application Sandbox</a>
+     -  <a href="#constructing-a-file-url">Constructing a file URL</a>
+     -  <a href="#persisting-the-items">Persisting the Items</a>
+     -  <a href="#loading-the-items">Loading the Items</a></li>
+      <li><a href="#application-states-and-transitions">Application States and Transitions</a>
+     -  <a href="#application-states-flow-chart">Application states flow chart</a>
+     -  <a href="#q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</a>
+     -  <a href="#q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</a>
+     -  <a href="#q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</a></li>
+      <li><a href="#the-application-bundle">The Application Bundle</a></li>
+      <li><a href="#modals-and-popovers">Modals and Popovers</a>
+     -  <a href="#alert-controllers">Alert controllers</a>
+         -  <a href="#presenting-programmatically">Presenting programmatically</a>
+         -  <a href="#dismissing">Dismissing</a>
+         -  <a href="#completion-closure">Completion closure</a></li>
+      <li><a href="#permissions">Permissions</a>
+     -  <a href="#caching-in-the-data-store">Caching in the data store</a></li>
+      <li><a href="#-mark">// MARK:</a></li>
+      <li><a href="#size-classes">Size classes</a>
+     -  <a href="#modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</a>
+     -  <a href="#varying-constraints-for-different-size-classes">Varying constraints for different size classes</a></li>
+      <li><a href="#web-services">Web Services</a>
+     -  <a href="#building-the-url">Building the URL</a>
+     -  <a href="#access-control">Access Control</a>
+     -  <a href="#sending-the-request">Sending the Request</a>
+     -  <a href="#the-main-thread">The Main Thread</a></li>
+      <li><a href="#collection-views">Collection Views</a>
+     -  <a href="#creating-a-uicollectionview">Creating a UICollectionView</a>
+     -  <a href="#uicollectionviewdatasource">UICollectionViewDataSource</a>
+     -  <a href="#customizing-a-collection-layout">Customizing a Collection Layout</a></li>
+    </ul>
+  </li>
 </ul>
             </nav>
           </aside>
@@ -415,7 +473,7 @@
 
 <span class="kd">import</span> <span class="kt">UIKit</span>
 
-<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="nf">UIViewController</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     
     <span class="k">let</span> <span class="nv">questions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s">"From what is congnac made?"</span><span class="p">,</span>
@@ -475,7 +533,7 @@
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Leader"</span><span class="p">:</span> <span class="s">"Dear Leader"</span><span class="p">,</span> <span class="s">"Commandante"</span><span class="p">:</span> <span class="s">"Commandante"</span><span class="p">,</span> <span class="s">"Brightlord"</span><span class="p">:</span> <span class="s">"Brightlord"</span><span class="p">]</span>
 <span class="k">var</span> <span class="nv">optionalTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="n">titles</span><span class="p">[</span><span class="s">"Leader"</span><span class="p">]</span>
 <span class="k">var</span> <span class="nv">greeting</span> <span class="o">=</span> <span class="s">"Hello"</span>
-<span class="k">if</span> <span class="k">let</span> <span class="nv">title</span> <span class="o">=</span> <span class="nf">optionalTitle</span> <span class="p">{</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">title</span> <span class="o">=</span> <span class="n">optionalTitle</span> <span class="p">{</span>
     <span class="n">greeting</span> <span class="o">+=</span> <span class="s">" </span><span class="se">\(</span><span class="n">title</span><span class="se">)</span><span class="s">"</span>
 <span class="p">}</span> <span class="c1">// Note that here, we convert the optional optionalTitle to a String</span>
 
@@ -504,9 +562,9 @@
 <p>‘if’ executes a set of statements if expression evalutates to true</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">swiftIsAwesome</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span>
-<span class="k">if</span> <span class="nf">swiftIsAwesome</span> <span class="p">{</span>
+<span class="k">if</span> <span class="n">swiftIsAwesome</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Duh"</span><span class="p">)</span>
-<span class="p">}</span> <span class="nf">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Something went wrong."</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -517,7 +575,7 @@
 
 <span class="k">let</span> <span class="nv">favoriteFood</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Cookie Pie"</span>
 <span class="k">var</span> <span class="nv">comment</span><span class="p">:</span> <span class="kt">String</span>
-<span class="k">switch</span> <span class="nf">favoriteFood</span> <span class="p">{</span>
+<span class="k">switch</span> <span class="n">favoriteFood</span> <span class="p">{</span>
     <span class="k">case</span> <span class="s">"Vegetables"</span><span class="p">:</span>
         <span class="n">comment</span> <span class="o">=</span> <span class="s">"Ew"</span>
     <span class="k">case</span> <span class="s">"Fruit"</span><span class="p">:</span>
@@ -540,11 +598,11 @@
     <span class="nf">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="c1">// 1 2 3 4 5</span>
 <span class="p">}</span>
 <span class="k">var</span> <span class="nv">things</span> <span class="o">=</span> <span class="p">[</span><span class="s">"socks"</span><span class="p">,</span><span class="s">"bannana"</span><span class="p">,</span><span class="s">"ennui"</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">word</span> <span class="k">in</span> <span class="nf">things</span> <span class="p">{</span>
+<span class="k">for</span> <span class="n">word</span> <span class="k">in</span> <span class="n">things</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="k">var</span> <span class="nv">etBroHome</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Matt"</span><span class="p">:</span> <span class="s">"GA"</span><span class="p">,</span><span class="s">"Scott"</span><span class="p">:</span> <span class="s">"DC"</span><span class="p">]</span> <span class="c1">// infers type</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span> <span class="k">in</span> <span class="nf">etBroHome</span> <span class="p">{</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span> <span class="k">in</span> <span class="n">etBroHome</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span> <span class="c1">// (Matt, GA); (Scott, DC)</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -557,7 +615,7 @@
 <span class="p">}</span>
 <span class="nf">printNumber</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1">// logs 5 to console</span>
 
-<span class="kd">func</span> <span class="nf">equalToTen</span><span class="p">(</span><span class="n">myNumber</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">Bool</span> <span class="p">{</span> 
+<span class="kd">func</span> <span class="nf">equalToTen</span><span class="p">(</span><span class="n">myNumber</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span> 
     <span class="c1">// myNumber is an explicitly named external parameter</span>
     <span class="k">return</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">10</span>
 <span class="p">}</span>
@@ -566,7 +624,7 @@
 <span class="kd">func</span> <span class="nf">hasMatches</span><span class="p">(</span><span class="nv">list</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">condition</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">var</span> <span class="nv">hasMatch</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="nf">list</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="n">list</span> <span class="p">{</span>
         <span class="k">if</span> <span class="nf">condition</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span>
 			<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span> 
         <span class="p">}</span>
@@ -581,7 +639,7 @@
 <h4 id="closures">Closures</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">moreNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">24</span><span class="p">]</span>
-<span class="k">let</span> <span class="nv">newNumbers</span> <span class="o">=</span> <span class="n">moreNumbers</span><span class="o">.</span><span class="nf">map</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">newNumbers</span> <span class="o">=</span> <span class="n">moreNumbers</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span>
     <span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="k">in</span>   			<span class="c1">// in is just a seperator that separates params from 										the function body in closures</span>
     <span class="k">return</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="p">}</span>
@@ -590,17 +648,17 @@
 
 <h4 id="structs">Structs</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="nf">House</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">House</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">hotTubs</span><span class="p">:</span> <span class="kt">Int</span>
-    <span class="kd">func</span> <span class="nf">describeHouse</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"House has </span><span class="se">\(</span><span class="n">hotTubs</span><span class="se">)</span><span class="s"> hot tubs!"</span> <span class="p">}</span>
+    <span class="kd">func</span> <span class="nf">describeHouse</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"House has </span><span class="se">\(</span><span class="n">hotTubs</span><span class="se">)</span><span class="s"> hot tubs!"</span> <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">var</span> <span class="nv">myHouse</span> <span class="o">=</span> <span class="nf">House</span><span class="p">(</span><span class="nv">hotTubs</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">myHouse</span> <span class="o">=</span> <span class="kt">House</span><span class="p">(</span><span class="nv">hotTubs</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">myHouse</span><span class="o">.</span><span class="nf">describeHouse</span><span class="p">())</span> <span class="c1">// House has 4 hot tubs!</span>
 </code></pre></div></div>
 
 <h4 id="classes">Classes</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Parent</span><span class="p">:</span> <span class="nf">Person</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Parent</span><span class="p">:</span> <span class="kt">Person</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kt">Bool</span>
     <span class="kd">static</span> <span class="k">var</span> <span class="nv">hasStaticChildren</span><span class="p">:</span> <span class="kt">Bool</span> 		<span class="c1">// class level variable</span>
     <span class="nf">init</span><span class="p">(</span><span class="nv">hasChildren</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
@@ -618,19 +676,19 @@
     	<span class="c1">// stuff here</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">var</span> <span class="nv">john</span> <span class="o">=</span> <span class="nf">Parent</span><span class="p">(</span><span class="nv">hasChildren</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">john</span> <span class="o">=</span> <span class="kt">Parent</span><span class="p">(</span><span class="nv">hasChildren</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 <span class="kt">Parent</span><span class="o">.</span><span class="nf">exampleTypeMethod</span><span class="p">()</span>
 <span class="n">john</span><span class="o">.</span><span class="nf">exampleInstanceMethod</span><span class="p">()</span>
 
 <span class="c1">// The way we assign innitialisation values are safer in Swift</span>
-<span class="kd">class</span> <span class="kt">Parent</span><span class="p">:</span> <span class="nf">Person</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">Parent</span><span class="p">:</span> <span class="kt">Person</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kt">Bool</span>
     <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">heightInMeters</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">hasChildren</span> <span class="o">=</span> <span class="n">hasChildren</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="nv">heightInMeters</span><span class="p">:</span> <span class="n">heightInMeters</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">var</span> <span class="nv">john</span> <span class="o">=</span> <span class="nf">Parent</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"John"</span><span class="p">,</span> <span class="nv">heightInMeters</span><span class="p">:</span> <span class="mf">1.8</span><span class="p">,</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">john</span> <span class="o">=</span> <span class="kt">Parent</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"John"</span><span class="p">,</span> <span class="nv">heightInMeters</span><span class="p">:</span> <span class="mf">1.8</span><span class="p">,</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>Differences between Classes and Structs in Swift</strong></p>
@@ -644,19 +702,19 @@
 
 <h4 id="properties">Properties</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="nf">Meal</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Meal</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">Int</span>
     <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Int</span>
 <span class="p">}</span>
-<span class="kd">struct</span> <span class="nf">Day</span> <span class="p">{</span>
+<span class="kd">struct</span> <span class="kt">Day</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
     <span class="k">var</span> <span class="nv">breakFast</span><span class="p">:</span> <span class="kt">Meal</span>
     <span class="k">var</span> <span class="nv">intervalBetweenMeals</span><span class="p">:</span> <span class="kt">Int</span>
-    <span class="k">var</span> <span class="nv">lunch</span><span class="p">:</span> <span class="nf">Meal</span> <span class="p">{</span>
-		<span class="nf">get</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">lunch</span><span class="p">:</span> <span class="kt">Meal</span> <span class="p">{</span>
+		<span class="k">get</span> <span class="p">{</span>
             <span class="k">let</span> <span class="nv">time</span> <span class="o">=</span> <span class="n">breakFast</span><span class="o">.</span><span class="n">time</span> <span class="o">+</span> <span class="n">breakFast</span><span class="o">.</span><span class="n">duration</span> <span class="o">+</span> <span class="n">intervalBetweenMeals</span>
             <span class="k">let</span> <span class="nv">duration</span> <span class="o">=</span> <span class="n">breakFast</span><span class="o">.</span><span class="n">duration</span>
-            <span class="k">return</span> <span class="nf">Meal</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="n">duration</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kt">Meal</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="n">duration</span><span class="p">)</span>
         <span class="p">}</span>
         <span class="nf">set</span><span class="p">(</span><span class="n">newLunch</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">breakFast</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">newLunch</span><span class="o">.</span><span class="n">time</span> <span class="o">-</span> <span class="n">intervalBetweenMeals</span>
@@ -664,21 +722,21 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">let</span> <span class="nv">aMeal</span> <span class="o">=</span> <span class="nf">Meal</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
-<span class="k">var</span> <span class="nv">aDay</span> <span class="o">=</span> <span class="nf">Day</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Monday"</span><span class="p">,</span> <span class="nv">breakFast</span><span class="p">:</span> <span class="n">aMeal</span><span class="p">,</span> <span class="nv">intervalBetweenMeals</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">aMeal</span> <span class="o">=</span> <span class="kt">Meal</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">var</span> <span class="nv">aDay</span> <span class="o">=</span> <span class="kt">Day</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Monday"</span><span class="p">,</span> <span class="nv">breakFast</span><span class="p">:</span> <span class="n">aMeal</span><span class="p">,</span> <span class="nv">intervalBetweenMeals</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">aDay</span><span class="o">.</span><span class="n">lunch</span> <span class="c1">// name = Monday; time = 12; duration = 1</span>
 </code></pre></div></div>
 
 <h4 id="protocols">Protocols</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Protocols are similar to interfaces in Java and you can conform to multiple protocols (this is how you can achieve multiple inheritance in Swift).</span>
-<span class="kd">protocol</span> <span class="nf">ExampleProtocol</span> <span class="p">{</span>
+<span class="kd">protocol</span> <span class="kt">ExampleProtocol</span> <span class="p">{</span>
     <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">doSomething</span><span class="p">()</span>
-    <span class="k">var</span> <span class="nv">aReadonlyIntProperty</span><span class="p">:</span> <span class="nf">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
-    <span class="k">var</span> <span class="nv">aReadwriteStringProperty</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span>
+    <span class="k">var</span> <span class="nv">aReadonlyIntProperty</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+    <span class="k">var</span> <span class="nv">aReadwriteStringProperty</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span>
 <span class="p">}</span>
-<span class="kd">class</span> <span class="kt">SomeClass</span><span class="p">:</span> <span class="nf">ExampleProtocol</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">doSomething</span> 
+<span class="kd">class</span> <span class="kt">SomeClass</span><span class="p">:</span> <span class="kt">ExampleProtocol</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="n">doSomething</span> 
     <span class="p">{</span> 
         <span class="c1">// code here</span>
     <span class="p">}</span>
@@ -691,11 +749,11 @@
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// add custom vars and methods to the basic types in Swift.</span>
 <span class="c1">// Note the visibility of these extensions is across the entire project.</span>
-<span class="kd">extension</span> <span class="kt">Int</span><span class="p">:</span> <span class="nf">ExampleProtocol</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nv">timesFive</span><span class="p">:</span> <span class="nf">Int</span> <span class="p">{</span>
+<span class="kd">extension</span> <span class="kt">Int</span><span class="p">:</span> <span class="kt">ExampleProtocol</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">timesFive</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">self</span> <span class="o">*</span> <span class="mi">5</span>
     <span class="p">}</span>
-    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">doSomething</span> <span class="p">{</span>
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="n">doSomething</span> <span class="p">{</span>
     <span class="c1">// code here </span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -713,7 +771,7 @@
 <span class="p">}</span>
 <span class="nf">swapTwoValues</span><span class="p">(</span><span class="o">&amp;</span><span class="n">someInt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">anotherInt</span><span class="p">)</span>
 <span class="nf">swapTwoValues</span><span class="p">(</span><span class="o">&amp;</span><span class="n">someString</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">anotherString</span><span class="p">)</span>
-<span class="kd">protocol</span> <span class="nf">RemoveInstance</span> <span class="p">{</span>
+<span class="kd">protocol</span> <span class="kt">RemoveInstance</span> <span class="p">{</span>
     <span class="kd">typealias</span> <span class="kt">ItemType</span>
     <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeInstance</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">ItemType</span><span class="p">)</span>
 <span class="p">}</span>
@@ -744,8 +802,8 @@
 
 <h4 id="creating-a-view-programmatically">Creating a view programmatically.</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">rect</span> <span class="o">=</span> <span class="nf">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">squareView</span> <span class="o">=</span> <span class="nf">UIView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">rect</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">rect</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">squareView</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">rect</span><span class="p">)</span>
 <span class="n">someOtherView</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">squareView</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -766,8 +824,8 @@
 <h4 id="what-other-information-does-a-view-have">What other information does a view have?</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Hierarchy (Painter's method):</span>
-<span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="nf">UIWindow</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
-<span class="k">var</span> <span class="nv">superview</span><span class="p">:</span> <span class="nf">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">var</span> <span class="nv">superview</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">var</span> <span class="nv">subviews</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="kd">func</span> <span class="nf">addSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span>
 <span class="kd">func</span> <span class="nf">insertSubview</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
@@ -953,7 +1011,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadView</span><span class="p">()</span> <span class="p">{</span>
     <span class="o">...</span>
-    <span class="k">let</span> <span class="nv">button</span> <span class="o">=</span> <span class="nf">UIButton</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">system</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">button</span> <span class="o">=</span> <span class="kt">UIButton</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">system</span><span class="p">)</span>
     <span class="c1">// this is similar to what we do in the interface builder by dragging and dropping.</span>
     <span class="n">button</span><span class="o">.</span><span class="nf">addTarget</span><span class="p">(</span><span class="k">self</span><span class="p">,</span>
            <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">buttonTapped(_:)</span><span class="kd">)</span><span class="p">,</span>
@@ -992,7 +1050,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">textField</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// Our controller</span>
 <span class="c1">// In our controller</span>
-<span class="kd">func</span> <span class="nf">textFieldShouldReturn</span><span class="p">(</span><span class="n">_</span> <span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">Bool</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">textFieldShouldReturn</span><span class="p">(</span><span class="n">_</span> <span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">textField</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="c1">// dismisses the keyboard and gives up the first responder status</span>
     <span class="n">textField</span><span class="o">.</span><span class="nf">resignFirstResponder</span><span class="p">()</span> 
@@ -1004,7 +1062,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <h4 id="conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nf">UITextFieldDelegate</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -1222,7 +1280,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
 
 <h4 id="hiding-views-inside-stackview">Hiding Views inside Stackview</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="nf">UIViewController</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">hideViewTapped</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">UIView</span><span class="o">.</span><span class="nf">animate</span><span class="p">(</span><span class="nv">withDuration</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">sender</span><span class="o">.</span><span class="n">superview</span><span class="p">?</span><span class="o">.</span><span class="n">isHidden</span> <span class="o">=</span> <span class="kc">true</span>
@@ -1364,10 +1422,10 @@ UIViewController is added to the navigation controller’s viewControllers array
   </li>
 </ul>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protocol</span> <span class="nf">Decodable</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">Decodable</span> <span class="p">{</span>
     <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span>
 <span class="p">}</span>
-<span class="kd">protocol</span> <span class="nf">Encodable</span> <span class="p">{</span>
+<span class="kd">protocol</span> <span class="kt">Encodable</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -1387,8 +1445,8 @@ UIViewController is added to the navigation controller’s viewControllers array
   <li>Property lists can hold the following types: Array, Dictionary, String, Data, Date, Int, Float, and Bool. As long as a given type is composed of those types, or a hierarchy of those types, then it can be represented as a property list.</li>
 </ul>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveChanges</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf">Bool</span> <span class="p">{</span>    
-    <span class="k">let</span> <span class="nv">encoder</span> <span class="o">=</span> <span class="nf">PropertyListEncoder</span><span class="p">()</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveChanges</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>    
+    <span class="k">let</span> <span class="nv">encoder</span> <span class="o">=</span> <span class="kt">PropertyListEncoder</span><span class="p">()</span>
     <span class="c1">// You will have an error on the next line, for not catching errors.</span>
     <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">allItems</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">false</span>
@@ -1408,10 +1466,10 @@ UIViewController is added to the navigation controller’s viewControllers array
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteImage</span><span class="p">(</span><span class="n">at</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">fileManager</span> <span class="o">=</span> <span class="kt">FileManager</span><span class="o">.</span><span class="k">default</span>
-    <span class="nf">do</span> <span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
         <span class="c1">// need try for every statement that can fail</span>
         <span class="k">try</span> <span class="n">fileManager</span><span class="o">.</span><span class="nf">removeItem</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="n">imageURL</span><span class="p">)</span> <span class="c1">// this method might throw an error</span>
-<span class="p">}</span> <span class="nf">catch</span> <span class="p">{</span> 
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> 
         <span class="nf">print</span><span class="p">(</span><span class="s">"Error removing image: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span> 
@@ -1451,10 +1509,10 @@ UIViewController is added to the navigation controller’s viewControllers array
 <p>You have a place to save data on the filesystem and a model object that can be saved to the filesystem. How do you kick off the saving and loading processes, and when do you do it?</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Writing data to disk</span>
-<span class="kd">func</span> <span class="nf">saveChanges</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nf">Bool</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">saveChanges</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 	<span class="nf">print</span><span class="p">(</span><span class="s">"Saving items to: </span><span class="se">\(</span><span class="n">itemArchiveURL</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-    <span class="nf">do</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">encoder</span> <span class="o">=</span> <span class="nf">PropertyListEncoder</span><span class="p">()</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">encoder</span> <span class="o">=</span> <span class="kt">PropertyListEncoder</span><span class="p">()</span>
         <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="n">encoder</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">allItems</span><span class="p">)</span> 
         <span class="k">try</span> <span class="n">data</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">itemArchiveURL</span><span class="p">)</span> 
         <span class="k">return</span> <span class="kc">true</span> 	
@@ -1473,12 +1531,12 @@ applicationDidEnterBackground(_:) is sent to the AppDelegate.</p>
 <h4 id="loading-the-items">Loading the Items</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">init</span><span class="p">()</span> <span class="p">{</span> 
-    <span class="nf">do</span> <span class="p">{</span> 
-        <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">itemArchiveURL</span><span class="p">)</span>
-        <span class="k">let</span> <span class="nv">unarchiver</span> <span class="o">=</span> <span class="nf">PropertyListDecoder</span><span class="p">()</span>
+    <span class="k">do</span> <span class="p">{</span> 
+        <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">itemArchiveURL</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">unarchiver</span> <span class="o">=</span> <span class="kt">PropertyListDecoder</span><span class="p">()</span>
         <span class="k">let</span> <span class="nv">items</span> <span class="o">=</span> <span class="k">try</span> <span class="n">unarchiver</span><span class="o">.</span><span class="nf">decode</span><span class="p">([</span><span class="kt">Item</span><span class="p">]</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
         <span class="n">allItems</span> <span class="o">=</span>  <span class="n">items</span>
-	<span class="p">}</span> <span class="nf">catch</span> <span class="p">{</span> 
+	<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span> 
         <span class="nf">print</span><span class="p">(</span><span class="s">"Error reading in saved items: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span> 
@@ -1537,9 +1595,9 @@ portion of the screen. This is especially true on iPad where there is more space
 
 <h5 id="presenting-programmatically">Presenting programmatically</h5>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="nf">UIViewController</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">addNewEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="nf">NewCalendarEventViewController</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">viewController</span> <span class="o">=</span> <span class="kt">NewCalendarEventViewController</span><span class="p">()</span>
         <span class="nf">present</span><span class="p">(</span><span class="n">viewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1547,7 +1605,7 @@ portion of the screen. This is especially true on iPad where there is more space
 
 <h5 id="dismissing">Dismissing</h5>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="nf">UIViewController</span> <span class="p">{</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">cancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="p">{</span>
         <span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
     <span class="p">}</span>
@@ -1582,12 +1640,12 @@ portion of the screen. This is especially true on iPad where there is more space
 
 <h4 id="caching-in-the-data-store">Caching in the data store</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nf">ImageStore</span> <span class="p">{</span> 
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ImageStore</span> <span class="p">{</span> 
     <span class="k">let</span> <span class="nv">cache</span> <span class="o">=</span> <span class="kt">NSCache</span><span class="o">&lt;</span><span class="kt">NSString</span><span class="p">,</span><span class="kt">UIImage</span><span class="o">&gt;</span><span class="p">()</span>
     <span class="kd">func</span> <span class="nf">setImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">cache</span><span class="o">.</span><span class="nf">setObject</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="n">key</span> <span class="k">as</span> <span class="kt">NSString</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="kd">func</span> <span class="nf">image</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">UIImage</span><span class="p">?</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">image</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">cache</span><span class="o">.</span><span class="nf">object</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="n">key</span> <span class="k">as</span> <span class="kt">NSString</span><span class="p">)</span>
     <span class="p">}</span>
     <span class="kd">func</span> <span class="nf">deleteImage</span><span class="p">(</span><span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
@@ -1704,8 +1762,8 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 <h4 id="creating-a-uicollectionview">Creating a UICollectionView</h4>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">layout</span> <span class="o">=</span> <span class="nf">UICollectionViewFlowLayout</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">cv</span> <span class="o">=</span> <span class="nf">UICollectionView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">,</span> <span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="n">layout</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">layout</span> <span class="o">=</span> <span class="kt">UICollectionViewFlowLayout</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">cv</span> <span class="o">=</span> <span class="kt">UICollectionView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">,</span> <span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="n">layout</span><span class="p">)</span>
 <span class="n">cv</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
 <span class="n">cv</span><span class="o">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="k">self</span>
 </code></pre></div></div>
@@ -1714,11 +1772,11 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">photos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Photos</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
 <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span>
-        <span class="n">numberOfItemsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">Int</span> <span class="p">{</span>
+        <span class="n">numberOfItemsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">photos</span><span class="o">.</span><span class="n">count</span>
 <span class="p">}</span>
 <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span>
-        <span class="n">cellForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">UICollectionViewCell</span> <span class="p">{</span>
+        <span class="n">cellForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">identifier</span> <span class="o">=</span> <span class="s">"UICollectionViewCell"</span>
     <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span>
         <span class="n">collectionView</span><span class="o">.</span><span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="nv">withReuseIdentifier</span><span class="p">:</span> <span class="n">identifier</span><span class="p">,</span>
@@ -1770,7 +1828,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
       
       
-      <a href="http://localhost:4000/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
     
     </span>
   </p>
@@ -1799,7 +1857,7 @@ importantly, it specifies the URL of the server for the request, but it also has
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/tech/Android-Notes/" class="pagination--pager" title="Android Notes
+      <a href="/tech/Android-Notes/" class="pagination--pager" title="Android Notes
 ">Previous</a>
     
     
@@ -1815,7 +1873,7 @@ importantly, it specifies the URL of the server for the request, but it also has
   
   
     <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
         
           
@@ -1827,7 +1885,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/tech/Android-Notes/" rel="permalink">Android Notes
+        <a href="/tech/Android-Notes/" rel="permalink">Android Notes
 </a>
       
     </h2>
@@ -1854,7 +1912,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/tech/System-Design-and-Scalability/" rel="permalink">System Design and Scalability
+        <a href="/tech/System-Design-and-Scalability/" rel="permalink">System Design and Scalability
 </a>
       
     </h2>
@@ -1881,7 +1939,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/tech/Java-Trivia/" rel="permalink">Java Trivia Questions
+        <a href="/tech/Java-Trivia/" rel="permalink">Java Trivia Questions
 </a>
       
     </h2>
@@ -1905,15 +1963,12 @@ importantly, it specifies the URL of the server for the request, but it also has
   
   
 </div>
-
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap">
-  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  <div id="results" class="results"></div>
-</div>
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
       </div>
     
 
@@ -1927,16 +1982,10 @@ importantly, it specifies the URL of the server for the request, but it also has
     
       <li><strong>Follow:</strong></li>
     
+
     
-      <li><a href="https://twitter.com/parth94mehta"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-    
-    
-    
-      <li><a href="https://github.com/pm2877"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    
-    <li><a href="http://localhost:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
@@ -1946,17 +1995,15 @@ importantly, it specifies the URL of the server for the request, but it also has
     </div>
 
     
-  <script src="http://localhost:4000/assets/js/main.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 
 
 
-  
-  
-  <script defer src="http://localhost:4000/assets/js/lunr/lunr.min.js"></script>
-  <script defer src="http://localhost:4000/assets/js/lunr/lunr-store.js"></script>
-  <script defer src="http://localhost:4000/assets/js/lunr/lunr-en.js"></script>
 
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

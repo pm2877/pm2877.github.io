@@ -27,4 +27,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "jekyll-toc"
 
-gem "minimal-mistakes-jekyll"
+gem "minimal-mistakes-jekyll", "4.13.0"
