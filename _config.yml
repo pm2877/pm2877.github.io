@@ -101,8 +101,8 @@ analytics:
 author:
   name             : "Parth Mehta"
   avatar           : "/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Software Developer | Machine Learning | Columbia University"
-  location         : "New York"
+  bio              : "Software Developer @ Yahoo | Machine Learning | Columbia University"
+  location         : "SF Bay Area, California"
   email            : parth.mehta@columbia.edu
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
