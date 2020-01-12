@@ -27,12 +27,12 @@ locale                   : "en-US"
 title                    : "Techie Notes"
 title_separator          : "-"
 name                     : "Parth Mehta"
-description              : "A place for all my tech notes"
+description              : "A little something about Parth Mehta"
 url                      : "https://pm2877.github.io"
 baseurl                  : ""
 repository               : "pm2877/pm2877.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-# breadcrumbs            : false # true, false (default)
+breadcrumbs            : true
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
@@ -203,12 +203,14 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -258,6 +260,14 @@ compress_html:
 
 # Defaults
 defaults:
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
   # _posts
   - scope:
       path: ""
@@ -269,6 +279,12 @@ defaults:
       comments: true
       share: true
       related: true
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
 
 # Build settings
 markdown: kramdown

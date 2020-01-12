@@ -1,6 +1,5 @@
 ---
-layout: single
-title:  "iOS Notes"
+title:  "iOS Development"
 date:   2019-03-22 10:13:06 -0500
 categories: Tech
 toc: true
@@ -106,7 +105,7 @@ Only this much code to create the question answer app!! :D
 
 ## Swift Basics
 
-#### Optionals and Optional Binding
+### Optionals and Optional Binding
 
 - An optional lets you express the possibility that a variable may not store a value at all. The value of an optional will either be an instance of the specified type or nil.
 - Allows the developer to indicate that an instance of any data type may be nil. 
@@ -126,7 +125,7 @@ if let title = optionalTitle {
 // greeting += " \(optionalTitle!)" // crash if optionalTitle  == nil
 ```
 
-#### Collections: Array 
+### Collections: Array 
 
 ```swift
 var bros: [String] = ["Matt","Scott","Josh","Nick"] // could also infer type
@@ -135,7 +134,7 @@ bros[3] = "Brandon" // ["Matt","Scott","Josh","Brandon","Brian"]
 bros.removeAtIndex(4) // ["Matt","Scott","Josh","Brandon"]
 ```
 
-#### Collections: Dictionary 
+### Collections: Dictionary 
 
 ```swift
 var etBroHome: [String: String] = ["Matt": "GA","Scott": "DC"]
@@ -145,7 +144,7 @@ if let oldMattSt = etBroHome.updateValue("CA", forKey:"Matt") {
 }
 ```
 
-#### Control Flow: Conditional Statements
+### Control Flow: Conditional Statements
 
 'if' executes a set of statements if expression evalutates to true 
 
@@ -177,7 +176,7 @@ switch favoriteFood {
 }
 ```
 
-#### Control Flow: For-in Loop 
+### Control Flow: For-in Loop 
 
 ```swift
 // Note that there is not manual version of the for-loop. If we need to use a manual version, we can use a while loop.
@@ -198,7 +197,7 @@ for (name, state) in etBroHome {
 }
 ```
 
-#### Functions
+### Functions
 
 ```swift
 // pay attention to the return type and the external parameter name
@@ -228,7 +227,7 @@ var numbers = [10, 20, 21, 10]
 print("Has matches: \(hasMatches(numbers, condition: equalToTen))") // (true, 2)
 ```
 
-#### Closures 
+### Closures 
 
 ```swift
 var moreNumbers = [10,3,11,24]
@@ -239,7 +238,7 @@ let newNumbers = moreNumbers.map {
 print(newNumbers) // [30,0,0,72]
 ```
 
-#### Structs 
+### Structs 
 
 ```swift
 struct House {
@@ -250,7 +249,7 @@ var myHouse = House(hotTubs: 4)
 print(myHouse.describeHouse()) // House has 4 hot tubs!
 ```
 
-#### Classes 
+### Classes 
 
 ```swift
 class Parent: Person {
@@ -293,7 +292,7 @@ var john = Parent(name: "John", heightInMeters: 1.8, hasChildren: true)
 - Contents of classes are mutable by all instances, irrespective of whether they are defined as `let ` or `const`, unlike in structs.
 - Structs have default initializers, unlike classes. Classes need initializers to be defined by us.
 
-#### Properties
+### Properties
 
 ```swift
 struct Meal {
@@ -321,7 +320,7 @@ var aDay = Day(name: "Monday", breakFast: aMeal, intervalBetweenMeals: 3)
 aDay.lunch // name = Monday; time = 12; duration = 1
 ```
 
-#### Protocols 
+### Protocols 
 
 ```swift
 // Protocols are similar to interfaces in Java and you can conform to multiple protocols (this is how you can achieve multiple inheritance in Swift).
@@ -340,7 +339,7 @@ class SomeClass: ExampleProtocol {
 }
 ```
 
-#### Extensions 
+### Extensions 
 
 ```swift
 // add custom vars and methods to the basic types in Swift.
@@ -357,7 +356,7 @@ extension Int: ExampleProtocol {
 5.timesFive // 25
 ```
 
-#### Generics 
+### Generics 
 
 ```swift
 func swapTwoValues<T>(inout a: T, inout b: T) { 
@@ -378,7 +377,7 @@ protocol RemoveInstance {
 
 ## Views Basics
 
-#### Views
+### Views
 
 Views are objects that are visible to the user, like buttons, text fields, and sliders. View objects make up an application’s UI. A view: 
 
@@ -387,17 +386,17 @@ Views are objects that are visible to the user, like buttons, text fields, and s
 - can handle events, like touches 
 - exists within a hierarchy of views whose root is the application’s window 
 
-#### The View Hierarchy 
+### The View Hierarchy 
 
 Every application has a single instance of UIWindow that serves as the container for all the views in the application. UIWindow is a subclass of UIView, so the window is itself a view. The window is created when the application launches. Once the window is created, other views can be added to it. 
 
 ![image-20190318134431322](/images/image-20190318134431322.png)
 
-#### Views and Frames
+### Views and Frames
 
 When the application is launched, the view for the initial view controller is added to the root-level window. This view controller is represented by the ViewController class defined in `ViewController.swift`.
 
-#### Creating a view programmatically. 
+### Creating a view programmatically. 
 
 ```swift
 let rect = CGRect(x: 0, y: 0, width: 20, height: 20)
@@ -407,7 +406,7 @@ someOtherView.addSubview(squareView)
 
 > **<u>Note</u>:** that these values are in points, not pixels. If the values were in pixels, then they would not be consistent across displays of different resolutions (i.e., Retina versus non-Retina). A point is a relative unit of a measure; it will be a different number of pixels depending on how many pixels are in the display. Sizes, positions, lines, and curves are always described in points to allow for differences in display resolution.
 
-#### Frame Vs. Bounds
+### Frame Vs. Bounds
 
 Frame boundaries are the boundaries of the view, from where to where the view is displayed. Bounds, on the other hand are the limits of the content of the view. Think about scrolling in a maps view. 
 
@@ -419,7 +418,7 @@ You cannot define a view’s alignment rectangle directly. You do not have enoug
 
 
 
-#### What other information does a view have? 
+### What other information does a view have? 
 
 ```swift
 // Hierarchy (Painter's method):
@@ -441,7 +440,7 @@ var alpha: CGFloat
 
 
 
-#### Auto Layout
+### Auto Layout
 
 Auto Layout is a crucial technology for every iOS developer. It helps you create flexible layouts that work across a range of devices and interface sizes. It also takes a lot of practice to master.
 
@@ -449,7 +448,7 @@ Auto Layout is a crucial technology for every iOS developer. It helps you create
 
 
 
-#### Constraints Menu
+### Constraints Menu
 
 In addition to using cntrl+drag to create relative positioning between 2 views, we also define constraints to the view.
 
@@ -459,7 +458,7 @@ In addition to using cntrl+drag to create relative positioning between 2 views, 
 
 If a view does not have any siblings in the specified direction, then the nearest neighbor is its superview, also known as its container.
 
-#### Align Menu
+### Align Menu
 
 ![image-20190318160547006](/images/image-20190318160547006.png)
 
@@ -471,7 +470,7 @@ A view controller is an instance of a subclass of UIViewController. A view contr
 
 Just think of a view controller as one view hierarchy. When an app switches between view controllers, it just means that it is switching between two different view heirarchies.
 
-#### The View of a View Controller 
+### The View of a View Controller 
 
 As subclasses of UIViewController, all view controllers inherit an important property:
 
@@ -492,7 +491,7 @@ There are two ways that a view controller can create its view hierarchy:
 
 > **<u>NOTE</u>**: Although a storyboard can have many view controllers, each storyboard file has exactly one **initial view controller**. The initial view controller acts as an entry point into the storyboard. 
 
-#### How does UIWindow handle the view controllers?
+### How does UIWindow handle the view controllers?
 
 UIWindow has a rootViewController property. When a view controller is set as the window’s rootViewController, that view controller’s view gets added to the window’s view hierarchy. When this property is set, any existing subviews on the window are removed and the view controller’s view gets added to the window with the appropriate Auto Layout constraints. 
 
@@ -500,7 +499,7 @@ UIWindow has a rootViewController property. When a view controller is set as the
 
 The main interface for an application is set in the project settings. In the General tab of the project settings, find the Deployment Info section. Here you will see the Main Interface setting. If it is set to Main, for example, it corresponds to Main.storyboard. 
 
-#### Tab Bar Controllers
+### Tab Bar Controllers
 
 UITabBarController keeps an array of view controllers. It also maintains a tab bar at the bottom of the screen with a tab for each view controller in its array. Tapping on a tab results in the presentation of the view of the view controller associated with that tab.
 
@@ -509,20 +508,20 @@ primary subviews: the tab bar and the view of the selected view controller
 
 ![image-20190319114632381](/images/image-20190319114632381.png)
 
-#### Tab bar items 
+### Tab bar items 
 
 Each tab on the tab bar can display a title and an image, and each view controller maintains a tabBarItem property for this purpose. When a view controller is contained by a UITabBarController, its tab bar item appears in the tab bar.
 
 The order of the tabs is determined by the order of the view controllers within the tab bar controller’s viewControllers array. 
 
-#### Accessing subviews 
+### Accessing subviews 
 
 Often, you will want to do some extra initialization or configuration of subviews defined in Interface Builder before they appear to the user. So where can you access a subview? There are two main options, depending on what you need to do. The first option is the `viewDidLoad()` method. This method
  is called after the view controller’s interface file is loaded, at which point all of the view controller’s outlets will reference the appropriate objects. The second option is another UIViewController method, `viewWillAppear`. This method is called just before a view controller’s view is added to the window. 
 
 Which should you choose? Override viewDidLoad() if the configuration only needs to be done once during the run of the app. Override `viewWillAppear` if you need the configuration to be done each time the view controller’s view appears onscreen. 
 
-#### Interacting with View Controllers and Their Views 
+### Interacting with View Controllers and Their Views 
 
 Let’s look at some methods that are called during the lifecycle of a view controller and its view. Some of these methods you have already seen, and some are new. 
 
@@ -541,7 +540,7 @@ Let’s look at some methods that are called during the lifecycle of a view cont
 
   This method and **viewDidAppear(_:)** get called every time your view controller is moved onscreen. **viewWillDisappear(_:)** and **viewDidDisappear(_:)** get called every time your view controller is moved offscreen. 
 
-#### Programmatic View Composition 
+### Programmatic View Composition 
 
 UIView has an instance method **addSubview(_:)** which let's you add a child view to its subviews collec4on. Other useful methods: 
 
@@ -551,7 +550,7 @@ UIView has an instance method **addSubview(_:)** which let's you add a child vie
 
 > **<u>NOTE</u>**: When using bringSubview and sendSubview, remember that the view to be brought back or sent forward is also already loaded (no lazy loading here).
 
-#### Programmatic Constraints
+### Programmatic Constraints
 
 > **<u>Note</u>**: 
 >
@@ -568,7 +567,7 @@ leadingAlignConstraint.isActive = true
 
 ![image-20190319123127198](/images/image-20190319123127198.png)
 
-##### Layout Margin Guides
+### Layout Margin Guides
 
 Every view has a layoutMargins property that denotes the default spacing to use when laying out content. This property is an instance of UIEdgeInsets, which you can think of as a type of frame. When adding constraints, you will use the layoutMarginsGuide, which exposes anchors that are tied to the edges of the layoutMargins. 
 
@@ -581,7 +580,7 @@ let constraint =
 constraint.isActive = true
 ```
 
-##### Layout Safe Area Guides
+### Layout Safe Area Guides
 
 View instances have a property to assist with layout content: the safeAreaLayoutGuide. This layout guide represents the rectangular extent to which the a view will be visible on screen. Using safeAreaLayoutGuide will allow your content to not underlap the status bar at the top of the screen or the tab bar at the bottom of the screen. 
 
@@ -593,7 +592,7 @@ let constraint =
 constraint.isActive = true
 ```
 
-##### Controls
+### Controls
 
 ```swift
 func loadView() {
@@ -611,7 +610,7 @@ func buttonTapped(_ sender: UIButton) {
 }
 ```
 
-##### Control Events
+### Control Events
 
 ![image-20190319124023164](/images/image-20190319124023164.png)
 
@@ -646,7 +645,7 @@ func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
 ![image-20190319142952879](/images/image-20190319142952879.png)
 
-#### Conforming to this Protocol (it's just like an interface in Java)
+### Conforming to this Protocol (it's just like an interface in Java)
 
 ```swift
 class MyViewController: UIViewController, UITextFieldDelegate {
@@ -671,7 +670,7 @@ Internationalization is making sure your native cultural information (like langu
 
 ![image-20190319151704807](/images/image-20190319151704807.png)
 
-#### Some formatters to keep in Mind
+### Some formatters to keep in Mind
 
 - Date Formatters
 - NumberFormatter
@@ -694,7 +693,7 @@ One option for localizing resource files is to create separate storyboard files 
 
 To simplify the process of localizing interface files, Xcode has a feature called base internationalization. Base internationalization creates the Base.lproj directory, which contains the main interface files. Localizing individual interface files can then be done by creating just the Localizable.strings files. It is still possible to create the full interface files, in case localization cannot be done by changing strings alone. 
 
-#### NSLocalizedString and strings tables 
+### NSLocalizedString and strings tables 
 
 In many places in your applications, you create String instances dynamically or display string literals to the user. To display translated versions of these strings, you must create a strings table. A strings table is a file containing a list of key-value pairs for all of the strings that your application uses and their associated translations. It is a resource file that you add to your application, but you do not need to do a lot of work to get data from it. 
 
@@ -716,7 +715,7 @@ When a UITableViewController creates its view, the dataSource and delegate prope
 
 ![image-20190320102625485](/images/image-20190320102625485.png) 
 
-#### Custom Initializers for classes
+### Custom Initializers for classes
 
 Classes can have two kinds of initializers: **designated initializers and convenience initializers.** 
 
@@ -726,7 +725,7 @@ Every class must have at least one designated initializer, but **convenience ini
 
 Convenience initializers must call another initializer on the same type, whereas designated initializers must call a designated initializer on its superclass.
 
-#### Dependency Inversion Principle ---> V.IMP
+### Dependency Inversion Principle ---> V.IMP
 
 - The essential goal of this principle is to decouple objects in an application by inverting certain dependencies between them. This results in more robust and maintainable code. 
 
@@ -740,11 +739,11 @@ Convenience initializers must call another initializer on the same type, whereas
 - A common pattern used when implementing the dependency inversion principle is **dependency injection**. In its simplest form, higher-level objects do not assume which lower-level objects they need to use. Instead, those are passed to them through an initializer or property. 
 - In our implementation of ItemsViewController, we used injection through a property to give it a store. 
 
-#### Data Source Methods
+### Data Source Methods
 
 When a UITableView wants to know what to display, it calls methods from the set of methods declared in the UITableViewDataSource protocol.
 
-#### UITableViewCells
+### UITableViewCells
 
 - Each row of a table view is a view. These views are instances of UITableViewCell.
 - A cell itself has one subview – its contentView. The contentView is the superview for the content of the cell. The cell may also have an accessory view. 
@@ -753,7 +752,7 @@ When a UITableView wants to know what to display, it calls methods from the set 
 
 ![image-20190320110245577](/images/image-20190320110245577.png)
 
-#### Reusing UITableViewCells 
+### Reusing UITableViewCells 
 
 - iOS devices have a limited amount of memory. If you were displaying a list with thousands of entries in a UITableView, you would have thousands of instances of UITableViewCell. Most of these cells would take up memory needlessly. After all, if the user cannot see a cell onscreen, then there is no reason for that cell to have a claim on memory. 
 - To conserve memory and improve performance, you can reuse table view cells. When the user scrolls the table, some cells move offscreen. Offscreen cells are put into a pool of cells available for reuse. Then, instead of creating a brand new cell for every request, the data source first checks the pool. If there is an unused cell, the data source configures it with new data and returns it to the table view.
@@ -762,11 +761,11 @@ When a UITableView wants to know what to display, it calls methods from the set 
 - To reuse cells, you need to register either a prototype cell or a class with the table view for a specific reuse identifier. The reuse identifier is an arbitrary string.
 - The method `dequeueReusableCell(withIdentifier:for:)` will check the pool, or queue, of cells to see whether a cell with the correct reuse identifier already exists. If so, it will “dequeue” that cell. **If there is not an existing cell, a new cell will be created and returned.**
 
-#### Editing Table Views 
+### Editing Table Views 
 
 One of the great feature of table views is their built-in support for editing. This includes inserting new rows, deleting existing rows, and rearranging rows. In this section, you will add in support for all three of those features to LootLogger. 
 
-##### Editing Mode 
+#### Editing Mode 
 
 UITableView has an editing property, and when this property is set to true, the UITableView enters editing mode. Once the table view is in editing mode, the rows of the table can be manipulated by the user. Depending on how the table view is configured, the user can change the order of the rows, add rows, or remove rows. (Editing mode does not allow the user to edit the content of a row.) 
 
@@ -778,7 +777,7 @@ Remember that the role of a view object is to present model objects to the user;
 
 
 
-#### Design Patterns
+### Design Patterns
 
 The consistent use of design patterns throughout the development process reduces the mental overhead in solving a problem so you can create complex applications more easily and rapidly. Here are some of the design patterns that Apple is very consistent with:
 
@@ -793,7 +792,7 @@ The consistent use of design patterns throughout the development process reduces
 
 A UITableView displays a list of UITableViewCell objects. For many applications, the basic cell with its textLabel, detailTextLabel, and imageView is sufficient. However, when you need a cell with more detail or a different layout, you subclass UITableViewCell. 
 
-#### Customizing the Cell
+### Customizing the Cell
 
 - You customize the appearance of UITableViewCell subclasses by adding subviews to its contentView. Adding subviews to the contentView instead of directly to the cell itself is important because the cell will resize the contentView inside it at certain times. 
 - For example, when a table view enters editing mode, the contentView resizes itself to make room for the editing controls. If you added subviews directly to the UITableViewCell, the editing controls would obscure the subviews. The cell cannot adjust its size when entering edit mode (it must remain the width of the table view), but the contentView can and does.
@@ -802,7 +801,7 @@ A UITableView displays a list of UITableViewCell objects. For many applications,
 
 
 
-#### Dynamic Type 
+### Dynamic Type 
 
 Creating an interface that appeals to everyone can be daunting. Some people prefer more compact interfaces so they can see more information at once. Others might want to be able to easily see information at a glance, or perhaps they have poor eyesight. In short: People have different needs. Good developers strive to make apps that meet those needs. 
 
@@ -812,19 +811,19 @@ The Dynamic Type system is centered around text styles. When a font is requested
 
 ![image-20190320123003161](/images/image-20190320123003161.png)
 
-#### Responding to user changes
+### Responding to user changes
 
 When the user changes the preferred text size and returns to the application, the table view will get reloaded. Unfortunately, the labels will not know about the new preferred text size. To fix this, you need to have the labels automatically adjust to content size changes. 
 
 Open Main.storyboard and select all three ItemCell labels. Open the attributes inspector, and check the box for **Automatically Adjusts Font**
 
-##### Bad Cell Constraints
+#### Bad Cell Constraints
 
 ![image-20190320114956174](/images/image-20190320114956174.png)
 
 Since there are are no vertical constraints, the label will be centered with height 0 and would thus, be invisible.
 
-##### Better Cell constraints
+#### Better Cell constraints
 
 ![image-20190320115129303](/images/image-20190320115129303.png)
 
@@ -844,13 +843,13 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
 
 
 
-#### Properties of StackView
+### Properties of StackView
 
 ![image-20190320145501757](/images/image-20190320145501757.png)
 
 ![image-20190320145526390](/images/image-20190320145526390.png)
 
-#### Hiding Views inside Stackview
+### Hiding Views inside Stackview
 
 ```swift
 class ViewController: UIViewController {
@@ -862,7 +861,7 @@ class ViewController: UIViewController {
 }
 ```
 
-#### Implicit Constraints
+### Implicit Constraints
 
 A view has one of these priorities for each axis: 
 
@@ -871,11 +870,11 @@ A view has one of these priorities for each axis:
 - horizontal content compression resistance priority 
 - vertical content compression resistance priority 
 
-##### Content hugging priorities 
+#### Content hugging priorities 
 
 The content hugging priority is like a rubber band that is placed around a view. The rubber band makes the view not want to be bigger than its intrinsic content size in that dimension. Each priority is associated with a value from 0 to 1000. A value of 1000 means that a view cannot get bigger than its intrinsic content size on that dimension. 
 
-##### Content compression resistance priorities 
+#### Content compression resistance priorities 
 
 The content compression resistance priorities determine how much a view resists getting smaller than its intrinsic content size.  
 
@@ -890,7 +889,7 @@ The content compression resistance priorities determine how much a view resists 
 - The action item is the view object in the storyboard file that triggers the segue, like a button, a table view cell, or some other UIControl. 
 - The identifier is used to programmatically access the segue. This is useful when you want to trigger a segue that does not come from an action item, like a shake or some other interface element that cannot be set up in the storyboard file. 
 
-#### Passing Data Around 
+### Passing Data Around 
 
 Whenever a segue is triggered, the prepare(for:sender:) method is called on the view controller initiating the segue. This method has two arguments: the UIStoryboardSegue, which gives you information about which segue is happening, and the sender, which is the object that triggered the segue (a UITableViewCell or a UIButton, for example). 
 
@@ -916,19 +915,19 @@ The UIStoryboardSegue gives you three pieces of information: the source view con
 
 ![image-20190320151348721](/images/image-20190320151348721.png)
 
-#### Appearing and Disappearing Views 
+### Appearing and Disappearing Views 
 
 - Whenever a UINavigationController is about to swap views, it calls two methods: viewWillDisappear(_:) and viewWillAppear(_:). The UIViewController that is about to be popped off the stack has viewWillDisappear(_:) called. The UIViewController that will then be on top of the stack has viewWillAppear(_:) called on it. 
 - To hold on to changes in the data, when a DetailViewController is popped off the stack you will set the
    properties of its item to the contents of the text fields. When implementing these methods for views appearing and disappearing, **it is important to call the superclass’s implementation – it might have some work to do and needs to be given the chance to do it.** 
 
-#### First Responder Status
+### First Responder Status
 
 - For the shake and keyboard events, for example, there is no event location within your view hierarchy to determine which view will receive the event, so another mechanism must be used. This mechanism is the **first responder status**. Many views and controls can be a first responder within your view hierarchy – but only one at a time. Think of it as a flag that can be passed among views. Whichever view holds the flag will receive the shake or keyboard event. 
 - Instances of UITextField and UITextView have an uncommon response to touch events. When touched, a text field or a text view becomes the first responder, which in turn triggers the system to put the keyboard onscreen and send the keyboard events to the text field or view. The keyboard and the text field or view have no direct connection, but they work together through the first responder status. 
 - This is a neat way to ensure that the keyboard input is delivered to the correct text field. The concept of a first responder is part of the broader topic of event handling in Cocoa Touch programming that includes the UIResponder class and the responder chain. *<u>You can visit Apple’s Event Handling Guide for iOS for more information.</u>* 
 
-#### UINavigationBar
+### UINavigationBar
 
 - Every UIViewController has a navigationItem property of type UINavigationItem. However, unlike
   UINavigationBar, UINavigationItem is not a subclass of UIView, so it cannot appear on the screen. 
@@ -977,7 +976,7 @@ Although your types can conform to just one of these protocols, it's common for 
 typealias Codable = Decodable & Encodable 
 ```
 
-#### Property Lists 
+### Property Lists 
 
 - A property list is a representation of some data that can be saved to disk and read back in at a later point. Property lists can represent hierarchies of data and so are a great tool for saving and loading lightweight object graphs. 
 
@@ -995,7 +994,7 @@ func saveChanges() -> Bool {
 }
 ```
 
-#### Error Handling
+### Error Handling
 
 - Optionals provide a simple way to represent failure when you do not care about the reason for failure. When you need to know why something failed, an optional will not provide enough information.
 - If a method could generate an error, its method signature needs to indicate this using the throws keyword. Error throwing and exception hanndling is 'opt-in' in Swift.
@@ -1016,13 +1015,13 @@ func deleteImage(at imageURL: URL) {
 } 
 ```
 
-#### Application Sandbox
+### Application Sandbox
 
 Every iOS application has its own application sandbox. An application sandbox is a directory on the filesystem that is barricaded from the rest of the filesystem. Your application must stay in its sandbox, and no other application can access its sandbox.
 
 ![image-20190321105354677](/images/image-20190321105354677.png)
 
-#### Constructing a file URL 
+### Constructing a file URL 
 
 The instances of our model objects will be saved to a single file in the Documents directory. The store will handle writing to and reading from that file. To do this, the store needs to construct a URL to this file. 
 
@@ -1041,7 +1040,7 @@ let itemArchiveURL: URL = {
 
 - In iOS, the last argument is always the same. (This method is borrowed from macOS, where there are significantly more options.) The first argument is a SearchPathDirectory enumeration that specifies the directory in the sandbox you want the URL for. For example, searching for .cachesDirectory will return the Caches directory in the application’s sandbox.
 
-#### Persisting the Items 
+### Persisting the Items 
 
 You have a place to save data on the filesystem and a model object that can be saved to the filesystem. How do you kick off the saving and loading processes, and when do you do it? 
 
@@ -1064,7 +1063,7 @@ func saveChanges() -> Bool {
 > **<u>NOTE</u>**: When the user leaves the application (often by swiping up on the Home indicator), the message
 > applicationDidEnterBackground(_:) is sent to the AppDelegate.
 
-#### Loading the Items
+### Loading the Items
 
 ```swift
 init() { 
@@ -1093,19 +1092,19 @@ When the user swipes up on the Home indicator or switches to another application
 
 **An application in the suspended state cannot execute code.** You cannot see its interface, and any resources it does not need while suspended are destroyed. A suspended application is essentially flash-frozen and can be quickly thawed when the user relaunches it. 
 
-#### Application states flow chart
+### Application states flow chart
 
 ![image-20190321120841914](/images/image-20190321120841914.png)
 
-#### Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?
+### Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?
 
 These push notifications are generally coming from a web service. These web services push the data to Apple, and Apple then sends us the notification. The code for sending these push nontifications is not in our app.
 
-#### Q. How can we reply directly from the notification then?
+### Q. How can we reply directly from the notification then?
 
 Such actions in response to notifications is possible when we have a separate small "app" bundled with our app. This small app generally has a single view controller. When we reply from the notification window, we are basically using this small app, as opposed to our main application. This app has it's own separae application state and transitions. So, our app need not be made active for such actions to be performed. 
 
-#### Q. What does the background app refresh option do?
+### Q. What does the background app refresh option do?
 
 When background app refresh is enabled, the OS may decide to enable the app to load or refresh it's data for a brief period of time, when the OS is not busy doing other things. So for this brief period, the app may be made active, and then back to inactive and suspended.
 
@@ -1126,11 +1125,11 @@ For example, when adding a new contact to your phone, you are presented with a s
 Modally presented view controllers often occupy the entire screen, but in certain contexts they might only take up a
 portion of the screen. This is especially true on iPad where there is more space to work with. In either case, the user is expected to interact with the modally presented view controller before proceeding.
 
-#### Alert controllers 
+### Alert controllers 
 
 To allow the user to choose a photo source, you will present an alert with the possible choices. Alerts are often used to display information to the user on which they must act. When you want to display an alert, you create an instance of UIAlertController with a preferred style. The two available styles are UIAlertControllerStyle.actionSheet and UIAlertControllerStyle.alert 
 
-##### Presenting programmatically 
+#### Presenting programmatically 
 
 ```swift
 class CalendarViewController: UIViewController {
@@ -1141,7 +1140,7 @@ class CalendarViewController: UIViewController {
 }
 ```
 
-##### Dismissing 
+#### Dismissing 
 
 ```swift
 class CalendarViewController: UIViewController {
@@ -1157,7 +1156,7 @@ class CalendarViewController: UIViewController {
 
 
 
-##### Completion closure 
+#### Completion closure 
 
 ```swift
 dismiss(animated: true, completion: {
@@ -1180,7 +1179,7 @@ There are a number of capabilities on iOS that require user approval before use.
 
 For each of these, your application must supply a usage description that specifies the reason that your application wants to access this information. This description will be presented to the user whenever the application accesses that capability.
 
-#### Caching in the data store
+### Caching in the data store
 
 ```swift
 class ImageStore { 
@@ -1233,7 +1232,7 @@ The relative sizes of screens are defined in *size classes*. A **size class** re
 
 Notice that the size classes cover both screen sizes and orientations. **Instead of thinking about interfaces in terms of orientation or device, it is better to think in terms of size classes.**
 
-#### Modifying Traits for a Specific Size Class 
+### Modifying Traits for a Specific Size Class 
 
 When editing the interface for a specific size class combination, you are able to change: 
 
@@ -1245,7 +1244,7 @@ When editing the interface for a specific size class combination, you are able t
 
 > **<u>NOTE:</u>** To detect a change in device orientation, we can use `viewWillTransition(to:with:)`. 
 
-#### Varying constraints for different size classes
+### Varying constraints for different size classes
 
 - To activate constraints on only a particular size classes ,for a partiular trait, you can change things like the axis of the stack view, and it will be applied to only that particular device orientation. We can add size-class-specific options to do this.
 
@@ -1254,11 +1253,11 @@ When editing the interface for a specific size class combination, you are able t
 
 ## Web Services
 
-#### Building the URL 
+### Building the URL 
 
 Communication with servers is done via requests. A request encapsulates information about the interaction between the application and the server, and its most important piece of information is the destination URL. 
 
-#### Access Control
+### Access Control
 
 You can control what can access the properties and methods on your own types. There are five levels of access control that can be applied to types, properties, and methods: 
 
@@ -1268,7 +1267,7 @@ You can control what can access the properties and methods on your own types. Th
 - fileprivate – Anything in the same source file can see this type, property, or method. 
 - private – Anything within the enclosing scope can access this type, property, or method. 
 
-#### Sending the Request
+### Sending the Request
 
 - A URL request encapsulates information about the communication from the application to the server. Most
   importantly, it specifies the URL of the server for the request, but it also has a timeout interval, a cache policy, and other metadata about the request. A request is represented by the URLRequest class. 
@@ -1283,7 +1282,7 @@ You can control what can access the properties and methods on your own types. Th
 
 ![image-20190321165226836](/images/image-20190321165226836.png)
 
-#### The Main Thread 
+### The Main Thread 
 
 - Modern iOS devices have multicore processors that enable them to run multiple chunks of code simultaneously. A common way to express this is by representing each computation with a different thread of control. 
 - When the web service completes, you want it to update the image view. But by default, URLSessionDataTask runs the completion handler on a background thread. You need a way to force code to run on the main thread to update the image view. You can do that easily using the OperationQueue class. 
@@ -1292,7 +1291,7 @@ You can control what can access the properties and methods on your own types. Th
 
 ## Collection Views
 
-#### Creating a UICollectionView 
+### Creating a UICollectionView 
 
 ```swift
 let layout = UICollectionViewFlowLayout()
@@ -1301,7 +1300,7 @@ cv.delegate = self
 cv.dataSource = self
 ```
 
-#### UICollectionViewDataSource 
+### UICollectionViewDataSource 
 
 ```swift
 var photos: [Photos] = ...
@@ -1320,7 +1319,7 @@ func collectionView(_ collectionView: UICollectionView,
 } 
 ```
 
-#### Customizing a Collection Layout
+### Customizing a Collection Layout
 
 ![image-20190322102944530](/images/image-20190322102944530.png)
 
@@ -1337,4 +1336,4 @@ Some of the properties you can customize on UICollectionViewFlowLayout are:
 - minimumInteritemSpacing – What is the minimum spacing between items in a row (or column, if scrolling horizontally)? 
 - itemSize – What is the size of each item? 
 - sectionInset – What are the margins used to lay out content for each section?
-   
+  

@@ -1,0 +1,1745 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Intro to React and Redux - Techie Notes</title>
+<meta name="description" content="Important concepts captured from React documentation">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Techie Notes">
+<meta property="og:title" content="Intro to React and Redux">
+<meta property="og:url" content="http://localhost:4000/tech/Intro-to-React/">
+
+
+  <meta property="og:description" content="Important concepts captured from React documentation">
+
+
+
+
+
+  <meta name="twitter:site" content="@parth94mehta">
+  <meta name="twitter:title" content="Intro to React and Redux">
+  <meta name="twitter:description" content="Important concepts captured from React documentation">
+  <meta name="twitter:url" content="http://localhost:4000/tech/Intro-to-React/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-05-01T08:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/Intro-to-React/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Parth Mehta",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Techie Notes</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/" title="My projects">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://bit.ly/parthmehta" title="Download resume">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#tech" itemprop="item"><span itemprop="name">Tech</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Intro to React and Redux</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Parth Mehta</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Software Developer @ Yahoo | Machine Learning | Columbia University
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">SF Bay Area, California</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:parth.mehta@columbia.edu">
+            <meta itemprop="email" content="parth.mehta@columbia.edu" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/pm2877" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Intro to React and Redux">
+    <meta itemprop="description" content="Important concepts captured from React documentation">
+    <meta itemprop="datePublished" content="May 01, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Intro to React and Redux
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  32 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#general-notes">General Notes:</a></li>
+  <li><a href="#embedding-expressions-in-jsx">Embedding Expressions in JSX</a></li>
+  <li><a href="#jsx-is-an-expression-too">JSX is an Expression Too</a></li>
+  <li><a href="#components">Components</a></li>
+  <li><a href="#props">Props</a></li>
+  <li><a href="#extracting-and-reusing-components">Extracting and Reusing Components</a></li>
+  <li><a href="#state">State</a>
+          - {:.} <a href="#class-constructor">Class Constructor</a>
+    <ul>
+      <li><a href="#using-state-correctly">Using State Correctly</a></li>
+      <li><a href="#do-not-modify-state-directly">Do Not Modify State Directly</a></li>
+      <li><a href="#state-updates-may-be-asynchronous">State Updates May Be Asynchronous</a></li>
+      <li><a href="#state-updates-are-merged">State Updates are Merged</a></li>
+    </ul>
+  </li>
+  <li><a href="#the-data-flows-down">The Data Flows Down</a>
+              - {:.} <a href="#this-is-commonly-called-a-top-down-or-unidirectional-data-flow-any-state-is-always-owned-by-some-specific-component-and-any-data-or-ui-derived-from-that-state-can-only-affect-components-below-them-in-the-tree">This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</a>
+              - {:.} <a href="#if-you-imagine-a-component-tree-as-a-waterfall-of-props-each-components-state-is-like-an-additional-water-source-that-joins-it-at-an-arbitrary-point-but-also-flows-down">If you imagine a component tree as a waterfall of props, each component’s state is like an additional water source that joins it at an arbitrary point but also flows down.</a></li>
+  <li><a href="#event-handling">Event Handling</a>
+              - {:.} <a href="#side-note">Side Note:</a></li>
+  <li><a href="#lists-and-keys">Lists and Keys</a>
+    <ul>
+      <li><a href="#rendering-multiple-components">Rendering Multiple Components</a></li>
+      <li><a href="#basic-list-component">Basic List Component</a>
+      - {:.} <a href="#a-key-is-a-special-string-attribute-you-need-to-include-when-creating-lists-of-elements-well-discuss-why-its-important-in-the-next-section">A “key” is a special string attribute you need to include when creating lists of elements. We’ll discuss why it’s important in the next section.</a></li>
+    </ul>
+  </li>
+  <li><a href="#keys">Keys</a>
+          - {:.} <a href="#very-important">VERY IMPORTANT:</a></li>
+  <li><a href="#lifting-state-up">Lifting State Up</a></li>
+  <li><a href="#containment">Containment</a></li>
+  <li><a href="#build-a-static-version-in-react">Build A Static Version in React</a></li>
+  <li><a href="#react-lifecycle-methods">React Lifecycle Methods</a>
+    <ul>
+      <li><a href="#constructor">constructor()</a></li>
+      <li><a href="#static-getderivedstatefromprops">static getDerivedStateFromProps()</a></li>
+      <li><a href="#unsafe_componentwillmount">UNSAFE_componentWillMount()</a></li>
+      <li><a href="#componentdidmount">componentDidMount()</a></li>
+      <li><a href="#unsafe_componentwillreceiveprops">UNSAFE_componentWillReceiveProps()</a></li>
+      <li><a href="#shouldcomponentupdate">shouldComponentUpdate()</a></li>
+      <li><a href="#unsafe_componentwillupdate">UNSAFE_componentWillUpdate()</a></li>
+      <li><a href="#getsnapshotbeforeupdate">getSnapshotBeforeUpdate()</a></li>
+      <li><a href="#componentdidupdate">componentDidUpdate()</a></li>
+      <li><a href="#componentwillunmount">componentWillUnmount()</a></li>
+      <li><a href="#componentdidcatch">componentDidCatch()</a></li>
+      <li><a href="#setstate">setState()</a></li>
+      <li><a href="#forceupdate">forceUpdate()</a></li>
+    </ul>
+  </li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#event-bubbling-through-portals">Event Bubbling Through Portals</a></li>
+  <li><a href="#redux---three-principles">Redux - Three Principles</a>
+    <ul>
+      <li><a href="#single-source-of-truth">Single source of truth</a></li>
+      <li><a href="#state-is-read-only">State is read-only:</a></li>
+      <li><a href="#changes-are-made-with-pure-functions">Changes are made with pure functions:</a></li>
+      <li><a href="#action">Action:</a></li>
+      <li><a href="#note-on-boilerplate">Note on Boilerplate</a></li>
+    </ul>
+  </li>
+  <li><a href="#action-creators">Action Creators</a>
+    <ul>
+      <li><a href="#data-flow---most-important">Data Flow - Most Important</a>
+      - {:.} <a href="#1-google-docs-overview">1. Google Docs Overview:</a>
+          - {:.} <a href="#httpsdocsgooglecomdocumentd1crsp0a16jlzhwr-o3dsatfigxkfgyoe72mu4b1wnjxkedituserstoinviteparthmehtaoathcomts5ac3fcb5actionbutton1">https://docs.google.com/document/d/1CrsP0a16JLZHWR-O3dsATFIGxKFgyOE72Mu4b1wnJxk/edit?userstoinvite=parth.mehta@oath.com&amp;ts=5ac3fcb5&amp;actionButton=1</a>
+      - {:.} <a href="#2-react-docs-httpsreactjsorg">2. React Docs: https://reactjs.org</a>
+      - {:.} <a href="#3-redux-docs-httpsreduxjsorg">3. Redux Docs: https://redux.js.org</a>
+      - {:.} <a href="#4-redux-select-httpsgithubcomreactjsreselect">4. Redux-Select: https://github.com/reactjs/reselect</a>
+      - {:.} <a href="#5-react-atomic-css-httpsgitouroathcommailreact-atomic-css">5. React-atomic-css: https://git.ouroath.com/Mail/react-atomic-css</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p>[TOC]</p>
+
+<h2 id="general-notes">General Notes:</h2>
+
+<ol>
+  <li>By default, React DOM <a href="http://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-on-html">escapes</a> any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">XSS (cross-site-scripting)</a> attacks.</li>
+  <li>React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.</li>
+  <li>Arrow Functions: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</li>
+  <li>Remember that whenever conditions become too complex, it might be a good time to <a href="https://reactjs.org/docs/components-and-props.html#extracting-components">extract a component</a>.</li>
+  <li>Keys only make sense in the context of the surrounding array. If you <a href="https://reactjs.org/docs/components-and-props.html#extracting-components">extract</a> a <code class="highlighter-rouge">ListItem</code> component, you should keep the key on the <code class="highlighter-rouge">&lt;ListItem /&gt;</code> elements in the array rather than on the <code class="highlighter-rouge">&lt;li&gt;</code> element in the <code class="highlighter-rouge">ListItem</code> itself.</li>
+  <li>A good rule of thumb is that elements inside the map() call need keys.</li>
+  <li>When you see something wrong in the UI, you can use <a href="https://github.com/facebook/react-devtools">React Developer Tools</a> to inspect the props and move up the tree until you find the component responsible for updating the state. This lets you trace the bugs to their source.</li>
+  <li><strong>Spread syntax</strong> (eg. <code class="highlighter-rouge">…payload</code>)allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.</li>
+</ol>
+
+<h2 id="embedding-expressions-in-jsx">Embedding Expressions in JSX</h2>
+
+<p>You can embed any <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">JavaScript expression</a> in JSX by wrapping it in curly braces.</p>
+
+<h2 id="jsx-is-an-expression-too">JSX is an Expression Too</h2>
+
+<p>After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.</p>
+
+<p>This means that you can use JSX inside of <code class="highlighter-rouge">if</code> statements and <code class="highlighter-rouge">for</code> loops, assign it to variables, accept it as arguments, and return it from functions:</p>
+
+<h2 id="components">Components</h2>
+
+<p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+
+<h2 id="props">Props</h2>
+
+<p>When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object “props”.</p>
+
+<p>Whether you declare a component <a href="https://reactjs.org/docs/components-and-props.html#functional-and-class-components">as a function or a class</a>, it must never modify its own props.</p>
+
+<h2 id="extracting-and-reusing-components">Extracting and Reusing Components</h2>
+
+<p>A good rule of thumb is that if a part of your UI is used several times (<code class="highlighter-rouge">Button</code>, <code class="highlighter-rouge">Panel</code>, <code class="highlighter-rouge">Avatar</code>), or is complex enough on its own (<code class="highlighter-rouge">App</code>, <code class="highlighter-rouge">FeedStory</code>, <code class="highlighter-rouge">Comment</code>), it is a good candidate to be a reusable component.</p>
+
+<h2 id="state">State</h2>
+
+<p>State is similar to props, but it is private and fully controlled by the component. components defined as classes have some additional features. Local state is exactly that: a feature available only to classes.</p>
+
+<h5 id="class-constructor">Class Constructor</h5>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">date</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()};</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="using-state-correctly">Using State Correctly</h3>
+
+<p>There are three things you should know about <code class="highlighter-rouge">setState()</code>.</p>
+
+<h3 id="do-not-modify-state-directly">Do Not Modify State Directly</h3>
+
+<p>For example, this will not re-render a component:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Wrong
+this.state.comment = 'Hello';
+</code></pre></div></div>
+
+<p>Instead, use <code class="highlighter-rouge">setState()</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Correct
+this.setState({comment: 'Hello'});
+</code></pre></div></div>
+
+<p>The only place where you can assign <code class="highlighter-rouge">this.state</code> is the constructor.</p>
+
+<h3 id="state-updates-may-be-asynchronous">State Updates May Be Asynchronous</h3>
+
+<p>React may batch multiple <code class="highlighter-rouge">setState()</code> calls into a single update for performance.</p>
+
+<p>Because <code class="highlighter-rouge">this.props</code> and <code class="highlighter-rouge">this.state</code> may be updated asynchronously, you should not rely on their values for calculating the next state.</p>
+
+<p>For example, this code may fail to update the counter:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Wrong
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+</code></pre></div></div>
+
+<p>To fix it, use a second form of <code class="highlighter-rouge">setState()</code> that accepts a function rather than an object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Correct
+this.setState((prevState, props) =&gt; ({
+  counter: prevState.counter + props.increment
+}));
+</code></pre></div></div>
+
+<p>We used an <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a> above, but it also works with regular functions:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Correct
+this.setState(function(prevState, props) {
+  return {
+    counter: prevState.counter + props.increment
+  };
+});
+</code></pre></div></div>
+
+<h3 id="state-updates-are-merged">State Updates are Merged</h3>
+
+<p>When you call <code class="highlighter-rouge">setState()</code>, React merges the object you provide into the current state.</p>
+
+<p>For example, your state may contain several independent variables:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+      comments: []
+    };
+  }
+</code></pre></div></div>
+
+<p>Then you can update them independently with separate <code class="highlighter-rouge">setState()</code> calls:</p>
+
+<pre><code class="language-Javascript">  componentDidMount() {
+    fetchPosts().then(response =&gt; {
+      this.setState({
+        posts: response.posts
+      });
+    });
+
+    fetchComments().then(response =&gt; {
+      this.setState({
+        comments: response.comments
+      });
+    });
+  }
+</code></pre>
+
+<p>The merging is shallow, so <code class="highlighter-rouge">this.setState({comments})</code> leaves <code class="highlighter-rouge">this.state.posts</code> intact, but completely replaces <code class="highlighter-rouge">this.state.comments</code>.</p>
+
+<h2 id="the-data-flows-down">The Data Flows Down</h2>
+
+<p>Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care whether it is defined as a function or a class.</p>
+
+<p>This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.</p>
+
+<p>A component may choose to pass its state down as props to its child components. This also works for user-defined components.</p>
+
+<p>The <code class="highlighter-rouge">FormattedDate</code> component would receive the <code class="highlighter-rouge">date</code> in its props and wouldn’t know whether it came from the <code class="highlighter-rouge">Clock</code>’s state, from the <code class="highlighter-rouge">Clock</code>’s props, or was typed by hand:</p>
+
+<h6 id="this-is-commonly-called-a-top-down-or-unidirectional-data-flow-any-state-is-always-owned-by-some-specific-component-and-any-data-or-ui-derived-from-that-state-can-only-affect-components-below-them-in-the-tree">This is commonly called a “top-down” or “unidirectional” data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.</h6>
+
+<h6 id="if-you-imagine-a-component-tree-as-a-waterfall-of-props-each-components-state-is-like-an-additional-water-source-that-joins-it-at-an-arbitrary-point-but-also-flows-down">If you imagine a component tree as a waterfall of props, each component’s state is like an additional water source that joins it at an arbitrary point but also flows down.</h6>
+
+<h2 id="event-handling">Event Handling</h2>
+
+<p>When you define a component using an <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes">ES6 class</a>, a common pattern is for an event handler to be a method on the class. For example, this <code class="highlighter-rouge">Toggle</code> component renders a button that lets the user toggle between “ON” and “OFF” states:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Toggle</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">isToggleOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">};</span>
+
+    <span class="c1">// This binding is necessary to make `this` work in the callback</span>
+    <span class="c1">// this.handleClick = this.handleClick.bind(this);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Warning: this is *experimental* syntax.</span>
+  <span class="nx">handleClick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'this is:'</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">handleClick</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">isToggleOn</span> <span class="p">?</span> <span class="s1">'ON'</span> <span class="p">:</span> <span class="s1">'OFF'</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">Toggle</span> <span class="o">/&gt;</span><span class="p">,</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<blockquote>
+  <h6 id="side-note">Side Note:</h6>
+
+  <p>You have to be careful about the meaning of <code class="highlighter-rouge">this</code> in JSX callbacks. In JavaScript, class methods are not <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind">bound</a> by default. If you forget to bind <code class="highlighter-rouge">this.handleClick</code> and pass it to <code class="highlighter-rouge">onClick</code>, <code class="highlighter-rouge">this</code> will be <code class="highlighter-rouge">undefined</code> when the function is actually called.</p>
+
+  <p>This is not React-specific behavior; it is a part of <a href="https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/">how functions work in JavaScript</a>. Generally, if you refer to a method without <code class="highlighter-rouge">()</code> after it, such as <code class="highlighter-rouge">onClick={this.handleClick}</code>, you should bind that method.</p>
+
+  <p>If calling <code class="highlighter-rouge">bind</code> annoys you, there are two ways you can get around this. If you are using the experimental <a href="https://babeljs.io/docs/plugins/transform-class-properties/">public class fields syntax</a>, you can use class fields to correctly bind callbacks.</p>
+</blockquote>
+
+<h2 id="lists-and-keys">Lists and Keys</h2>
+
+<p>First, let’s review how you transform lists in JavaScript.</p>
+
+<p>Given the code below, we use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code class="highlighter-rouge">map()</code></a> function to take an array of <code class="highlighter-rouge">numbers</code> and double their values. We assign the new array returned by <code class="highlighter-rouge">map()</code> to the variable <code class="highlighter-rouge">doubled</code> and log it:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">doubled</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubled</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>This code logs <code class="highlighter-rouge">[2, 4, 6, 8, 10]</code> to the console.</p>
+
+<p>In React, transforming arrays into lists of <a href="https://reactjs.org/docs/rendering-elements.html">elements</a> is nearly identical.</p>
+
+<h3 id="rendering-multiple-components">Rendering Multiple Components</h3>
+
+<p>You can build collections of elements and <a href="https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx">include them in JSX</a> using curly braces <code class="highlighter-rouge">{}</code>.</p>
+
+<p>Below, we loop through the <code class="highlighter-rouge">numbers</code> array using the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code class="highlighter-rouge">map()</code></a> function. We return an <code class="highlighter-rouge">&lt;li&gt;</code> element for each item. Finally, we assign the resulting array of elements to <code class="highlighter-rouge">listItems</code>:</p>
+
+<pre><code class="language-Javascript">const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =&gt;
+  &lt;li&gt;{number}&lt;/li&gt;
+);
+</code></pre>
+
+<p>We include the entire <code class="highlighter-rouge">listItems</code> array inside a <code class="highlighter-rouge">&lt;ul&gt;</code> element, and <a href="https://reactjs.org/docs/rendering-elements.html#rendering-an-element-into-the-dom">render it to the DOM</a>:</p>
+
+<pre><code class="language-Javascript">ReactDOM.render(
+  &lt;ul&gt;{listItems}&lt;/ul&gt;,
+  document.getElementById('root')
+);
+</code></pre>
+
+<p><a href="https://codepen.io/gaearon/pen/GjPyQr?editors=0011">Try it on CodePen.</a></p>
+
+<p>This code displays a bullet list of numbers between 1 and 5.</p>
+
+<h3 id="basic-list-component">Basic List Component</h3>
+
+<p>Usually you would render lists inside a <a href="https://reactjs.org/docs/components-and-props.html">component</a>.</p>
+
+<p>We can refactor the previous example into a component that accepts an array of <code class="highlighter-rouge">numbers</code> and outputs an unordered list of elements.</p>
+
+<h5 id="a-key-is-a-special-string-attribute-you-need-to-include-when-creating-lists-of-elements-well-discuss-why-its-important-in-the-next-section">A “key” is a special string attribute you need to include when creating lists of elements. We’ll discuss why it’s important in the next section.</h5>
+
+<p>Let’s assign a <code class="highlighter-rouge">key</code> to our list items inside <code class="highlighter-rouge">numbers.map()</code> and fix the missing key issue.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">NumberList</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="nx">props</span><span class="p">.</span><span class="nx">numbers</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">number</span><span class="p">.</span><span class="nx">toString</span><span class="p">()}</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">number</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">listItems</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">NumberList</span> <span class="nx">numbers</span><span class="o">=</span><span class="p">{</span><span class="nx">numbers</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">,
+</span>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p><a href="https://codepen.io/gaearon/pen/jrXYRR?editors=0011">Try it on CodePen.</a></p>
+
+<h2 id="keys">Keys</h2>
+
+<p>Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">listItems</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">number</span><span class="p">.</span><span class="nx">toString</span><span class="p">()}</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="nx">number</span><span class="p">}</span>
+  <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">todoItems</span> <span class="o">=</span> <span class="nx">todos</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">todo</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">todo</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="nx">todo</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span>
+  <span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h5 id="very-important">VERY IMPORTANT:</h5>
+
+<p>Keys serve as a hint to React but they don’t get passed to your components. If you need the same value in your component, pass it explicitly as a prop with a different name:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const content = posts.map((post) =&gt;
+  &lt;Post
+    key={post.id}
+    id={post.id}
+    title={post.title} /&gt;
+);
+</code></pre></div></div>
+
+<p>With the example above, the <code class="highlighter-rouge">Post</code> component can read <code class="highlighter-rouge">props.id</code>, but not <code class="highlighter-rouge">props.key</code>.</p>
+
+<p>Overall, this makes it so that <code class="highlighter-rouge">&lt;input type="text"&gt;</code>, <code class="highlighter-rouge">&lt;textarea&gt;</code>, and <code class="highlighter-rouge">&lt;select&gt;</code> all work very similarly - they all accept a <code class="highlighter-rouge">value</code> attribute that you can use to implement a controlled component.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>You can pass an array into the <code class="highlighter-rouge">value</code> attribute, allowing you to select multiple options in a <code class="highlighter-rouge">select</code> tag:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;select multiple={true} value={['B', 'C']}&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="lifting-state-up">Lifting State Up</h2>
+
+<p>There should be a single “source of truth” for any data that changes in a React application. Usually, the state is first added to the component that needs it for rendering. Then, if other components also need it, you can lift it up to their closest common ancestor. Instead of trying to sync the state between different components, you should rely on the <a href="https://reactjs.org/docs/state-and-lifecycle.html#the-data-flows-down">top-down data flow</a>.</p>
+
+<p>Lifting state involves writing more “boilerplate” code than two-way binding approaches, but as a benefit, it takes less work to find and isolate bugs. Since any state “lives” in some component and that component alone can change it, the surface area for bugs is greatly reduced. Additionally, you can implement any custom logic to reject or transform user input.</p>
+
+<p>If something can be derived from either props or state, it probably shouldn’t be in the state. For example, instead of storing both <code class="highlighter-rouge">celsiusValue</code> and <code class="highlighter-rouge">fahrenheitValue</code>, we store just the last edited <code class="highlighter-rouge">temperature</code> and its <code class="highlighter-rouge">scale</code>. The value of the other input can always be calculated from them in the <code class="highlighter-rouge">render()</code> method. This lets us clear or apply rounding to the other field without losing any precision in the user input.</p>
+
+<h2 id="containment">Containment</h2>
+
+<p>Some components don’t know their children ahead of time. This is especially common for components like <code class="highlighter-rouge">Sidebar</code> or <code class="highlighter-rouge">Dialog</code> that represent generic “boxes”.</p>
+
+<p>We recommend that such components use the special <code class="highlighter-rouge">children</code> prop to pass children elements directly into their output:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function FancyBorder(props) {
+  return (
+    &lt;div className={'FancyBorder FancyBorder-' + props.color}&gt;
+      {props.children}
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<p>This lets other components pass arbitrary children to them by nesting the JSX:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function WelcomeDialog() {
+  return (
+    &lt;FancyBorder color="blue"&gt;
+      &lt;h1 className="Dialog-title"&gt;
+        Welcome
+      &lt;/h1&gt;
+      &lt;p className="Dialog-message"&gt;
+        Thank you for visiting our spacecraft!
+      &lt;/p&gt;
+    &lt;/FancyBorder&gt;
+  );
+}
+</code></pre></div></div>
+
+<p><a href="https://codepen.io/gaearon/pen/ozqNOV?editors=0010">Try it on CodePen.</a></p>
+
+<p>Anything inside the <code class="highlighter-rouge">&lt;FancyBorder&gt;</code> JSX tag gets passed into the <code class="highlighter-rouge">FancyBorder</code>component as a <code class="highlighter-rouge">children</code> prop. Since <code class="highlighter-rouge">FancyBorder</code> renders <code class="highlighter-rouge">{props.children}</code>inside a <code class="highlighter-rouge">&lt;div&gt;</code>, the passed elements appear in the final output.</p>
+
+<h2 id="build-a-static-version-in-react">Build A Static Version in React</h2>
+
+<p>See the Pen <a href="https://codepen.io/gaearon/pen/BwWzwm">Thinking In React: Step 2</a> on <a href="http://codepen.io/">CodePen</a>.</p>
+
+<p>Now that you have your component hierarchy, it’s time to implement your app. The easiest way is to build a version that takes your data model and renders the UI but has no interactivity. It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. We’ll see why.</p>
+
+<p>To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using <em>props</em>. <em>props</em> are a way of passing data from parent to child. If you’re familiar with the concept of <em>state</em>, <strong>don’t use state at all</strong> to build this static version. State is reserved only for interactivity, that is, data that changes over time. Since this is a static version of the app, you don’t need it.</p>
+
+<p>You can build top-down or bottom-up. That is, you can either start with building the components higher up in the hierarchy (i.e. starting with <code class="highlighter-rouge">FilterableProductTable</code>) or with the ones lower in it (<code class="highlighter-rouge">ProductRow</code>). In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up and write tests as you build.</p>
+
+<p>At the end of this step, you’ll have a library of reusable components that render your data model. The components will only have <code class="highlighter-rouge">render()</code> methods since this is a static version of your app. The component at the top of the hierarchy (<code class="highlighter-rouge">FilterableProductTable</code>) will take your data model as a prop. If you make a change to your underlying data model and call <code class="highlighter-rouge">ReactDOM.render()</code> again, the UI will be updated. It’s easy to see how your UI is updated and where to make changes since there’s nothing complicated going on. React’s <strong>one-way data flow</strong> (also called <em>one-way binding</em>) keeps everything modular and fast.</p>
+
+<p>Simply refer to the <a href="https://reactjs.org/docs/">React docs</a> if you need help executing this step.</p>
+
+<h2 id="react-lifecycle-methods">React Lifecycle Methods</h2>
+
+<h3 id="constructor"><code class="highlighter-rouge">constructor()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(props)
+</code></pre></div></div>
+
+<p>The constructor for a React component is called before it is mounted. When implementing the constructor for a <code class="highlighter-rouge">React.Component</code> subclass, you should call <code class="highlighter-rouge">super(props)</code> before any other statement. Otherwise, <code class="highlighter-rouge">this.props</code> will be undefined in the constructor, which can lead to bugs.</p>
+
+<p>Avoid introducing any side-effects or subscriptions in the constructor. For those use cases, use <code class="highlighter-rouge">componentDidMount()</code> instead.</p>
+
+<p>The constructor is the right place to initialize state. To do so, just assign an object to <code class="highlighter-rouge">this.state</code>; don’t try to call <code class="highlighter-rouge">setState()</code> from the constructor. The constructor is also often used to bind event handlers to the class instance.</p>
+
+<p>If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.</p>
+
+<hr />
+
+<h3 id="static-getderivedstatefromprops"><code class="highlighter-rouge">static getDerivedStateFromProps()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>static getDerivedStateFromProps(nextProps, prevState)
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">getDerivedStateFromProps</code> is invoked after a component is instantiated as well as when it receives new props. It should return an object to update state, or null to indicate that the new props do not require any state updates.</p>
+
+<p>Note that if a parent component causes your component to re-render, this method will be called even if props have not changed. You may want to compare new and previous values if you only want to handle changes.</p>
+
+<p>Calling <code class="highlighter-rouge">this.setState()</code> generally doesn’t trigger <code class="highlighter-rouge">getDerivedStateFromProps()</code>.</p>
+
+<hr />
+
+<h3 id="unsafe_componentwillmount"><code class="highlighter-rouge">UNSAFE_componentWillMount()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UNSAFE_componentWillMount()
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">UNSAFE_componentWillMount()</code> is invoked just before mounting occurs. It is called before <code class="highlighter-rouge">render()</code>, therefore calling <code class="highlighter-rouge">setState()</code> synchronously in this method will not trigger an extra rendering. Generally, we recommend using the <code class="highlighter-rouge">constructor()</code> instead for initializing state.</p>
+
+<p>Avoid introducing any side-effects or subscriptions in this method. For those use cases, use <code class="highlighter-rouge">componentDidMount()</code> instead.</p>
+
+<p>This is the only lifecycle hook called on server rendering.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>This lifecycle was previously named <code class="highlighter-rouge">componentWillMount</code>. That name will continue to work until version 17. Use the <a href="https://github.com/reactjs/react-codemod#rename-unsafe-lifecycles"><code class="highlighter-rouge">rename-unsafe-lifecycles</code> codemod</a> to automatically update your components.</p>
+</blockquote>
+
+<h3 id="componentdidmount"><code class="highlighter-rouge">componentDidMount()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentDidMount()
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">componentDidMount()</code> is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.</p>
+
+<p>This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in <code class="highlighter-rouge">componentWillUnmount()</code>.</p>
+
+<p>Calling <code class="highlighter-rouge">setState()</code> in this method will trigger an extra rendering, but it will happen before the browser updates the screen. This guarantees that even though the <code class="highlighter-rouge">render()</code> will be called twice in this case, the user won’t see the intermediate state. Use this pattern with caution because it often causes performance issues. It can, however, be necessary for cases like modals and tooltips when you need to measure a DOM node before rendering something that depends on its size or position.</p>
+
+<hr />
+
+<h3 id="unsafe_componentwillreceiveprops"><code class="highlighter-rouge">UNSAFE_componentWillReceiveProps()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UNSAFE_componentWillReceiveProps(nextProps)
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>It is recommended that you use the static <a href="https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops"><code class="highlighter-rouge">getDerivedStateFromProps</code></a> lifecycle instead of <code class="highlighter-rouge">UNSAFE_componentWillReceiveProps</code>. <a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes">Learn more about this recommendation here.</a></p>
+</blockquote>
+
+<p><code class="highlighter-rouge">UNSAFE_componentWillReceiveProps()</code> is invoked before a mounted component receives new props. If you need to update the state in response to prop changes (for example, to reset it), you may compare <code class="highlighter-rouge">this.props</code> and <code class="highlighter-rouge">nextProps</code> and perform state transitions using <code class="highlighter-rouge">this.setState()</code> in this method.</p>
+
+<p>Note that if a parent component causes your component to re-render, this method will be called even if props have not changed. Make sure to compare the current and next values if you only want to handle changes.</p>
+
+<p>React doesn’t call <code class="highlighter-rouge">UNSAFE_componentWillReceiveProps()</code> with initial props during <a href="https://reactjs.org/docs/react-component.html#mounting">mounting</a>. It only calls this method if some of component’s props may update. Calling <code class="highlighter-rouge">this.setState()</code> generally doesn’t trigger <code class="highlighter-rouge">UNSAFE_componentWillReceiveProps()</code>.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>This lifecycle was previously named <code class="highlighter-rouge">componentWillReceiveProps</code>. That name will continue to work until version 17. Use the <a href="https://github.com/reactjs/react-codemod#rename-unsafe-lifecycles"><code class="highlighter-rouge">rename-unsafe-lifecycles</code> codemod</a> to automatically update your components.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="shouldcomponentupdate"><code class="highlighter-rouge">shouldComponentUpdate()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shouldComponentUpdate(nextProps, nextState)
+</code></pre></div></div>
+
+<p>Use <code class="highlighter-rouge">shouldComponentUpdate()</code> to let React know if a component’s output is not affected by the current change in state or props. The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.</p>
+
+<p><code class="highlighter-rouge">shouldComponentUpdate()</code> is invoked before rendering when new props or state are being received. Defaults to <code class="highlighter-rouge">true</code>. This method is not called for the initial render or when <code class="highlighter-rouge">forceUpdate()</code> is used.</p>
+
+<p>Returning <code class="highlighter-rouge">false</code> does not prevent child components from re-rendering when <em>their</em> state changes.</p>
+
+<p>Currently, if <code class="highlighter-rouge">shouldComponentUpdate()</code> returns <code class="highlighter-rouge">false</code>, then <a href="https://reactjs.org/docs/react-component.html#componentwillupdate"><code class="highlighter-rouge">UNSAFE_componentWillUpdate()</code></a>, <a href="https://reactjs.org/docs/react-component.html#render"><code class="highlighter-rouge">render()</code></a>, and <a href="https://reactjs.org/docs/react-component.html#componentdidupdate"><code class="highlighter-rouge">componentDidUpdate()</code></a> will not be invoked. Note that in the future React may treat <code class="highlighter-rouge">shouldComponentUpdate()</code> as a hint rather than a strict directive, and returning <code class="highlighter-rouge">false</code> may still result in a re-rendering of the component.</p>
+
+<p>If you determine a specific component is slow after profiling, you may change it to inherit from <a href="https://reactjs.org/docs/react-api.html#reactpurecomponent"><code class="highlighter-rouge">React.PureComponent</code></a> which implements <code class="highlighter-rouge">shouldComponentUpdate()</code> with a shallow prop and state comparison. If you are confident you want to write it by hand, you may compare <code class="highlighter-rouge">this.props</code> with <code class="highlighter-rouge">nextProps</code> and <code class="highlighter-rouge">this.state</code> with <code class="highlighter-rouge">nextState</code> and return <code class="highlighter-rouge">false</code> to tell React the update can be skipped.</p>
+
+<p>We do not recommend doing deep equality checks or using <code class="highlighter-rouge">JSON.stringify()</code> in <code class="highlighter-rouge">shouldComponentUpdate()</code>. It is very inefficient and will harm performance.</p>
+
+<hr />
+
+<h3 id="unsafe_componentwillupdate"><code class="highlighter-rouge">UNSAFE_componentWillUpdate()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UNSAFE_componentWillUpdate(nextProps, nextState)
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">UNSAFE_componentWillUpdate()</code> is invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs. This method is not called for the initial render.</p>
+
+<p>Note that you cannot call <code class="highlighter-rouge">this.setState()</code> here; nor should you do anything else (e.g. dispatch a Redux action) that would trigger an update to a React component before <code class="highlighter-rouge">UNSAFE_componentWillUpdate()</code> returns.</p>
+
+<p>If you need to update <code class="highlighter-rouge">state</code> in response to <code class="highlighter-rouge">props</code> changes, use <a href="https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops"><code class="highlighter-rouge">getDerivedStateFromProps()</code></a> instead.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>This lifecycle was previously named <code class="highlighter-rouge">componentWillUpdate</code>. That name will continue to work until version 17. Use the <a href="https://github.com/reactjs/react-codemod#rename-unsafe-lifecycles"><code class="highlighter-rouge">rename-unsafe-lifecycles</code> codemod</a> to automatically update your components.</p>
+</blockquote>
+
+<blockquote>
+  <p>Note</p>
+
+  <p><code class="highlighter-rouge">UNSAFE_componentWillUpdate()</code> will not be invoked if <a href="https://reactjs.org/docs/react-component.html#shouldcomponentupdate"><code class="highlighter-rouge">shouldComponentUpdate()</code></a>returns false.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="getsnapshotbeforeupdate"><code class="highlighter-rouge">getSnapshotBeforeUpdate()</code></h3>
+
+<p><code class="highlighter-rouge">getSnapshotBeforeUpdate()</code> is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture current values (e.g. scroll position) before they are potentially changed. Any value returned by this lifecycle will be passed as a parameter to <code class="highlighter-rouge">componentDidUpdate()</code>.</p>
+
+<p>For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ScrollingList extends React.Component {
+  listRef = React.createRef();
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    // Are we adding new items to the list?
+    // Capture the current height of the list so we can adjust scroll later.
+    if (prevProps.list.length &lt; this.props.list.length) {
+      return this.listRef.current.scrollHeight;
+    }
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // If we have a snapshot value, we've just added new items.
+    // Adjust scroll so these new items don't push the old ones out of view.
+    if (snapshot !== null) {
+      this.listRef.current.scrollTop +=
+        this.listRef.current.scrollHeight - snapshot;
+    }
+  }
+
+  render() {
+    return (
+      &lt;div ref={this.listRef}&gt;{/* ...contents... */}&lt;/div&gt;
+    );
+  }
+}
+</code></pre></div></div>
+
+<p>In the above examples, it is important to read the <code class="highlighter-rouge">scrollHeight</code> property in <code class="highlighter-rouge">getSnapshotBeforeUpdate</code> rather than <code class="highlighter-rouge">componentWillUpdate</code> in order to support async rendering. With async rendering, there may be delays between “render” phase lifecycles (like <code class="highlighter-rouge">componentWillUpdate</code> and <code class="highlighter-rouge">render</code>) and “commit” phase lifecycles (like <code class="highlighter-rouge">getSnapshotBeforeUpdate</code> and <code class="highlighter-rouge">componentDidUpdate</code>). If a user does something like resize the browser during this time, a <code class="highlighter-rouge">scrollHeight</code> value read from <code class="highlighter-rouge">componentWillUpdate</code> will be stale.</p>
+
+<hr />
+
+<h3 id="componentdidupdate"><code class="highlighter-rouge">componentDidUpdate()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentDidUpdate(prevProps, prevState, snapshot)
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">componentDidUpdate()</code> is invoked immediately after updating occurs. This method is not called for the initial render.</p>
+
+<p>Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to previous props (e.g. a network request may not be necessary if the props have not changed).</p>
+
+<p>If your component implements the <code class="highlighter-rouge">getSnapshotBeforeUpdate()</code> lifecycle, the value it returns will be passed as a third “snapshot” parameter to <code class="highlighter-rouge">componentDidUpdate()</code>. (Otherwise this parameter will be undefined.)</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p><code class="highlighter-rouge">componentDidUpdate()</code> will not be invoked if <a href="https://reactjs.org/docs/react-component.html#shouldcomponentupdate"><code class="highlighter-rouge">shouldComponentUpdate()</code></a> returns false.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="componentwillunmount"><code class="highlighter-rouge">componentWillUnmount()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentWillUnmount()
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">componentWillUnmount()</code> is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in <code class="highlighter-rouge">componentDidMount()</code>.</p>
+
+<hr />
+
+<h3 id="componentdidcatch"><code class="highlighter-rouge">componentDidCatch()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>componentDidCatch(error, info)
+</code></pre></div></div>
+
+<p>Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.</p>
+
+<p>A class component becomes an error boundary if it defines this lifecycle method. Calling <code class="highlighter-rouge">setState()</code> in it lets you capture an unhandled JavaScript error in the below tree and display a fallback UI. Only use error boundaries for recovering from unexpected exceptions; don’t try to use them for control flow.</p>
+
+<p>For more details, see <a href="https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html"><em>Error Handling in React 16</em></a>.</p>
+
+<blockquote>
+  <p>Note</p>
+
+  <p>Error boundaries only catch errors in the components <strong>below</strong> them in the tree. An error boundary can’t catch an error within itself.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="setstate"><code class="highlighter-rouge">setState()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setState(updater[, callback])
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">setState()</code> enqueues changes to the component state and tells React that this component and its children need to be re-rendered with the updated state. This is the primary method you use to update the user interface in response to event handlers and server responses.</p>
+
+<p>Think of <code class="highlighter-rouge">setState()</code> as a <em>request</em> rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.</p>
+
+<p><code class="highlighter-rouge">setState()</code> does not always immediately update the component. It may batch or defer the update until later. This makes reading <code class="highlighter-rouge">this.state</code> right after calling <code class="highlighter-rouge">setState()</code> a potential pitfall. Instead, use <code class="highlighter-rouge">componentDidUpdate</code> or a <code class="highlighter-rouge">setState</code> callback (<code class="highlighter-rouge">setState(updater, callback)</code>), either of which are guaranteed to fire after the update has been applied. If you need to set the state based on the previous state, read about the <code class="highlighter-rouge">updater</code> argument below.</p>
+
+<p><code class="highlighter-rouge">setState()</code> will always lead to a re-render unless <code class="highlighter-rouge">shouldComponentUpdate()</code> returns <code class="highlighter-rouge">false</code>. If mutable objects are being used and conditional rendering logic cannot be implemented in <code class="highlighter-rouge">shouldComponentUpdate()</code>, calling <code class="highlighter-rouge">setState()</code> only when the new state differs from the previous state will avoid unnecessary re-renders.</p>
+
+<p>The first argument is an <code class="highlighter-rouge">updater</code> function with the signature:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(prevState, props) =&gt; stateChange
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">prevState</code> is a reference to the previous state. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from <code class="highlighter-rouge">prevState</code> and <code class="highlighter-rouge">props</code>. For instance, suppose we wanted to increment a value in state by <code class="highlighter-rouge">props.step</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.setState((prevState, props) =&gt; {
+  return {counter: prevState.counter + props.step};
+});
+</code></pre></div></div>
+
+<p>Both <code class="highlighter-rouge">prevState</code> and <code class="highlighter-rouge">props</code> received by the updater function are guaranteed to be up-to-date. The output of the updater is shallowly merged with <code class="highlighter-rouge">prevState</code>.</p>
+
+<p>The second parameter to <code class="highlighter-rouge">setState()</code> is an optional callback function that will be executed once <code class="highlighter-rouge">setState</code> is completed and the component is re-rendered. Generally we recommend using <code class="highlighter-rouge">componentDidUpdate()</code> for such logic instead.</p>
+
+<p>You may optionally pass an object as the first argument to <code class="highlighter-rouge">setState()</code> instead of a function:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setState(stateChange[, callback])
+</code></pre></div></div>
+
+<p>This performs a shallow merge of <code class="highlighter-rouge">stateChange</code> into the new state, e.g., to adjust a shopping cart item quantity:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.setState({quantity: 2})
+</code></pre></div></div>
+
+<p>This form of <code class="highlighter-rouge">setState()</code> is also asynchronous, and multiple calls during the same cycle may be batched together. For example, if you attempt to increment an item quantity more than once in the same cycle, that will result in the equivalent of:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Object.assign(
+  previousState,
+  {quantity: state.quantity + 1},
+  {quantity: state.quantity + 1},
+  ...
+)
+</code></pre></div></div>
+
+<p>Subsequent calls will override values from previous calls in the same cycle, so the quantity will only be incremented once. If the next state depends on the previous state, we recommend using the updater function form, instead:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.setState((prevState) =&gt; {
+  return {quantity: prevState.quantity + 1};
+});
+</code></pre></div></div>
+
+<p>For more detail, see:</p>
+
+<ul>
+  <li><a href="https://reactjs.org/docs/state-and-lifecycle.html">State and Lifecycle guide</a></li>
+  <li><a href="https://stackoverflow.com/a/48610973/458193">In depth: When and why are <code class="highlighter-rouge">setState()</code> calls batched?</a></li>
+  <li><a href="https://github.com/facebook/react/issues/11527#issuecomment-360199710">In depth: Why isn’t <code class="highlighter-rouge">this.state</code> updated immediately?</a></li>
+</ul>
+
+<hr />
+
+<h3 id="forceupdate"><code class="highlighter-rouge">forceUpdate()</code></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>component.forceUpdate(callback)
+</code></pre></div></div>
+
+<p>By default, when your component’s state or props change, your component will re-render. If your <code class="highlighter-rouge">render()</code> method depends on some other data, you can tell React that the component needs re-rendering by calling <code class="highlighter-rouge">forceUpdate()</code>.</p>
+
+<p>Calling <code class="highlighter-rouge">forceUpdate()</code> will cause <code class="highlighter-rouge">render()</code> to be called on the component, skipping <code class="highlighter-rouge">shouldComponentUpdate()</code>. This will trigger the normal lifecycle methods for child components, including the <code class="highlighter-rouge">shouldComponentUpdate()</code> method of each child. React will still only update the DOM if the markup changes.</p>
+
+<p>Normally you should try to avoid all uses of <code class="highlighter-rouge">forceUpdate()</code> and only read from <code class="highlighter-rouge">this.props</code> and <code class="highlighter-rouge">this.state</code> in <code class="highlighter-rouge">render()</code>.</p>
+
+<h1 id="portals">Portals</h1>
+
+<p>Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ReactDOM.createPortal(child, container)
+</code></pre></div></div>
+
+<p>The first argument (<code class="highlighter-rouge">child</code>) is any <a href="https://reactjs.org/docs/react-component.html#render">renderable React child</a>, such as an element, string, or fragment. The second argument (<code class="highlighter-rouge">container</code>) is a DOM element.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Normally, when you return an element from a component’s render method, it’s mounted into the DOM as a child of the nearest parent node:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>render() {
+  // React mounts a new div and renders the children into it
+  return (
+    &lt;div&gt;
+      {this.props.children}
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<p>However, sometimes it’s useful to insert a child into a different location in the DOM:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>render() {
+  // React does *not* create a new div. It renders the children into `domNode`.
+  // `domNode` is any valid DOM node, regardless of its location in the DOM.
+  return ReactDOM.createPortal(
+    this.props.children,
+    domNode
+  );
+}
+</code></pre></div></div>
+
+<p>A typical use case for portals is when a parent component has an <code class="highlighter-rouge">overflow: hidden</code> or <code class="highlighter-rouge">z-index</code> style, but you need the child to visually “break out” of its container. For example, dialogs, hovercards, and tooltips.</p>
+
+<blockquote>
+  <p>Note:</p>
+
+  <p>It is important to remember, when working with portals, you’ll need to make sure to follow the proper accessibility guidelines.</p>
+</blockquote>
+
+<p><a href="https://codepen.io/gaearon/pen/yzMaBd">Try it on CodePen.</a></p>
+
+<h2 id="event-bubbling-through-portals">Event Bubbling Through Portals</h2>
+
+<p>Even though a portal can be anywhere in the DOM tree, it behaves like a normal React child in every other way. Features like context work exactly the same regardless of whether the child is a portal, as the portal still exists in the <em>React tree</em> regardless of position in the <em>DOM tree</em>.</p>
+
+<p>This includes event bubbling. An event fired from inside a portal will propagate to ancestors in the containing <em>React tree</em>, even if those elements are not ancestors in the <em>DOM tree</em>. Assuming the following HTML structure:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app-root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"modal-root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>A <code class="highlighter-rouge">Parent</code> component in <code class="highlighter-rouge">#app-root</code> would be able to catch an uncaught, bubbling event from the sibling node <code class="highlighter-rouge">#modal-root</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// These two containers are siblings in the DOM
+const appRoot = document.getElementById('app-root');
+const modalRoot = document.getElementById('modal-root');
+
+class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.el = document.createElement('div');
+  }
+
+  componentDidMount() {
+    // The portal element is inserted in the DOM tree after
+    // the Modal's children are mounted, meaning that children
+    // will be mounted on a detached DOM node. If a child
+    // component requires to be attached to the DOM tree
+    // immediately when mounted, for example to measure a
+    // DOM node, or uses 'autoFocus' in a descendant, add
+    // state to Modal and only render the children when Modal
+    // is inserted in the DOM tree.
+    modalRoot.appendChild(this.el);
+  }
+
+  componentWillUnmount() {
+    modalRoot.removeChild(this.el);
+  }
+
+  render() {
+    return ReactDOM.createPortal(
+      this.props.children,
+      this.el,
+    );
+  }
+}
+
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {clicks: 0};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    // This will fire when the button in Child is clicked,
+    // updating Parent's state, even though button
+    // is not direct descendant in the DOM.
+    this.setState(prevState =&gt; ({
+      clicks: prevState.clicks + 1
+    }));
+  }
+
+  render() {
+    return (
+      &lt;div onClick={this.handleClick}&gt;
+        &lt;p&gt;Number of clicks: {this.state.clicks}&lt;/p&gt;
+        &lt;p&gt;
+          Open up the browser DevTools
+          to observe that the button
+          is not a child of the div
+          with the onClick handler.
+        &lt;/p&gt;
+        &lt;Modal&gt;
+          &lt;Child /&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+function Child() {
+  // The click event on this button will bubble up to parent,
+  // because there is no 'onClick' attribute defined
+  return (
+    &lt;div className="modal"&gt;
+      &lt;button&gt;Click&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.render(&lt;Parent /&gt;, appRoot);
+</code></pre></div></div>
+
+<p><a href="https://codepen.io/gaearon/pen/jGBWpE">Try it on CodePen.</a></p>
+
+<p>Catching an event bubbling up from a portal in a parent component allows the development of more flexible abstractions that are not inherently reliant on portals. For example, if you render a <code class="highlighter-rouge">&lt;Modal /&gt;</code> component, the parent can capture its events regardless of whether it’s implemented using portals.</p>
+
+<h2 id="redux---three-principles">Redux - Three Principles</h2>
+
+<h3 id="single-source-of-truth">Single source of truth</h3>
+
+<p><strong>The</strong> <a href="https://redux.js.org/glossary#state"><strong>state</strong></a> <strong>of your whole application is stored in an object tree within a single</strong> <a href="https://redux.js.org/glossary#store"><strong>store</strong></a><strong>.</strong></p>
+
+<p>This makes it easy to create universal apps, as the state from your server can be serialized and hydrated into the client with no extra coding effort. A single state tree also makes it easier to debug or inspect an application; it also enables you to persist your app’s state in development, for a faster development cycle. Some functionality which has been traditionally difficult to implement - Undo/Redo, for example - can suddenly become trivial to implement, if all of your state is stored in a single tree.</p>
+
+<h3 id="state-is-read-only">State is read-only:</h3>
+
+<p><strong>The only way to change the state is to emit an</strong> <a href="https://redux.js.org/glossary#action"><strong>action</strong></a><strong>, an object describing what happened.</strong></p>
+
+<p>This ensures that neither the views nor the network callbacks will ever write directly to the state. Instead, they express an intent to transform the state. Because all changes are centralized and happen one by one in a strict order, there are no subtle race conditions to watch out for. As actions are just plain objects, they can be logged, serialized, stored, and later replayed for debugging or testing purposes.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'COMPLETE_TODO'</span><span class="p">,</span>
+  <span class="na">index</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">})</span>
+<span class="err"> </span>
+<span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span>
+  <span class="na">type</span><span class="p">:</span> <span class="s1">'SET_VISIBILITY_FILTER'</span><span class="p">,</span>
+  <span class="na">filter</span><span class="p">:</span> <span class="s1">'SHOW_COMPLETED'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="changes-are-made-with-pure-functions">Changes are made with pure functions:</h3>
+
+<p><strong>To specify how the state tree is transformed by actions, you write pure</strong> <a href="https://redux.js.org/glossary#reducer"><strong>reducers</strong></a><strong>.</strong></p>
+
+<p>Reducers are just pure functions that take the previous state and an action, and return the next state. Remember to return new state objects, instead of mutating the previous state. You can start with a single reducer, and as your app grows, split it off into smaller reducers that manage specific parts of the state tree. Because reducers are just functions, you can control the order in which they are called, pass additional data, or even make reusable reducers for common tasks such as pagination.</p>
+
+<pre><code class="language-Javascript">function visibilityFilter(state = 'SHOW_ALL', action) {
+  switch (action.type) {
+    case 'SET_VISIBILITY_FILTER':
+      return action.filter
+    default:
+      return state
+  }
+}
+ 
+function todos(state = [], action) {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [
+        ...state,
+        {
+          text: action.text,
+          completed: false
+        }
+      ]
+    case 'COMPLETE_TODO':
+      return state.map((todo, index) =&gt; {
+        if (index === action.index) {
+          return Object.assign({}, todo, {
+            completed: true
+          })
+        }
+        return todo
+      })
+    default:
+      return state
+  }
+}
+ 
+import { combineReducers, createStore } from 'redux'
+const reducer = combineReducers({ visibilityFilter, todos })
+const store = createStore(reducer)
+</code></pre>
+
+<h3 id="action">Action:</h3>
+
+<p>First, let’s define some actions.</p>
+
+<p><strong>Actions</strong> are payloads of information that send data from your application to your store. They are the <em>only</em> source of information for the store. You send them to the store using <a href="https://redux.js.org/api-reference/store#dispatch"><code class="highlighter-rouge">store.dispatch()</code></a>.</p>
+
+<p>Here’s an example action which represents adding a new todo item:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const ADD_TODO = 'ADD_TODO'
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  type: ADD_TODO,
+  text: 'Build my first Redux app'
+}
+</code></pre></div></div>
+
+<p>Actions are plain JavaScript objects. Actions must have a <code class="highlighter-rouge">type</code> property that indicates the type of action being performed. Types should typically be defined as string constants. Once your app is large enough, you may want to move them into a separate module.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { ADD_TODO, REMOVE_TODO } from '../actionTypes'
+</code></pre></div></div>
+
+<blockquote>
+  <h3 id="note-on-boilerplate">Note on Boilerplate</h3>
+
+  <p>You don’t have to define action type constants in a separate file, or even to define them at all. For a small project, it might be easier to just use string literals for action types. However, there are some benefits to explicitly declaring constants in larger codebases. Read <a href="https://redux.js.org/recipes/reducing-boilerplate">Reducing Boilerplate</a> for more practical tips on keeping your codebase clean.</p>
+</blockquote>
+
+<p>Other than <code class="highlighter-rouge">type</code>, the structure of an action object is really up to you. If you’re interested, check out <a href="https://github.com/acdlite/flux-standard-action">Flux Standard Action</a> for recommendations on how actions could be constructed.</p>
+
+<p>We’ll add one more action type to describe a user ticking off a todo as completed. We refer to a particular todo by <code class="highlighter-rouge">index</code> because we store them in an array. In a real app, it is wiser to generate a unique ID every time something new is created.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  type: TOGGLE_TODO,
+  index: 5
+}
+</code></pre></div></div>
+
+<p>It’s a good idea to pass as little data in each action as possible. For example, it’s better to pass <code class="highlighter-rouge">index</code> than the whole todo object.</p>
+
+<p>Finally, we’ll add one more action type for changing the currently visible todos.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  type: SET_VISIBILITY_FILTER,
+  filter: SHOW_COMPLETED
+}
+</code></pre></div></div>
+
+<h2 id="action-creators">Action Creators</h2>
+
+<p><strong>Action creators</strong> are exactly that—functions that create actions. It’s easy to conflate the terms “action” and “action creator”, so do your best to use the proper term.</p>
+
+<p>In Redux, action creators simply return an action:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function addTodo(text) {
+  return {
+    type: ADD_TODO,
+    text
+  }
+}
+</code></pre></div></div>
+
+<p>This makes them portable and easy to test.</p>
+
+<p>In <a href="http://facebook.github.io/flux">traditional Flux</a>, action creators often trigger a dispatch when invoked, like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function addTodoWithDispatch(text) {
+  const action = {
+    type: ADD_TODO,
+    text
+  }
+  dispatch(action)
+}
+</code></pre></div></div>
+
+<p>In Redux this is <em>not</em> the case.Instead, to actually initiate a dispatch, pass the result to the <code class="highlighter-rouge">dispatch()</code> function:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dispatch(addTodo(text))
+dispatch(completeTodo(index))
+</code></pre></div></div>
+
+<p>Alternatively, you can create a <strong>bound action creator</strong> that automatically dispatches:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const boundAddTodo = text =&gt; dispatch(addTodo(text))
+const boundCompleteTodo = index =&gt; dispatch(completeTodo(index))
+</code></pre></div></div>
+
+<p>Now you’ll be able to call them directly:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boundAddTodo(text)
+boundCompleteTodo(index)
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">dispatch()</code> function can be accessed directly from the store as <a href="https://redux.js.org/api-reference/store#dispatch"><code class="highlighter-rouge">store.dispatch()</code></a>, but more likely you’ll access it using a helper like <a href="http://github.com/gaearon/react-redux">react-redux</a>’s <code class="highlighter-rouge">connect()</code>. You can use <a href="https://redux.js.org/api-reference/bindactioncreators"><code class="highlighter-rouge">bindActionCreators()</code></a> to automatically bind many action creators to a <code class="highlighter-rouge">dispatch()</code> function.</p>
+
+<p>Action creators can also be asynchronous and have side-effects. You can read about <a href="https://redux.js.org/advanced/async-actions">async actions</a> in the <a href="https://redux.js.org/advanced">advanced tutorial</a> to learn how to handle AJAX responses and compose action creators into async control flow. Don’t skip ahead to async actions until you’ve completed the basics tutorial, as it covers other important concepts that are prerequisite for the advanced tutorial and async actions.</p>
+
+<h3 id="data-flow---most-important">Data Flow - Most Important</h3>
+
+<p>Redux architecture revolves around a <strong>strict unidirectional data flow</strong>.</p>
+
+<p>This means that all data in an application follows the same lifecycle pattern, making the logic of your app more predictable and easier to understand. It also encourages data normalization, so that you don’t end up with multiple, independent copies of the same data that are unaware of one another.</p>
+
+<p>If you’re still not convinced, read <a href="https://redux.js.org/introduction/motivation">Motivation</a> and <a href="https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6">The Case for Flux</a> for a compelling argument in favor of unidirectional data flow. Although <a href="https://redux.js.org/introduction/prior-art">Redux is not exactly Flux</a>, it shares the same key benefits.</p>
+
+<p>The data lifecycle in any Redux app follows these 4 steps:</p>
+
+<ol>
+  <li>
+    <p><strong>You call</strong> <a href="https://redux.js.org/api-reference/store#dispatch"><code class="highlighter-rouge">store.dispatch(action)</code></a>.</p>
+
+    <p>An <a href="https://redux.js.org/basics/actions">action</a> is a plain object describing <em>what happened</em>. For example:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> { type: 'LIKE_ARTICLE', articleId: 42 }
+ { type: 'FETCH_USER_SUCCESS', response: { id: 3, name: 'Mary' } }
+ { type: 'ADD_TODO', text: 'Read the Redux docs.' }
+</code></pre></div>    </div>
+
+    <p>Think of an action as a very brief snippet of news. “Mary liked article 42.” or “‘Read the Redux docs.’ was added to the list of todos.”</p>
+
+    <p>You can call <a href="https://redux.js.org/api-reference/store#dispatch"><code class="highlighter-rouge">store.dispatch(action)</code></a> from anywhere in your app, including components and XHR callbacks, or even at scheduled intervals.</p>
+  </li>
+  <li>
+    <p><strong>The Redux store calls the reducer function you gave it.</strong></p>
+
+    <p>The <a href="https://redux.js.org/basics/store">store</a> will pass two arguments to the <a href="https://redux.js.org/basics/reducers">reducer</a>: the current state tree and the action. For example, in the todo app, the root reducer might receive something like this:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // The current application state (list of todos and chosen filter)
+ let previousState = {
+   visibleTodoFilter: 'SHOW_ALL',
+   todos: [
+     {
+       text: 'Read the docs.',
+       complete: false
+     }
+   ]
+ }
+ 
+ // The action being performed (adding a todo)
+ let action = {
+   type: 'ADD_TODO',
+   text: 'Understand the flow.'
+ }
+ 
+ // Your reducer returns the next application state
+ let nextState = todoApp(previousState, action)
+</code></pre></div>    </div>
+
+    <p>Note that a reducer is a pure function. It only <em>computes</em> the next state. It should be completely predictable: calling it with the same inputs many times should produce the same outputs. It shouldn’t perform any side effects like API calls or router transitions. These should happen before an action is dispatched.</p>
+  </li>
+  <li>
+    <p><strong>The root reducer may combine the output of multiple reducers into a single state tree.</strong></p>
+
+    <p>How you structure the root reducer is completely up to you. Redux ships with a <a href="https://redux.js.org/api-reference/combinereducers"><code class="highlighter-rouge">combineReducers()</code></a> helper function, useful for “splitting” the root reducer into separate functions that each manage one branch of the state tree.</p>
+
+    <p>Here’s how <a href="https://redux.js.org/api-reference/combinereducers"><code class="highlighter-rouge">combineReducers()</code></a> works. Let’s say you have two reducers, one for a list of todos, and another for the currently selected filter setting:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function todos(state = [], action) {
+   // Somehow calculate it...
+   return nextState
+ }
+ 
+ function visibleTodoFilter(state = 'SHOW_ALL', action) {
+   // Somehow calculate it...
+   return nextState
+ }
+ 
+ let todoApp = combineReducers({
+   todos,
+   visibleTodoFilter
+ })
+</code></pre></div>    </div>
+
+    <p>When you emit an action, <code class="highlighter-rouge">todoApp</code> returned by <code class="highlighter-rouge">combineReducers</code> will call both reducers:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> let nextTodos = todos(state.todos, action)
+ let nextVisibleTodoFilter = visibleTodoFilter(state.visibleTodoFilter, action)
+</code></pre></div>    </div>
+
+    <p>It will then combine both sets of results into a single state tree:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> return {
+   todos: nextTodos,
+   visibleTodoFilter: nextVisibleTodoFilter
+ }
+</code></pre></div>    </div>
+
+    <p>While <a href="https://redux.js.org/api-reference/combinereducers"><code class="highlighter-rouge">combineReducers()</code></a> is a handy helper utility, you don’t have to use it; feel free to write your own root reducer!</p>
+  </li>
+  <li>
+    <p><strong>The Redux store saves the complete state tree returned by the root reducer.</strong></p>
+
+    <p>This new tree is now the next state of your app! Every listener registered with <a href="https://redux.js.org/api-reference/store#subscribe"><code class="highlighter-rouge">store.subscribe(listener)</code></a> will now be invoked; listeners may call <a href="https://redux.js.org/api-reference/store#getState"><code class="highlighter-rouge">store.getState()</code></a> to get the current state.</p>
+
+    <p>Now, the UI can be updated to reflect the new state. If you use bindings like <a href="https://github.com/gaearon/react-redux">React Redux</a>, this is the point at which <code class="highlighter-rouge">component.setState(newState)</code> is called.</p>
+  </li>
+</ol>
+
+<h1 id="docs-to-view">Docs to View:</h1>
+
+<h5 id="1-google-docs-overview">1. Google Docs Overview:</h5>
+
+<h6 id="httpsdocsgooglecomdocumentd1crsp0a16jlzhwr-o3dsatfigxkfgyoe72mu4b1wnjxkedituserstoinviteparthmehtaoathcomts5ac3fcb5actionbutton1">https://docs.google.com/document/d/1CrsP0a16JLZHWR-O3dsATFIGxKFgyOE72Mu4b1wnJxk/edit?userstoinvite=parth.mehta@oath.com&amp;ts=5ac3fcb5&amp;actionButton=1</h6>
+
+<h5 id="2-react-docs-httpsreactjsorg">2. React Docs: https://reactjs.org</h5>
+
+<h5 id="3-redux-docs-httpsreduxjsorg">3. Redux Docs: https://redux.js.org</h5>
+
+<h5 id="4-redux-select-httpsgithubcomreactjsreselect">4. Redux-Select: https://github.com/reactjs/reselect</h5>
+
+<h5 id="5-react-atomic-css-httpsgitouroathcommailreact-atomic-css">5. React-atomic-css: https://git.ouroath.com/Mail/react-atomic-css</h5>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-01T08:00:00-07:00">May 01, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=Intro+to+React+and+Redux%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FIntro-to-React%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FIntro-to-React%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FIntro-to-React%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FIntro-to-React%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tech/Android-Development-Basics/" class="pagination--pager" title="Android Development Basics
+">Previous</a>
+    
+    
+      <a href="/tech/Pro-Git/" class="pagination--pager" title="Pro-Git
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/learning/Negotiations-Workshop/" rel="permalink">Negotiations Workshop
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">by Holly Schroth
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/books/Getting-to-Yes/" rel="permalink">Getting to Yes
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  44 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Summary of the book ‘Getting to Yes’ on Negotiations
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/ML-Tech-talk/" rel="permalink">Intro to ML by Parth Mehta
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Tech session conducted by me teaching ML basics to engineers at Yahoo
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/iOS-Development/" rel="permalink">iOS Development
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  56 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes taken during iOS training course with Big Nerd Ranch
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

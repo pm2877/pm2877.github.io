@@ -1,0 +1,791 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Search at scale - Techie Notes</title>
+<meta name="description" content="What every software engineer should know about search">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Techie Notes">
+<meta property="og:title" content="Search at scale">
+<meta property="og:url" content="http://localhost:4000/tech/Search-at-Scale/">
+
+
+  <meta property="og:description" content="What every software engineer should know about search">
+
+
+
+
+
+  <meta name="twitter:site" content="@parth94mehta">
+  <meta name="twitter:title" content="Search at scale">
+  <meta name="twitter:description" content="What every software engineer should know about search">
+  <meta name="twitter:url" content="http://localhost:4000/tech/Search-at-Scale/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2017-11-18T07:00:00-08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/Search-at-Scale/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Parth Mehta",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Techie Notes</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/" title="My projects">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://bit.ly/parthmehta" title="Download resume">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#tech" itemprop="item"><span itemprop="name">Tech</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Search at scale</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Parth Mehta</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Software Developer @ Yahoo | Machine Learning | Columbia University
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">SF Bay Area, California</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:parth.mehta@columbia.edu">
+            <meta itemprop="email" content="parth.mehta@columbia.edu" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/pm2877" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Search at scale">
+    <meta itemprop="description" content="What every software engineer should know about search">
+    <meta itemprop="datePublished" content="November 18, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Search at scale
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  13 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#a-collection-of-insights-and-resources-that-could-help-you-to-build-search-experiences">A collection of insights and resources that could help you to build search experiences</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h5 id="a-collection-of-insights-and-resources-that-could-help-you-to-build-search-experiences">A collection of insights and resources that could help you to build search experiences</h5>
+
+<p>[TOC]</p>
+
+<h2 id="search-is-an-inherently-messy-problem">Search is an inherently messy problem:</h2>
+
+<ol>
+  <li>
+    <p>Queries are highly variable.</p>
+  </li>
+  <li>
+    <p>The search problems are highly variable based on product needs.</p>
+  </li>
+  <li>
+    <p>Think about how different Facebook search (searching a graph of people),</p>
+
+    <p>YouTube search (searching individual videos), Or how different both of those are are from Kayak (air travel planning is a really hairy problem).</p>
+  </li>
+  <li>
+    <p>Google Maps (making sense of geo-spacial data).</p>
+  </li>
+  <li>
+    <p>Pinterest (pictures of a brunch you might cook one day).</p>
+  </li>
+</ol>
+
+<p><u>**Note:**</u></p>
+
+<ol>
+  <li>Search is not just about building software that does ranking or retrieval for a specific domain. Search systems are usually an evolving pipeline of components that are tuned and evolve over time and that build up to a cohesive experience.</li>
+  <li>The key to success in search is building processes for evaluation and tuning into the product and development cycles. A search system architect should think about processes and metrics, not just technologies.</li>
+  <li>❗️Even if you are using an existing open source or commercial solution, you should have some sense of the <strong>complexity of the search problem</strong> and where there are likely to be pitfalls.</li>
+  <li><strong>Named-entity recognition</strong>
+Named-entity recognition (NER) (also known as entity identification, entity chunking and entity extraction) is a subtask of information extraction that seeks to locate and classify named entities in text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages, etc.</li>
+  <li><strong>Locality-sensitive hashing (LSH)</strong> reduces the dimensionality of high-dimensional data. LSH hashes input items so that similar items map to the same “buckets” with high probability (the number of buckets being much smaller than the universe of possible input items). LSH differs from conventional and cryptographic hash functions because it aims to maximize the probability of a “collision” for similar items.</li>
+</ol>
+
+<p><strong>Search is different for every product, and choices depend on many technical details of the requirements. It helps to identify the key parameters of your search problem:</strong></p>
+
+<ol>
+  <li>Size: How big is the corpus (a complete set of documents that need to be searched)? Is it thousands or billions of documents?</li>
+  <li>Media: Are you searching through text, images, graphical relationships, or geospatial data?</li>
+  <li>🔷 Corpus control and quality: Are the sources for the documents under your control, or coming from a (potentially adversarial) third party? Are all the documents ready to be indexed or need to be cleaned up and selected?</li>
+  <li>Indexing speed: Do you need real-time indexing, or is building indices in batch is fine?</li>
+  <li>Query language: Are the queries structured, or you need to support unstructured ones?</li>
+  <li>Query structure: Are your queries textual, images, sounds? Street addresses, record ids, people’s faces?</li>
+  <li>Context-dependence: Do the results depend on who the user is, what is their history with the product, their geographical location, time of the day etc?</li>
+  <li>Suggest support: Do you need to support incomplete queries?</li>
+  <li>Latency: What are the serving latency requirements? 100 milliseconds or 100 seconds?</li>
+  <li>Access control: Is it entirely public or should users only see a restricted subset of the documents?</li>
+  <li>Compliance: Are there compliance or organizational limitations?</li>
+  <li>Internationalization: Do you need to support documents with multilingual character sets or Unicode? (Hint: Always use UTF-8 unless you really know what you’re doing.) Do you need to support a multilingual corpus? Multilingual queries?</li>
+</ol>
+
+<h2 id="search-pipeline-problems">Search Pipeline problems</h2>
+
+<h3 id="1-index-selection">1. Index selection:</h3>
+
+<p>given a set of documents (e.g. the entirety of the Internet, all the Twitter posts, all the pictures on Instagram), select a potentially smaller subset of documents that may be worthy for consideration as search results and only include those in the index, discarding the rest. This is done to keep your indexes compact, and is almost orthogonal to selecting the documents to show to the user. Examples of particular classes of documents that don’t make the cut may include:</p>
+
+<h4 id="a-spam">a. Spam:</h4>
+
+<p>oh, all the different shapes and sizes of search spam! A giant topic in itself, worthy of a separate guide. A good web spam taxonomy overview.</p>
+
+<h4 id="b-undesirable-documents">b. Undesirable documents:</h4>
+
+<p>domain constraints might require filtering: porn, illegal content, etc. The techniques are similar to spam filtering, probably with extra heuristics.</p>
+
+<h4 id="c-duplicates">c. Duplicates:</h4>
+
+<p>Or near-duplicates and redundant documents. Can be done with Locality-sensitive hashing, similarity measures, clustering techniques or even clickthrough data. A good overview of techniques.</p>
+
+<h4 id="d-low-utility-documents">d. Low-utility documents:</h4>
+
+<p>The definition of utility depends highly on the problem domain, so it’s hard to recommend the approaches here. Some ideas are: it might be possible to build a utility function for your documents; heuristics might work, or example an image that contains only black pixels is not a useful document; utility might be learned from user behavior.</p>
+
+<h3 id="2-index-construction">2. Index construction:</h3>
+
+<p>For most search systems, document retrieval is performed using an inverted index — often just called the index.</p>
+
+<ul>
+  <li>
+    <p>The index is a mapping of search terms to documents. A search term could be a word, an image feature or any other document derivative useful for query-to-document matching. The list of the documents for a given term is called a posting list. It can be sorted by some metric, like document quality.</p>
+  </li>
+  <li>
+    <p>Figure out whether you need to index the data in real time.❗️Many companies with large corpora of documents use a batch-oriented indexing approach, but then find this is unsuited to a product where users expect results to be current.</p>
+  </li>
+  <li>
+    <p>With text documents, term extraction usually involves using NLP techniques, such as stop lists, stemming and entity extraction; for images or videos computer vision methods are used etc.</p>
+  </li>
+  <li>
+    <p>In addition, documents are mined for statistical and meta information, such as references to other documents (used in the famous PageRank ranking signal), topics, counts of term occurrences, document size, entities A mentioned etc. That information can be later used in ranking signal construction or document clustering. Some larger systems might contain several indexes, e.g. for documents of different types.</p>
+  </li>
+  <li>
+    <p>Index formats. The actual structure and layout of the index is a complex topic, since it can be optimized in many ways. For instance there are posting lists compression methods, one could target mmap()able data representation or use LSM-tree for continuously updated index.</p>
+  </li>
+</ul>
+
+<h2 id="query-analysis-and-document-retrieval">Query analysis and document retrieval:</h2>
+
+<p>Most popular search systems allow non-structured queries. That means the system has to extract structure out of the query itself. In the case of an inverted index, you need to extract search terms using NLP techniques.
+The extracted terms can be used to retrieve relevant documents. Unfortunately, most queries are not very well formulated, so it pays to do additional query expansion and rewriting, like:</p>
+
+<ul>
+  <li><a href="http://orion.lcg.ufrj.br/Dr.Dobbs/books/book5/chap11.htm">Term re-weighting</a>.</li>
+  <li><a href="http://norvig.com/spell-correct.html">Spell checking</a>. Historical query logs are very useful as a dictionary.</li>
+  <li><a href="http://nlp.stanford.edu/IR-book/html/htmledition/query-expansion-1.html">Synonym matching</a>. Another survey.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named entity recognition</a>. A good approach is to use HMM-based language modeling.</li>
+  <li>Query classification. Detect queries of particular type. For example, Google Search detects queries that contain a geographical entity, a porny query, or a query about something in the news. The retrieval algorithm can then make a decision about which corpora or indexes to look at.</li>
+  <li>Expansion through personalization or local context. Useful for queries like “gas stations around me”.</li>
+</ul>
+
+<h2 id="ranking">Ranking:</h2>
+
+<p>Given a list of documents (retrieved in the previous step), their signals, and a processed query, create an optimal ordering (ranking) for those documents.</p>
+
+<ul>
+  <li>Originally, most ranking models in use were hand-tuned weighted combinations of all the document signals. Signal sets might include PageRank, clickthrough data, topicality information and others.</li>
+  <li>To further complicate things, many of those signals, such as PageRank, or ones generated by statistical language models contain parameters that greatly affect the performance of a signal. Those have to be hand-tuned too.</li>
+  <li>Lately, 🔷 learning to rank, signal-based discriminative supervised approaches are becoming more and more popular. Some popular examples of LtR are McRank and LambdaRank from Microsoft, and MatrixNet from Yandex.</li>
+  <li>A new, vector space based approach for semantic retrieval and ranking is gaining popularity lately. The idea is to learn individual low-dimensional vector document representations, then build a model which maps queries into the same vector space.</li>
+  <li>Then, retrieval is just finding several documents that are closest by some metric (e.g. Eucledian distance) to the query vector. Ranking is the distance itself. If the mapping of both the documents and queries is built well, the documents are chosen not by a fact of presence of some simple pattern (like a word), but how close the documents are to the query by meaning.</li>
+</ul>
+
+<h2 id="indexing-pipeline-operation">Indexing pipeline operation</h2>
+
+<p>Usually, each of the above pieces of the pipeline must be operated on a regular basis to keep the search index and search experience current.</p>
+
+<ul>
+  <li>❗️Operating a search pipeline can be complex and involve a lot of moving pieces. Not only is the data moving through the pipeline, but the code for each module and the formats and assumptions embedded in the data will change over time.</li>
+  <li>A pipeline can be run in “batch” or based on a regular or occasional basis (if indexing speed does not need to be real time) or in a streamed way (if real-time indexing is needed) or based on certain triggers.</li>
+  <li>Some complex search engines (like Google) have several layers of pipelines operating on different time scales — for example, a page that changes often (like cnn.com) is indexed with a higher frequency than a static page that hasn’t changed in years.</li>
+</ul>
+
+<h2 id="serving-systems">==Serving systems==</h2>
+
+<p>Ultimately, the goal of a search system is to accept queries, and use the index to return appropriately ranked results. While this subject can be incredibly complex and technical, we mention a few of the key aspects to this part of the system.</p>
+
+<ol>
+  <li><strong>Performance:</strong> users notice when the system they interact with is laggy. ❗️Google has done extensive research, and they have noticed that number of searches falls 0.6%, when serving is slowed by 300ms. They recommend to serve results under 200 ms for most of your queries. A good article on the topic. This is the hard part: the system needs to collect documents from, possibly, many computers, than merge them into possible a very long list and then sort that list in the ranking order. To complicate things further, ranking might be query-dependent, so, while sorting, the system is not just comparing 2 numbers, but performing computation.</li>
+  <li>🔷 <strong>Caching results:</strong> is often necessary to achieve decent performance. ❗️ But caches are just one large gotcha. The might show stale results when indices are updated or some results are blacklisted. Purging caches is a can of worms of itself: a search system might not have the capacity to serve the entire query stream with an empty (cold) cache, so the cache needs to be pre-warmed before the queries start arriving. Overall, caches complicate a system’s performance profile. Choosing a cache size and a replacement algorithm is also a challenge.</li>
+  <li><strong>Availability:</strong> is often defined by an uptime/(uptime + downtime) metric. When the index is distributed, in order to serve any search results, the system often needs to query all the shards for their share of results. ❗️That means, that if one shard is unavailable, the entire search system is compromised. The more machines are involved in serving the index — the higher the probability of one of them becoming defunct and bringing the whole system down.</li>
+  <li><strong>Managing multiple indices:</strong> Indices for large systems may separated into shards (pieces) or divided by media type or indexing cadence (fresh versus long-term indices). Results can then be merged.</li>
+  <li><strong>Merging results of different kinds:</strong> e.g. Google showing results from Maps, News etc.</li>
+</ol>
+
+<h2 id="quality-evaluation-and-improvement">Quality, evaluation, and improvement</h2>
+
+<p>So you’ve launched your indexing pipeline and search servers, and it’s all running nicely. Unfortunately the road to a solid search experience only begins with running infrastructure.</p>
+
+<p>Next, you’ll need to build a set of processes around continuous search quality evaluation and improvement. In fact, this is actually most of the work and the hardest problem you’ll have to solve.</p>
+
+<p>🔷 <strong>What is quality?</strong> First, you’ll need to determine (and get your boss or the product lead to agree), what quality means in your case:</p>
+
+<ol>
+  <li>Self-reported user satisfaction (includes UX)</li>
+  <li>Perceived relevance of the returned results (not including UX)</li>
+  <li>Satisfaction relative to competitors</li>
+  <li>Satisfaction relative performance of the previous version of the search engine (e.g. last week)</li>
+  <li>User engagement</li>
+</ol>
+
+<p><strong>Metrics:</strong> Some of these concepts can be quite hard to quantify. On the other hand, it’s incredibly useful to be able to express how well a search engine is performing in a single number, a quality metric.
+Continuously computing such a metric for your (and your competitors’) system you can both track your progress and explain how well you are doing to your boss. Here are some classical ways to quantify quality, that can help you construct your magic quality metric formula:</p>
+
+<ol>
+  <li>Precision and recall measure how well the retrieved set of documents corresponds to the set you expected to see.</li>
+  <li>F score (specifically F1 score) is a single number, that represents both precision and recall well.</li>
+  <li>Mean Average Precision (MAP) allows to quantify the relevance of the top returned results.</li>
+  <li>🔷 Normalized Discounted Cumulative Gain (nDCG) is like MAP, but weights the relevance of the result by its position.</li>
+  <li>Long and short clicks — Allow to quantify how useful the results are to the real users.</li>
+  <li>A good detailed overview.</li>
+</ol>
+
+<p>🔷 <strong>Human evaluations:</strong> Quality metrics might seem like statistical calculations, but they can’t all be done by automated calculations. Ultimately, metrics need to represent subjective human evaluation, and this is where a “human in the loop” comes into play.
+❗️==Skipping human evaluation is probably the most spread reason of sub-par search experiences.==</p>
+
+<p>Usually, at early stages the developers themselves evaluate the results manually. At later point human raters (or assessors) may get involved. Raters typically use custom tools to look at returned search results and provide feedback on the quality of the results.</p>
+
+<p>Subsequently, you can use the feedback signals to guide development, help make launch decisions or even feed them back into the index selection, retrieval or ranking systems.</p>
+
+<p>Here is the list of some other types of human-driven evaluation, that can be done on a search system:</p>
+
+<ol>
+  <li>
+    <p>Basic user evaluation: The user ranks their satisfaction with the whole experience</p>
+  </li>
+  <li>Comparative evaluation: Compare with other search results (compare with search results from earlier versions of the system or competitors)</li>
+  <li>Retrieval evaluation: The query analysis and retrieval quality is often evaluated using manually constructed query-document sets. A user is shown a query and the list of the retrieved documents. She can then mark all the documents that are relevant to the query, and the ones that are not. The resulting pairs of (query, [relevant docs]) are called a “golden set”. Golden sets are remarkably useful. For one, an engineer can set up automatic retrieval regression tests using those sets. The selection signal from golden sets can also be fed back as ground truth to term re-weighting and other query re-writing models.</li>
+  <li>Ranking evaluation: Raters are presented with a query and two documents side-by-side. The rater must choose the document that fits the query better. This creates a partial ordering on the documents for a given query. That ordering can be later be compared to the output of the ranking system. The usual ranking quality measures used are MAP and nDCG.</li>
+</ol>
+
+<p><strong>Evaluation datasets:</strong>
+One should start thinking about the datasets used for evaluation (like “golden sets” mentioned above) early in the search experience design process. How you collect and update them? How you push them to the production eval pipeline? Is there a built-in bias?</p>
+
+<p><strong>Live experiments:</strong>
+After your search engine catches on and gains enough users, you might want to start conducting live search experiments on a portion of your traffic. The basic idea is to turn some optimization on for a group of people, and then compare the outcome with that of a “control” group — a similar sample of your users that did not have the experiment feature on for them. How you would measure the outcome is, once again, very product specific: it could be clicks on results, clicks on ads etc.</p>
+
+<p><strong>Evaluation cycle time:</strong> How fast you improve your search quality is directly related to how fast you can complete the above cycle of measurement and improvement. It is essential from the beginning to ask yourself, “how fast can we measure and improve our performance?”</p>
+
+<p>Will it take days, hours, minutes or seconds to make changes and see if they improve quality? ❗️Running evaluation should also be as easy as possible for the engineers and should not take too much hands-on time.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-11-18T07:00:00-08:00">November 18, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=Search+at+scale%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FSearch-at-Scale%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FSearch-at-Scale%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FSearch-at-Scale%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FSearch-at-Scale%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tech/System-Design-and-Scalability/" class="pagination--pager" title="System Design and Scalability
+">Previous</a>
+    
+    
+      <a href="/tech/Android-Development-Basics/" class="pagination--pager" title="Android Development Basics
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/learning/Negotiations-Workshop/" rel="permalink">Negotiations Workshop
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">by Holly Schroth
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/books/Getting-to-Yes/" rel="permalink">Getting to Yes
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  44 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Summary of the book ‘Getting to Yes’ on Negotiations
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/ML-Tech-talk/" rel="permalink">Intro to ML by Parth Mehta
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Tech session conducted by me teaching ML basics to engineers at Yahoo
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/iOS-Development/" rel="permalink">iOS Development
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  56 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes taken during iOS training course with Big Nerd Ranch
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

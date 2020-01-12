@@ -1,0 +1,945 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Intro to ML by Parth Mehta - Techie Notes</title>
+<meta name="description" content="Tech session conducted by me teaching ML basics to engineers at Yahoo">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Techie Notes">
+<meta property="og:title" content="Intro to ML by Parth Mehta">
+<meta property="og:url" content="http://localhost:4000/tech/ML-Tech-talk/">
+
+
+  <meta property="og:description" content="Tech session conducted by me teaching ML basics to engineers at Yahoo">
+
+
+
+
+
+  <meta name="twitter:site" content="@parth94mehta">
+  <meta name="twitter:title" content="Intro to ML by Parth Mehta">
+  <meta name="twitter:description" content="Tech session conducted by me teaching ML basics to engineers at Yahoo">
+  <meta name="twitter:url" content="http://localhost:4000/tech/ML-Tech-talk/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-04-17T08:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/ML-Tech-talk/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Parth Mehta",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Techie Notes</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/" title="My projects">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://bit.ly/parthmehta" title="Download resume">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#tech" itemprop="item"><span itemprop="name">Tech</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Intro to ML by Parth Mehta</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Parth Mehta</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Software Developer @ Yahoo | Machine Learning | Columbia University
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">SF Bay Area, California</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:parth.mehta@columbia.edu">
+            <meta itemprop="email" content="parth.mehta@columbia.edu" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/pm2877" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Intro to ML by Parth Mehta">
+    <meta itemprop="description" content="Tech session conducted by me teaching ML basics to engineers at Yahoo">
+    <meta itemprop="datePublished" content="April 17, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Intro to ML by Parth Mehta
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#supervised-machine-learning-models">Supervised Machine Learning Models</a></li>
+  <li><a href="#focus-of-the-talk">Focus of the talk</a></li>
+  <li><a href="#what-is-machine-learning-ml">What is Machine Learning (ML)?</a></li>
+  <li><a href="#why-machine-learning">Why Machine Learning?</a></li>
+  <li><a href="#types-of-machine-learning">Types of Machine Learning</a></li>
+  <li><a href="#supervised-learning">Supervised Learning</a></li>
+  <li><a href="#mathematically-speaking">Mathematically Speaking</a></li>
+  <li><a href="#unsupervised-learning-in-contrast">Unsupervised Learning in contrast</a></li>
+  <li><a href="#reinforcement-learning-rl">Reinforcement Learning (RL)</a></li>
+  <li><a href="#important-python-libraries">Important Python Libraries</a></li>
+  <li><a href="#basic-terminology">Basic Terminology</a></li>
+  <li><a href="#data-representation">Data representation</a>
+    <ul>
+      <li><a href="#goal--to-create-a-model-that-learns-what-digit-the-images-represent-and-predict-accurately-the-digit-in-a-new-image-given-to-it">GOAL:  To create a model, that learns what digit the images represent and predict accurately the digit in a new image given to it.</a></li>
+      <li><a href="#sample">Sample:</a></li>
+      <li><a href="#feature">Feature:</a></li>
+      <li><a href="#label">Label:</a>
+        <ul>
+          <li><a href="#generalization-training-data-test-data">Generalization, Training Data, Test Data</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#supervised-machine-learning-problems">Supervised Machine Learning Problems</a></li>
+  <li><a href="#ml-workflow">ML Workflow</a></li>
+  <li><a href="#focus-today---building-supervised-learning-models">Focus today - Building Supervised Learning Models</a></li>
+  <li><a href="#so-what-are-ml-models">So what are ML Models?</a></li>
+  <li><a href="#model-complexity-overfitting-and-underfitting">Model Complexity, Overfitting and Underfitting</a></li>
+  <li><a href="#linear-models-for-classification">Linear Models for Classification</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="supervised-machine-learning-models">Supervised Machine Learning Models</h1>
+
+<h1 id="focus-of-the-talk">Focus of the talk</h1>
+
+<ul>
+  <li>Understand core concepts and terminologies for Machine Learning</li>
+  <li>How to build Machine Learning models for classification problems and evaluate them</li>
+  <li>Supervised Learning models</li>
+  <li>Solve an actual ML problem posted on Kaggle</li>
+</ul>
+
+<h1 id="what-is-machine-learning-ml">What is Machine Learning (ML)?</h1>
+
+<ul>
+  <li>Machine learning is about extracting knowledge from data.</li>
+  <li>We want to learn, from a large dataset, to make decisions based on future observations.</li>
+  <li>You input to a machine learning program a dataset, and it learns to make decisions on future observations by itself.</li>
+</ul>
+
+<h1 id="why-machine-learning">Why Machine Learning?</h1>
+
+<ul>
+  <li>Creating rule-based system requires deep understanding of how the rules should be made, by an expert.</li>
+  <li>The logic required to make a decision is specific to a single domain and task. Changing the task even slightly might require a rewrite of the whole system.</li>
+  <li>You cannot create RULES for everything - eg. image recoginition</li>
+</ul>
+
+<h1 id="types-of-machine-learning">Types of Machine Learning</h1>
+
+<ol>
+  <li><strong>Supervised Learning</strong>    &lt;==   Our focus for today</li>
+  <li>Unsupervised Learning</li>
+  <li>Reinforcement Learning (RL)</li>
+</ol>
+
+<h1 id="supervised-learning">Supervised Learning</h1>
+<ul>
+  <li>Machine learning algorithms that learn from input/output pairs are called supervised learning algorithms</li>
+  <li>
+    <p>The desired outputs (Y vector in the image below) provided for each example act as a “supervisor” to the algorithms to help them learn.</p>
+  </li>
+  <li>
+    <p>Most common type of ML in industry and research currently.</p>
+  </li>
+  <li>A common example is spam filtering.
+<img src="./data-table.png" alt="data-table.png" /></li>
+</ul>
+
+<h1 id="mathematically-speaking">Mathematically Speaking</h1>
+
+<p>Supervised learning is where you have <strong>input variables (x)</strong> and an <strong>output variable (Y)</strong> and you use an algorithm to learn the mapping function from the input to the output.</p>
+
+<p><em>Y = f(X)</em></p>
+
+<p>The goal is to approximate the mapping function so well that when you have new <strong>input data (x)</strong> that you can predict the <strong>output variables (Y)</strong> for that data.</p>
+
+<h1 id="unsupervised-learning-in-contrast">Unsupervised Learning in contrast</h1>
+<ul>
+  <li>
+    <p>In unsupervised learning, even for the given dataset, only the input data is known, and no known output data is given to the algorithm.</p>
+  </li>
+  <li>
+    <p>A common example is <code class="highlighter-rouge">Identifying topics in a set of blog posts</code></p>
+  </li>
+</ul>
+
+<h1 id="reinforcement-learning-rl">Reinforcement Learning (RL)</h1>
+<ul>
+  <li>
+    <p>This branch is increasingly ganining popularity. Alpha Go program from DeepMind company, that defeated the world champion in the game of Go used RL.</p>
+  </li>
+  <li>
+    <p>Reinforcement learning is about an agent learning to interact with an environment, with some ultimate goal. When the agent performs a desired action, the algorithm rewards the agent, and when it makes a mistake, the algorithm penalizes the agent. This helps the agent learn.</p>
+  </li>
+</ul>
+
+<h1 id="important-python-libraries">Important Python Libraries</h1>
+
+<p>Some important python libraries and their uses:</p>
+
+<p><strong>scikit-learn or sklearn</strong> - scikit-learn is a very popular tool, and the most prominent Python library for machine learning. It contains a number of state-of-the-art machine learning algorithms, as well as comprehensive documentation about each algorithm.</p>
+
+<p><strong>NumPy</strong> - scikit-learn takes in data only in the form of NumPy arrays. It contains functionality for multidimensional arrays, and complex math operations.</p>
+
+<p><strong>matplotlib</strong> - matplotlib is the primary scientific plotting library in Python.</p>
+
+<p><strong>pandas</strong> - pandas is a Python library for data wrangling and analysis. A pandas DataFrame is a table, similar to an Excel spreadsheet. pandas also provides the ability to ingest data from variety of file formats like CSV, SQL, excel files, etc.</p>
+
+<h1 id="basic-terminology">Basic Terminology</h1>
+
+<p>To understand the concepts and examples that follow, we need to grasp on some basic terminology used in Machine Learning.</p>
+
+<p>Let’s do that with an example</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span> <span class="c">#pre-loaded labelled dataset</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_keys(['data', 'target', 'target_names', 'images', 'DESCR'])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Dimensions of the data</span><span class="se">\n</span><span class="s">{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dimensions of the data
+(1797, 8, 8)
+</code></pre></div></div>
+
+<p>This tells us that in my dataset, there are 1797 images, each with dimensions 8 x 8 (64 pixels)</p>
+
+<p>This is a very small and simple image dataset.
+Every single image is a grayscale image, where each pixel is represented by a brightness value from 0 to 16.</p>
+
+<p>Let’s look at how these images look like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">images_and_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images_and_labels</span><span class="p">[:</span><span class="mi">8</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">'nearest'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Labels: </span><span class="si">%</span><span class="s">i'</span> <span class="o">%</span> <span class="n">label</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="ML_BOF_TALK_files/ML_BOF_TALK_14_0.png" alt="png" /></p>
+
+<p>Let’s see how a single image looks like in code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Arrangement of pixels in first image of the dataset</span><span class="se">\n\n</span><span class="s">{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Arrangement of pixels in first image of the dataset
+
+[[ 0.  0.  5. 13.  9.  1.  0.  0.]
+ [ 0.  0. 13. 15. 10. 15.  5.  0.]
+ [ 0.  3. 15.  2.  0. 11.  8.  0.]
+ [ 0.  4. 12.  0.  0.  8.  8.  0.]
+ [ 0.  5.  8.  0.  0.  9.  8.  0.]
+ [ 0.  4. 11.  0.  1. 12.  7.  0.]
+ [ 0.  2. 14.  5. 10. 12.  0.  0.]
+ [ 0.  0.  6. 13. 10.  0.  0.  0.]]
+</code></pre></div></div>
+
+<h1 id="data-representation">Data representation</h1>
+
+<p>Since Machine Learning largely includes various mathematical operations over data, <strong>we need to represent our data in a way that we can apply these math operations in an optimized way</strong></p>
+
+<p>The way we do it is to represent data in the form of matrices, or in programming terms, a 2D array.</p>
+
+<p>Since, each our image is an 8 x 8 matrix and we have about 1800 images, our data is currently represented in 3 dimensions (1800 x 8 x 8).</p>
+
+<p>So instead, we represent each image as a 1 x 64 matrix (or a vector). By doing this, our dataset of images would be a 2D matrix (1800 x 64)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Dimensions of the data</span><span class="se">\n</span><span class="s">{}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Representation of a single image</span><span class="se">\n</span><span class="s">{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dimensions of the data
+(1797, 64)
+
+Representation of a single image
+[ 0.  0.  5. 13.  9.  1.  0.  0.  0.  0. 13. 15. 10. 15.  5.  0.  0.  3.
+ 15.  2.  0. 11.  8.  0.  0.  4. 12.  0.  0.  8.  8.  0.  0.  5.  8.  0.
+  0.  9.  8.  0.  0.  4. 11.  0.  1. 12.  7.  0.  0.  2. 14.  5. 10. 12.
+  0.  0.  0.  0.  6. 13. 10.  0.  0.  0.]
+</code></pre></div></div>
+
+<p>So let’s say this is the data we would be working on.</p>
+
+<h2 id="goal--to-create-a-model-that-learns-what-digit-the-images-represent-and-predict-accurately-the-digit-in-a-new-image-given-to-it">GOAL:  To create a model, that learns what digit the images represent and predict accurately the digit in a new image given to it.</h2>
+
+<p>Now, that we have the data and have set our goal, we are ready to learn some terms:</p>
+
+<h2 id="sample">Sample:</h2>
+<p>Each sample refers to a single row in a dataset. In our case, a sample would be a single image.</p>
+<h2 id="feature">Feature:</h2>
+<p>Each column in the dataset is known as a feature vector and each entry in a sample is a feature. For our images, the pixel value is a feature. So our images have 64 features each.</p>
+
+<p>Features are the properties of a sample, that help the machine understand and learn about the sample.</p>
+
+<h2 id="label">Label:</h2>
+<p>Ground truth value of a sample. These are the values against which we check how accurate our predictions are. In our example, the label array tells us the actual value of the digits in the images.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Dimensions of the labels array</span><span class="se">\n</span><span class="s">{}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Target labels of the images</span><span class="se">\n</span><span class="s">{}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dimensions of the labels array
+(1797,)
+
+Target labels of the images
+[0 1 2 ... 8 9 8]
+</code></pre></div></div>
+
+<h3 id="generalization-training-data-test-data">Generalization, Training Data, Test Data</h3>
+
+<p>One of the most important concepts to learn in supervised machine learning, is of generalization.</p>
+
+<ul>
+  <li>
+    <p>We want to build a machine learning model from this data that can predict the number in a new image. We need some data on which we can assess how our model is doing.</p>
+  </li>
+  <li>
+    <p>Unfortunately, we cannot use the data we used to build the model, to evaluate it too. This is because our model can always simply remember the whole training set, and will therefore always predict the correct label for any point in the training set.</p>
+  </li>
+  <li>
+    <p>This <strong>“remembering”</strong> does not indicate to us whether our model will also perform well on new data (in other words, whether it will <strong>generalize</strong> well).</p>
+  </li>
+  <li>
+    <p>To assess the model’s learning at every step, we show it new data (data that it hasn’t seen while learning), but for which we have labels.</p>
+  </li>
+  <li>
+    <p>This is usually done by splitting the labeled data we have collected (our 1797 images) into two parts. One part of the data is used to build our machine learning model, and is called the training data or training set. The rest of the data will be used to assess how well the model works; this is called the test data, test set, or hold-out set.</p>
+  </li>
+  <li>
+    <p>Think of this as your Math exam in school!!</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
+
+<span class="c"># separating out data for training and testing</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+        <span class="n">digits</span><span class="p">[</span><span class="s">'data'</span><span class="p">],</span> <span class="n">digits</span><span class="p">[</span><span class="s">'target'</span><span class="p">],</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c"># setting parameters for our model</span>
+<span class="n">classifier_model</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">100.</span><span class="p">)</span>
+
+<span class="c"># training the model on the train data only!</span>
+<span class="n">classifier_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c"># Let's check how well the model has learned on the training data</span>
+<span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">classifier_model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Train accuracy: {}</span><span class="si">%</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">train_accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Train accuracy: 100.0%
+</code></pre></div></div>
+
+<p>Training accuracy only indicates that our model has learned the training set properties well. It doesn’t say how well it will perform on new data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now I have a model that has learned to predict the digits, given images. Let's test it out on 1 new image</span>
+<span class="n">single_prediction</span> <span class="o">=</span> <span class="n">classifier_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'prediction on new image </span><span class="se">\n</span><span class="s">{}</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">single_prediction</span><span class="p">))</span>
+
+<span class="c"># Now let's see if this matches with the actual label (ground-truth)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X_test</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">'nearest'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'label of the new image </span><span class="se">\n</span><span class="s">{}</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y_test</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prediction on new image 
+[2]
+
+label of the new image 
+2
+</code></pre></div></div>
+
+<p><img src="ML_BOF_TALK_files/ML_BOF_TALK_25_1.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Let's check how accurate our model is, using the test data</span>
+<span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">classifier_model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Test accuracy: {}</span><span class="si">%</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Test accuracy: 86.8888888888889%
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Now, I can infer from this that my model is <strong>87% likely to recognise a new image correctly</strong>. This problem is commonly known as <code class="highlighter-rouge">Optical Character Recognition</code></p>
+
+    <p>The above problem is also a good example of a certain type of a Machine Learning problem - <strong>Classification problems</strong>. We want to classify the images into categories.</p>
+  </li>
+  <li>
+    <p>A more relatable, but a very similar problem is a spam filter for emails. The goal is simple here: classify my email into either of 2 classes - spam or not spam.</p>
+
+    <p>The interesting question is: what are the features for every email sample?</p>
+  </li>
+  <li>
+    <p>The <code class="highlighter-rouge">canIPush</code> program we are trying to build, is also a perfect example of a classification problem.</p>
+  </li>
+</ul>
+
+<h1 id="supervised-machine-learning-problems">Supervised Machine Learning Problems</h1>
+
+<ul>
+  <li>Classification - the goal is to predict a class label, which is a choice from a predefined list of possibilities.</li>
+  <li>Regression - the goal is to predict a continuous number.</li>
+</ul>
+
+<p>Example: Predicting a person’s annual income from their education, their age, and where they live is an example of a regression task. When predicting income, the predicted value is an amount, and can be any number in a given range.</p>
+
+<h1 id="ml-workflow">ML Workflow</h1>
+
+<p><img src="./ml-workflow.png" alt="ML workflow chart" /></p>
+
+<h1 id="focus-today---building-supervised-learning-models">Focus today - Building Supervised Learning Models</h1>
+
+<h1 id="so-what-are-ml-models">So what are ML Models?</h1>
+
+<ul>
+  <li>Models are what make the machines “intelligent”.</li>
+  <li>They are the algorithms that help the machines learn using the available data, which you can then use as an input/output blackbox to get predictions on real-world input.</li>
+  <li>You don’t explicitly program the algorithm to answer for the new input. You help it learn from the data samples, and it tries and generalizes it to predict the answer to the new input.</li>
+</ul>
+
+<h1 id="model-complexity-overfitting-and-underfitting">Model Complexity, Overfitting and Underfitting</h1>
+<p><img src="./generalization_curve.png" alt="generalization_curve.png" /></p>
+
+<h1 id="linear-models-for-classification">Linear Models for Classification</h1>
+
+<p>In our example above, we just used a linear classification model to classify our digits data. We used a library function with an in-built machine learning algorithm with a certain set of parameters.</p>
+
+<p>But how does these classification models work? It is important to know this to select the right model for the right use case, and also to tune a model with correct parameters.</p>
+
+<p>Dhruv will help us answer this question.</p>
+
+<h1 id="references">References</h1>
+
+<p>Introduction to Machine Learning in Python (IMLP) - https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-17T08:00:00-07:00">April 17, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=Intro+to+ML+by+Parth+Mehta%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FML-Tech-talk%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FML-Tech-talk%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FML-Tech-talk%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FML-Tech-talk%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tech/iOS-Development/" class="pagination--pager" title="iOS Development
+">Previous</a>
+    
+    
+      <a href="/books/Getting-to-Yes/" class="pagination--pager" title="Getting to Yes
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/learning/Negotiations-Workshop/" rel="permalink">Negotiations Workshop
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">by Holly Schroth
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/books/Getting-to-Yes/" rel="permalink">Getting to Yes
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  44 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Summary of the book ‘Getting to Yes’ on Negotiations
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/iOS-Development/" rel="permalink">iOS Development
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  55 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes taken during iOS training course with Big Nerd Ranch
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/Pro-Git/" rel="permalink">Pro-Git
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A deep study of Git
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,730 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.13.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Pro-Git - Techie Notes</title>
+<meta name="description" content="A deep study of Git">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Techie Notes">
+<meta property="og:title" content="Pro-Git">
+<meta property="og:url" content="http://localhost:4000/tech/Pro-Git/">
+
+
+  <meta property="og:description" content="A deep study of Git">
+
+
+
+
+
+  <meta name="twitter:site" content="@parth94mehta">
+  <meta name="twitter:title" content="Pro-Git">
+  <meta name="twitter:description" content="A deep study of Git">
+  <meta name="twitter:url" content="http://localhost:4000/tech/Pro-Git/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-02-15T07:00:00-08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/Pro-Git/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Parth Mehta",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Techie Notes Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Techie Notes</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/" title="My projects">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://bit.ly/parthmehta" title="Download resume">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#tech" itemprop="item"><span itemprop="name">Tech</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Pro-Git</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/avatar.jpg" alt="Parth Mehta" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Parth Mehta</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Software Developer @ Yahoo | Machine Learning | Columbia University
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">SF Bay Area, California</span>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:parth.mehta@columbia.edu">
+            <meta itemprop="email" content="parth.mehta@columbia.edu" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/Parth94Mehta" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/parth94" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/pm2877" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Pro-Git">
+    <meta itemprop="description" content="A deep study of Git">
+    <meta itemprop="datePublished" content="February 15, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Pro-Git
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#history-of-vcs">History of VCS</a></li>
+  <li><a href="#history-of-git">History of Git</a></li>
+  <li><a href="#git-vs-other-vcs">Git Vs. Other VCS</a></li>
+  <li><a href="#git-basics">Git Basics</a></li>
+  <li><a href="#first-time-git-setup">First-time Git Setup</a></li>
+  <li><a href="#checking-your-settings">Checking Your Settings</a></li>
+  <li><a href="#basic-concepts">Basic Concepts</a>
+      - {:.} <a href="#short-status">Short Status</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h3 id="history-of-vcs">History of VCS</h3>
+
+<blockquote>
+  <p>Local VCS (RCS) –&gt; Centralised Remote VCS (subversion) –&gt; Distributed Remote VCS (Git)</p>
+</blockquote>
+
+<h3 id="history-of-git">History of Git</h3>
+
+<blockquote>
+  <p>Linux Kernel used patch files from 1991 - 2002 —&gt; In 2002, started using Bitkeeper, a proprietary DCVS —&gt; In 2005, they fought and it Linus Torvalds decided to build something of his own, learning lessons from Bitkeeper.</p>
+</blockquote>
+
+<h3 id="git-vs-other-vcs">Git Vs. Other VCS</h3>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>The basic difference is that Git is not a delta-based version control system. It stores snapshots of the entire filesystem at each commit, as opposed to storing what changed in all the files from the previous version.</p>
+    </li>
+    <li>
+      <p>Nearly every operation is local, be it looking up history, or making commits.</p>
+    </li>
+    <li>
+      <p>Everything in Git is checksummed before it is stored and is then referred to by that checksum. This means it’s impossible to change the contents of any file or directory without Git knowing about it. This functionality is built into Git at the lowest levels and is integral to its philosophy. You can’t lose information in transit or get file corruption without Git being able to detect it.</p>
+
+      <p>The mechanism that Git uses for this checksumming is called a SHA-1 hash.</p>
+    </li>
+  </ol>
+</blockquote>
+
+<h3 id="git-basics">Git Basics</h3>
+
+<blockquote>
+  <p>Git has three main states that your files can reside in: <em>committed</em>, <em>modified</em>, and <em>staged</em>:</p>
+
+  <ul>
+    <li>Committed means that the data is safely stored in your local database.</li>
+    <li>Modified means that you have changed the file but have not committed it to your database yet.</li>
+    <li>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.</li>
+  </ul>
+
+  <p>This leads us to the three main sections of a Git project: the Git directory, the working tree, and the staging area.</p>
+
+  <p>The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you <em>clone</em> a repository from another computer.</p>
+
+  <p>The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.</p>
+
+  <p>The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.</p>
+
+  <p>The basic Git workflow goes something like this:</p>
+
+  <ol>
+    <li>You modify files in your working tree.</li>
+    <li>You selectively stage just those changes you want to be part of your next commit, which adds <em>only</em>those changes to the staging area.</li>
+    <li>You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</li>
+  </ol>
+
+  <p>If a particular version of a file is in the Git directory, it’s considered <em>committed</em>. If it has been modified and was added to the staging area, it is <em>staged</em>. And if it was changed since it was checked out but has not been staged, it is <em>modified</em>.</p>
+</blockquote>
+
+<h3 id="first-time-git-setup">First-time Git Setup</h3>
+
+<p>Git comes with a tool called <code class="highlighter-rouge">git config</code> that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">/etc/gitconfig</code> file: Contains values applied to every user on the system and all their repositories. If you pass the option <code class="highlighter-rouge">--system</code> to <code class="highlighter-rouge">git config</code>, it reads and writes from this file specifically. (Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.)</li>
+  <li><code class="highlighter-rouge">~/.gitconfig</code> or <code class="highlighter-rouge">~/.config/git/config</code> file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the <code class="highlighter-rouge">--global</code> option, and this affects <em>all</em> of the repositories you work with on your system.</li>
+  <li><code class="highlighter-rouge">config</code> file in the Git directory (that is, <code class="highlighter-rouge">.git/config</code>) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the <code class="highlighter-rouge">--local</code> option, <strong>but that is in fact the default</strong>. (Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.)</li>
+</ol>
+
+<p>Each level overrides values in the previous level, so values in <code class="highlighter-rouge">.git/config</code> trump those in <code class="highlighter-rouge">/etc/gitconfig</code>.</p>
+
+<h3 id="checking-your-settings">Checking Your Settings</h3>
+
+<p>If you want to check your configuration settings, you can use the <code class="highlighter-rouge">git config --list</code> command to list all the settings Git can find at that point:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git config <span class="nt">--list</span>
+<span class="go">user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<p>You may see keys more than once, because Git reads the same key from different files (<code class="highlighter-rouge">/etc/gitconfig</code> and <code class="highlighter-rouge">~/.gitconfig</code>, for example). In this case, Git uses the last value for each unique key it sees.</p>
+
+<p>You can also check what Git thinks a specific key’s value is by typing <code class="highlighter-rouge">git config &lt;key&gt;</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git config user.name
+<span class="go">John Doe
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>Since Git might read the same configuration variable value from more than one file, it’s possible that you have an unexpected value for one of these values and you don’t know why. In cases like that, you can query Git as to the <em>origin</em> for that value, and it will tell you which configuration file had the final say in setting that value:<code class="highlighter-rouge">$ git config --show-origin rerere.autoUpdate file:/home/johndoe/.gitconfig	false</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="basic-concepts">Basic Concepts</h3>
+
+<ol>
+  <li>
+    <p>Remember that each file in your working directory can be in one of two states: <em>tracked</em> or <em>untracked</em>. <strong>Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged. In short, tracked files are files that Git knows about.</strong> <strong>Untracked files are everything else — any files in your working directory that were not in your last snapshot and are not in your staging area. When you first clone a repository, all of your files will be tracked and unmodified because Git just checked them out and you haven’t edited anything.</strong> <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="" /></p>
+  </li>
+  <li>
+    <h5 id="short-status">Short Status</h5>
+
+    <p>While the <code class="highlighter-rouge">git status</code> output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run <code class="highlighter-rouge">git status -s</code> or <code class="highlighter-rouge">git status --short</code> you get a far more simplified output from the command:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> git status <span class="nt">-s</span>
+<span class="go"> M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+</span></code></pre></div>    </div>
+
+    <p>New files that aren’t tracked have a <code class="highlighter-rouge">??</code> next to them, new files that have been added to the staging area have an <code class="highlighter-rouge">A</code>, modified files have an <code class="highlighter-rouge">M</code> and so on. There are two columns to the output - the left-hand column indicates the status of the staging area and the right-hand column indicates the status of the working tree. So for example in that output, the <code class="highlighter-rouge">README</code> file is modified in the working directory but not yet staged, while the <code class="highlighter-rouge">lib/simplegit.rb</code> file is modified and staged. The <code class="highlighter-rouge">Rakefile</code> was modified, staged and then modified again, so there are changes to it that are both staged and unstaged.</p>
+  </li>
+  <li></li>
+</ol>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">Tech</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-15T07:00:00-08:00">February 15, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=Pro-Git%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FPro-Git%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FPro-Git%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FPro-Git%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FPro-Git%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tech/Intro-to-React/" class="pagination--pager" title="Intro to React and Redux
+">Previous</a>
+    
+    
+      <a href="/tech/iOS-Development/" class="pagination--pager" title="iOS Development
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/learning/Negotiations-Workshop/" rel="permalink">Negotiations Workshop
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">by Holly Schroth
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/books/Getting-to-Yes/" rel="permalink">Getting to Yes
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  44 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Summary of the book ‘Getting to Yes’ on Negotiations
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/ML-Tech-talk/" rel="permalink">Intro to ML by Parth Mehta
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Tech session conducted by me teaching ML basics to engineers at Yahoo
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/iOS-Development/" rel="permalink">iOS Development
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  56 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Notes taken during iOS training course with Big Nerd Ranch
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

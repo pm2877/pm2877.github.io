@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>iOS Notes - Techie Notes</title>
+<!-- begin _includes/seo.html --><title>iOS Development - Techie Notes</title>
 <meta name="description" content="Notes taken during iOS training course with Big Nerd Ranch">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Techie Notes">
-<meta property="og:title" content="iOS Notes">
-<meta property="og:url" content="http://localhost:4000/tech/iOS-Notes/">
+<meta property="og:title" content="iOS Development">
+<meta property="og:url" content="http://localhost:4000/tech/iOS-Development/">
 
 
   <meta property="og:description" content="Notes taken during iOS training course with Big Nerd Ranch">
@@ -28,9 +28,9 @@
 
 
   <meta name="twitter:site" content="@parth94mehta">
-  <meta name="twitter:title" content="iOS Notes">
+  <meta name="twitter:title" content="iOS Development">
   <meta name="twitter:description" content="Notes taken during iOS training course with Big Nerd Ranch">
-  <meta name="twitter:url" content="http://localhost:4000/tech/iOS-Notes/">
+  <meta name="twitter:url" content="http://localhost:4000/tech/iOS-Development/">
 
   
     <meta name="twitter:card" content="summary">
@@ -52,7 +52,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/tech/iOS-Notes/">
+<link rel="canonical" href="http://localhost:4000/tech/iOS-Development/">
 
 
 
@@ -128,7 +128,15 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="/">Techie Notes</a>
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/" title="My projects">Portfolio</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://bit.ly/parthmehta" title="Download resume">Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/notes/" >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li></ul>
         
         <button class="search__toggle" type="button">
           <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
@@ -150,6 +158,42 @@
     <div class="initial-content">
       
 
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#tech" itemprop="item"><span itemprop="name">Tech</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">iOS Development</li>
+      
+    
+  </ol>
+</nav>
+
+  
 
 
 <div id="main" role="main">
@@ -176,7 +220,7 @@
     
     
       <p class="author__bio" itemprop="description">
-        Software Developer | Machine Learning | Columbia University
+        Software Developer @ Yahoo | Machine Learning | Columbia University
       </p>
     
   </div>
@@ -186,7 +230,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">New York</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">SF Bay Area, California</span>
         </li>
       
 
@@ -283,7 +327,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="iOS Notes">
+    <meta itemprop="headline" content="iOS Development">
     <meta itemprop="description" content="Notes taken during iOS training course with Big Nerd Ranch">
     <meta itemprop="datePublished" content="March 22, 2019">
     
@@ -291,7 +335,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">iOS Notes
+          <h1 id="page-title" class="page__title" itemprop="headline">iOS Development
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -316,109 +360,178 @@
       <li><a href="#general-notes">General Notes</a></li>
       <li><a href="#mvc">MVC</a></li>
       <li><a href="#swift-basics">Swift Basics</a>
-      - {:.} <a href="#optionals-and-optional-binding">Optionals and Optional Binding</a>
-      - {:.} <a href="#collections-array">Collections: Array</a>
-      - {:.} <a href="#collections-dictionary">Collections: Dictionary</a>
-      - {:.} <a href="#control-flow-conditional-statements">Control Flow: Conditional Statements</a>
-      - {:.} <a href="#control-flow-for-in-loop">Control Flow: For-in Loop</a>
-      - {:.} <a href="#functions">Functions</a>
-      - {:.} <a href="#closures">Closures</a>
-      - {:.} <a href="#structs">Structs</a>
-      - {:.} <a href="#classes">Classes</a>
-      - {:.} <a href="#properties">Properties</a>
-      - {:.} <a href="#protocols">Protocols</a>
-      - {:.} <a href="#extensions">Extensions</a>
-      - {:.} <a href="#generics">Generics</a></li>
+        <ul>
+          <li><a href="#optionals-and-optional-binding">Optionals and Optional Binding</a></li>
+          <li><a href="#collections-array">Collections: Array</a></li>
+          <li><a href="#collections-dictionary">Collections: Dictionary</a></li>
+          <li><a href="#control-flow-conditional-statements">Control Flow: Conditional Statements</a></li>
+          <li><a href="#control-flow-for-in-loop">Control Flow: For-in Loop</a></li>
+          <li><a href="#functions">Functions</a></li>
+          <li><a href="#closures">Closures</a></li>
+          <li><a href="#structs">Structs</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#protocols">Protocols</a></li>
+          <li><a href="#extensions">Extensions</a></li>
+          <li><a href="#generics">Generics</a></li>
+        </ul>
+      </li>
       <li><a href="#views-basics">Views Basics</a>
-      - {:.} <a href="#views">Views</a>
-      - {:.} <a href="#the-view-hierarchy">The View Hierarchy</a>
-      - {:.} <a href="#views-and-frames">Views and Frames</a>
-      - {:.} <a href="#creating-a-view-programmatically">Creating a view programmatically.</a>
-      - {:.} <a href="#frame-vs-bounds">Frame Vs. Bounds</a>
-      - {:.} <a href="#what-other-information-does-a-view-have">What other information does a view have?</a>
-      - {:.} <a href="#auto-layout">Auto Layout</a>
-      - {:.} <a href="#constraints-menu">Constraints Menu</a>
-      - {:.} <a href="#align-menu">Align Menu</a></li>
+        <ul>
+          <li><a href="#views">Views</a></li>
+          <li><a href="#the-view-hierarchy">The View Hierarchy</a></li>
+          <li><a href="#views-and-frames">Views and Frames</a></li>
+          <li><a href="#creating-a-view-programmatically">Creating a view programmatically.</a></li>
+          <li><a href="#frame-vs-bounds">Frame Vs. Bounds</a></li>
+          <li><a href="#what-other-information-does-a-view-have">What other information does a view have?</a></li>
+          <li><a href="#auto-layout">Auto Layout</a></li>
+          <li><a href="#constraints-menu">Constraints Menu</a></li>
+          <li><a href="#align-menu">Align Menu</a></li>
+        </ul>
+      </li>
       <li><a href="#view-controller">View Controller</a>
-      - {:.} <a href="#the-view-of-a-view-controller">The View of a View Controller</a>
-      - {:.} <a href="#how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</a>
-      - {:.} <a href="#tab-bar-controllers">Tab Bar Controllers</a>
-      - {:.} <a href="#tab-bar-items">Tab bar items</a>
-      - {:.} <a href="#accessing-subviews">Accessing subviews</a>
-      - {:.} <a href="#interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</a>
-      - {:.} <a href="#programmatic-view-composition">Programmatic View Composition</a>
-      - {:.} <a href="#programmatic-constraints">Programmatic Constraints</a>
-          - {:.} <a href="#layout-margin-guides">Layout Margin Guides</a>
-          - {:.} <a href="#layout-safe-area-guides">Layout Safe Area Guides</a>
-          - {:.} <a href="#controls">Controls</a>
-          - {:.} <a href="#control-events">Control Events</a>
-      - {:.} <a href="#q-when-exactly-is-the-loadview-method-called">Q. When exactly is the loadview() method called?</a></li>
+        <ul>
+          <li><a href="#the-view-of-a-view-controller">The View of a View Controller</a></li>
+          <li><a href="#how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</a></li>
+          <li><a href="#tab-bar-controllers">Tab Bar Controllers</a></li>
+          <li><a href="#tab-bar-items">Tab bar items</a></li>
+          <li><a href="#accessing-subviews">Accessing subviews</a></li>
+          <li><a href="#interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</a></li>
+          <li><a href="#programmatic-view-composition">Programmatic View Composition</a></li>
+          <li><a href="#programmatic-constraints">Programmatic Constraints</a></li>
+          <li><a href="#layout-margin-guides">Layout Margin Guides</a></li>
+          <li><a href="#layout-safe-area-guides">Layout Safe Area Guides</a></li>
+          <li><a href="#controls">Controls</a></li>
+          <li><a href="#control-events">Control Events</a>
+            <ul>
+              <li><a href="#q-when-exactly-is-the-loadview-method-called">Q. When exactly is the loadview() method called?</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><a href="#text-input--delegation">Text Input &amp; Delegation</a>
-      - {:.} <a href="#conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</a></li>
+        <ul>
+          <li><a href="#conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</a></li>
+        </ul>
+      </li>
       <li><a href="#internalization-and-localization">Internalization and Localization</a>
-      - {:.} <a href="#some-formatters-to-keep-in-mind">Some formatters to keep in Mind</a>
-      - {:.} <a href="#nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</a></li>
+        <ul>
+          <li><a href="#some-formatters-to-keep-in-mind">Some formatters to keep in Mind</a></li>
+          <li><a href="#nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</a></li>
+        </ul>
+      </li>
       <li><a href="#table-views">Table Views</a>
-      - {:.} <a href="#custom-initializers-for-classes">Custom Initializers for classes</a>
-      - {:.} <a href="#dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</a>
-      - {:.} <a href="#data-source-methods">Data Source Methods</a>
-      - {:.} <a href="#uitableviewcells">UITableViewCells</a>
-      - {:.} <a href="#reusing-uitableviewcells">Reusing UITableViewCells</a>
-      - {:.} <a href="#editing-table-views">Editing Table Views</a>
-          - {:.} <a href="#editing-mode">Editing Mode</a>
-          - {:.} <a href="#adding-and-deleting-items">Adding and Deleting Items</a>
-      - {:.} <a href="#design-patterns">Design Patterns</a></li>
+        <ul>
+          <li><a href="#custom-initializers-for-classes">Custom Initializers for classes</a></li>
+          <li><a href="#dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</a></li>
+          <li><a href="#data-source-methods">Data Source Methods</a></li>
+          <li><a href="#uitableviewcells">UITableViewCells</a></li>
+          <li><a href="#reusing-uitableviewcells">Reusing UITableViewCells</a></li>
+          <li><a href="#editing-table-views">Editing Table Views</a>
+            <ul>
+              <li><a href="#editing-mode">Editing Mode</a>
+                <ul>
+                  <li><a href="#adding-and-deleting-items">Adding and Deleting Items</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#design-patterns">Design Patterns</a></li>
+        </ul>
+      </li>
       <li><a href="#subclassing-uitableviewcell">Subclassing UITableViewCell</a>
-      - {:.} <a href="#customizing-the-cell">Customizing the Cell</a>
-      - {:.} <a href="#dynamic-type">Dynamic Type</a>
-      - {:.} <a href="#responding-to-user-changes">Responding to user changes</a>
-          - {:.} <a href="#bad-cell-constraints">Bad Cell Constraints</a>
-          - {:.} <a href="#better-cell-constraints">Better Cell constraints</a></li>
+        <ul>
+          <li><a href="#customizing-the-cell">Customizing the Cell</a></li>
+          <li><a href="#dynamic-type">Dynamic Type</a></li>
+          <li><a href="#responding-to-user-changes">Responding to user changes</a>
+            <ul>
+              <li><a href="#bad-cell-constraints">Bad Cell Constraints</a></li>
+              <li><a href="#better-cell-constraints">Better Cell constraints</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><a href="#stack-views">Stack Views</a>
-      - {:.} <a href="#properties-of-stackview">Properties of StackView</a>
-      - {:.} <a href="#hiding-views-inside-stackview">Hiding Views inside Stackview</a>
-      - {:.} <a href="#implicit-constraints">Implicit Constraints</a>
-          - {:.} <a href="#content-hugging-priorities">Content hugging priorities</a>
-          - {:.} <a href="#content-compression-resistance-priorities">Content compression resistance priorities</a></li>
+        <ul>
+          <li><a href="#properties-of-stackview">Properties of StackView</a></li>
+          <li><a href="#hiding-views-inside-stackview">Hiding Views inside Stackview</a></li>
+          <li><a href="#implicit-constraints">Implicit Constraints</a>
+            <ul>
+              <li><a href="#content-hugging-priorities">Content hugging priorities</a></li>
+              <li><a href="#content-compression-resistance-priorities">Content compression resistance priorities</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><a href="#segues">Segues</a>
-      - {:.} <a href="#passing-data-around">Passing Data Around</a></li>
+        <ul>
+          <li><a href="#passing-data-around">Passing Data Around</a></li>
+        </ul>
+      </li>
       <li><a href="#uinavigationcontroller">UINavigationController</a>
-      - {:.} <a href="#appearing-and-disappearing-views">Appearing and Disappearing Views</a>
-      - {:.} <a href="#first-responder-status">First Responder Status</a>
-      - {:.} <a href="#uinavigationbar">UINavigationBar</a></li>
+        <ul>
+          <li><a href="#appearing-and-disappearing-views">Appearing and Disappearing Views</a></li>
+          <li><a href="#first-responder-status">First Responder Status</a></li>
+          <li><a href="#uinavigationbar">UINavigationBar</a></li>
+        </ul>
+      </li>
       <li><a href="#saving-loading-and-error-handling">Saving, Loading and Error Handling</a>
-      - {:.} <a href="#property-lists">Property Lists</a>
-      - {:.} <a href="#error-handling">Error Handling</a>
-      - {:.} <a href="#application-sandbox">Application Sandbox</a>
-      - {:.} <a href="#constructing-a-file-url">Constructing a file URL</a>
-      - {:.} <a href="#persisting-the-items">Persisting the Items</a>
-      - {:.} <a href="#loading-the-items">Loading the Items</a></li>
+        <ul>
+          <li><a href="#property-lists">Property Lists</a></li>
+          <li><a href="#error-handling">Error Handling</a></li>
+          <li><a href="#application-sandbox">Application Sandbox</a></li>
+          <li><a href="#constructing-a-file-url">Constructing a file URL</a></li>
+          <li><a href="#persisting-the-items">Persisting the Items</a></li>
+          <li><a href="#loading-the-items">Loading the Items</a></li>
+        </ul>
+      </li>
       <li><a href="#application-states-and-transitions">Application States and Transitions</a>
-      - {:.} <a href="#application-states-flow-chart">Application states flow chart</a>
-      - {:.} <a href="#q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</a>
-      - {:.} <a href="#q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</a>
-      - {:.} <a href="#q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</a></li>
+        <ul>
+          <li><a href="#application-states-flow-chart">Application states flow chart</a></li>
+          <li><a href="#q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</a></li>
+          <li><a href="#q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</a></li>
+          <li><a href="#q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</a></li>
+        </ul>
+      </li>
       <li><a href="#the-application-bundle">The Application Bundle</a></li>
       <li><a href="#modals-and-popovers">Modals and Popovers</a>
-      - {:.} <a href="#alert-controllers">Alert controllers</a>
-          - {:.} <a href="#presenting-programmatically">Presenting programmatically</a>
-          - {:.} <a href="#dismissing">Dismissing</a>
-          - {:.} <a href="#completion-closure">Completion closure</a></li>
+        <ul>
+          <li><a href="#alert-controllers">Alert controllers</a>
+            <ul>
+              <li><a href="#presenting-programmatically">Presenting programmatically</a></li>
+              <li><a href="#dismissing">Dismissing</a></li>
+              <li><a href="#completion-closure">Completion closure</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><a href="#permissions">Permissions</a>
-      - {:.} <a href="#caching-in-the-data-store">Caching in the data store</a></li>
+        <ul>
+          <li><a href="#caching-in-the-data-store">Caching in the data store</a></li>
+        </ul>
+      </li>
       <li><a href="#-mark">// MARK:</a></li>
       <li><a href="#size-classes">Size classes</a>
-      - {:.} <a href="#modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</a>
-      - {:.} <a href="#varying-constraints-for-different-size-classes">Varying constraints for different size classes</a></li>
+        <ul>
+          <li><a href="#modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</a></li>
+          <li><a href="#varying-constraints-for-different-size-classes">Varying constraints for different size classes</a></li>
+        </ul>
+      </li>
       <li><a href="#web-services">Web Services</a>
-      - {:.} <a href="#building-the-url">Building the URL</a>
-      - {:.} <a href="#access-control">Access Control</a>
-      - {:.} <a href="#sending-the-request">Sending the Request</a>
-      - {:.} <a href="#the-main-thread">The Main Thread</a></li>
+        <ul>
+          <li><a href="#building-the-url">Building the URL</a></li>
+          <li><a href="#access-control">Access Control</a></li>
+          <li><a href="#sending-the-request">Sending the Request</a></li>
+          <li><a href="#the-main-thread">The Main Thread</a></li>
+        </ul>
+      </li>
       <li><a href="#collection-views">Collection Views</a>
-      - {:.} <a href="#creating-a-uicollectionview">Creating a UICollectionView</a>
-      - {:.} <a href="#uicollectionviewdatasource">UICollectionViewDataSource</a>
-      - {:.} <a href="#customizing-a-collection-layout">Customizing a Collection Layout</a></li>
+        <ul>
+          <li><a href="#creating-a-uicollectionview">Creating a UICollectionView</a></li>
+          <li><a href="#uicollectionviewdatasource">UICollectionViewDataSource</a></li>
+          <li><a href="#customizing-a-collection-layout">Customizing a Collection Layout</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -517,7 +630,7 @@
 
 <h2 id="swift-basics">Swift Basics</h2>
 
-<h4 id="optionals-and-optional-binding">Optionals and Optional Binding</h4>
+<h3 id="optionals-and-optional-binding">Optionals and Optional Binding</h3>
 
 <ul>
   <li>An optional lets you express the possibility that a variable may not store a value at all. The value of an optional will either be an instance of the specified type or nil.</li>
@@ -538,7 +651,7 @@
 <span class="c1">// greeting += " \(optionalTitle!)" // crash if optionalTitle  == nil</span>
 </code></pre></div></div>
 
-<h4 id="collections-array">Collections: Array</h4>
+<h3 id="collections-array">Collections: Array</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">bros</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Matt"</span><span class="p">,</span><span class="s">"Scott"</span><span class="p">,</span><span class="s">"Josh"</span><span class="p">,</span><span class="s">"Nick"</span><span class="p">]</span> <span class="c1">// could also infer type</span>
 <span class="n">bros</span> <span class="o">+=</span> <span class="p">[</span><span class="s">"Brian"</span><span class="p">]</span> <span class="c1">// ["Matt","Scott","Josh","Nick","Brian"]</span>
@@ -546,7 +659,7 @@
 <span class="n">bros</span><span class="o">.</span><span class="nf">removeAtIndex</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1">// ["Matt","Scott","Josh","Brandon"]</span>
 </code></pre></div></div>
 
-<h4 id="collections-dictionary">Collections: Dictionary</h4>
+<h3 id="collections-dictionary">Collections: Dictionary</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">etBroHome</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Matt"</span><span class="p">:</span> <span class="s">"GA"</span><span class="p">,</span><span class="s">"Scott"</span><span class="p">:</span> <span class="s">"DC"</span><span class="p">]</span>
 <span class="n">etBroHome</span><span class="p">[</span><span class="s">"Brian"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"GA"</span> <span class="c1">// ["Matt": "GA","Scott": "DC","Brian: GA"]</span>
@@ -555,7 +668,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="control-flow-conditional-statements">Control Flow: Conditional Statements</h4>
+<h3 id="control-flow-conditional-statements">Control Flow: Conditional Statements</h3>
 
 <p>‘if’ executes a set of statements if expression evalutates to true</p>
 
@@ -585,7 +698,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="control-flow-for-in-loop">Control Flow: For-in Loop</h4>
+<h3 id="control-flow-for-in-loop">Control Flow: For-in Loop</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Note that there is not manual version of the for-loop. If we need to use a manual version, we can use a while loop.</span>
 
@@ -605,7 +718,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="functions">Functions</h4>
+<h3 id="functions">Functions</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// pay attention to the return type and the external parameter name</span>
 <span class="kd">func</span> <span class="nf">printNumber</span><span class="p">(</span><span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
@@ -634,7 +747,7 @@
 <span class="nf">print</span><span class="p">(</span><span class="s">"Has matches: </span><span class="se">\(</span><span class="nf">hasMatches</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="nv">condition</span><span class="p">:</span> <span class="n">equalToTen</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// (true, 2)</span>
 </code></pre></div></div>
 
-<h4 id="closures">Closures</h4>
+<h3 id="closures">Closures</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">moreNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">24</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">newNumbers</span> <span class="o">=</span> <span class="n">moreNumbers</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span>
@@ -644,7 +757,7 @@
 <span class="nf">print</span><span class="p">(</span><span class="n">newNumbers</span><span class="p">)</span> <span class="c1">// [30,0,0,72]</span>
 </code></pre></div></div>
 
-<h4 id="structs">Structs</h4>
+<h3 id="structs">Structs</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">House</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">hotTubs</span><span class="p">:</span> <span class="kt">Int</span>
@@ -654,7 +767,7 @@
 <span class="nf">print</span><span class="p">(</span><span class="n">myHouse</span><span class="o">.</span><span class="nf">describeHouse</span><span class="p">())</span> <span class="c1">// House has 4 hot tubs!</span>
 </code></pre></div></div>
 
-<h4 id="classes">Classes</h4>
+<h3 id="classes">Classes</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Parent</span><span class="p">:</span> <span class="kt">Person</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">hasChildren</span><span class="p">:</span> <span class="kt">Bool</span>
@@ -698,7 +811,7 @@
   <li>Structs have default initializers, unlike classes. Classes need initializers to be defined by us.</li>
 </ul>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Meal</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">time</span><span class="p">:</span> <span class="kt">Int</span>
@@ -725,7 +838,7 @@
 <span class="n">aDay</span><span class="o">.</span><span class="n">lunch</span> <span class="c1">// name = Monday; time = 12; duration = 1</span>
 </code></pre></div></div>
 
-<h4 id="protocols">Protocols</h4>
+<h3 id="protocols">Protocols</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Protocols are similar to interfaces in Java and you can conform to multiple protocols (this is how you can achieve multiple inheritance in Swift).</span>
 <span class="kd">protocol</span> <span class="kt">ExampleProtocol</span> <span class="p">{</span>
@@ -743,7 +856,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="extensions">Extensions</h4>
+<h3 id="extensions">Extensions</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// add custom vars and methods to the basic types in Swift.</span>
 <span class="c1">// Note the visibility of these extensions is across the entire project.</span>
@@ -759,7 +872,7 @@
 <span class="mi">5</span><span class="o">.</span><span class="n">timesFive</span> <span class="c1">// 25</span>
 </code></pre></div></div>
 
-<h4 id="generics">Generics</h4>
+<h3 id="generics">Generics</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="n">swapTwoValues</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">inout</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="k">inout</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span> 
 	<span class="k">let</span> <span class="nv">temporaryA</span> <span class="o">=</span> <span class="n">a</span>
@@ -777,7 +890,7 @@
 
 <h2 id="views-basics">Views Basics</h2>
 
-<h4 id="views">Views</h4>
+<h3 id="views">Views</h3>
 
 <p>Views are objects that are visible to the user, like buttons, text fields, and sliders. View objects make up an application’s UI. A view:</p>
 
@@ -788,17 +901,17 @@
   <li>exists within a hierarchy of views whose root is the application’s window</li>
 </ul>
 
-<h4 id="the-view-hierarchy">The View Hierarchy</h4>
+<h3 id="the-view-hierarchy">The View Hierarchy</h3>
 
 <p>Every application has a single instance of UIWindow that serves as the container for all the views in the application. UIWindow is a subclass of UIView, so the window is itself a view. The window is created when the application launches. Once the window is created, other views can be added to it.</p>
 
 <p><img src="/images/image-20190318134431322.png" alt="image-20190318134431322" /></p>
 
-<h4 id="views-and-frames">Views and Frames</h4>
+<h3 id="views-and-frames">Views and Frames</h3>
 
 <p>When the application is launched, the view for the initial view controller is added to the root-level window. This view controller is represented by the ViewController class defined in <code class="highlighter-rouge">ViewController.swift</code>.</p>
 
-<h4 id="creating-a-view-programmatically">Creating a view programmatically.</h4>
+<h3 id="creating-a-view-programmatically">Creating a view programmatically.</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">rect</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">squareView</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">rect</span><span class="p">)</span>
@@ -809,7 +922,7 @@
   <p><strong><u>Note</u>:</strong> that these values are in points, not pixels. If the values were in pixels, then they would not be consistent across displays of different resolutions (i.e., Retina versus non-Retina). A point is a relative unit of a measure; it will be a different number of pixels depending on how many pixels are in the display. Sizes, positions, lines, and curves are always described in points to allow for differences in display resolution.</p>
 </blockquote>
 
-<h4 id="frame-vs-bounds">Frame Vs. Bounds</h4>
+<h3 id="frame-vs-bounds">Frame Vs. Bounds</h3>
 
 <p>Frame boundaries are the boundaries of the view, from where to where the view is displayed. Bounds, on the other hand are the limits of the content of the view. Think about scrolling in a maps view.</p>
 
@@ -819,7 +932,7 @@
 
 <p><img src="/images/image-20190318134658420.png" alt="image-20190318134658420" /></p>
 
-<h4 id="what-other-information-does-a-view-have">What other information does a view have?</h4>
+<h3 id="what-other-information-does-a-view-have">What other information does a view have?</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Hierarchy (Painter's method):</span>
 <span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
@@ -838,13 +951,13 @@
 <span class="k">var</span> <span class="nv">alpha</span><span class="p">:</span> <span class="kt">CGFloat</span>
 </code></pre></div></div>
 
-<h4 id="auto-layout">Auto Layout</h4>
+<h3 id="auto-layout">Auto Layout</h3>
 
 <p>Auto Layout is a crucial technology for every iOS developer. It helps you create flexible layouts that work across a range of devices and interface sizes. It also takes a lot of practice to master.</p>
 
 <p><img src="/images/image-20190318135555143.png" alt="image-20190318135555143" /></p>
 
-<h4 id="constraints-menu">Constraints Menu</h4>
+<h3 id="constraints-menu">Constraints Menu</h3>
 
 <p>In addition to using cntrl+drag to create relative positioning between 2 views, we also define constraints to the view.</p>
 
@@ -854,7 +967,7 @@
 
 <p>If a view does not have any siblings in the specified direction, then the nearest neighbor is its superview, also known as its container.</p>
 
-<h4 id="align-menu">Align Menu</h4>
+<h3 id="align-menu">Align Menu</h3>
 
 <p><img src="/images/image-20190318160547006.png" alt="image-20190318160547006" /></p>
 
@@ -864,7 +977,7 @@
 
 <p>Just think of a view controller as one view hierarchy. When an app switches between view controllers, it just means that it is switching between two different view heirarchies.</p>
 
-<h4 id="the-view-of-a-view-controller">The View of a View Controller</h4>
+<h3 id="the-view-of-a-view-controller">The View of a View Controller</h3>
 
 <p>As subclasses of UIViewController, all view controllers inherit an important property:</p>
 
@@ -888,7 +1001,7 @@
   <p><strong><u>NOTE</u></strong>: Although a storyboard can have many view controllers, each storyboard file has exactly one <strong>initial view controller</strong>. The initial view controller acts as an entry point into the storyboard.</p>
 </blockquote>
 
-<h4 id="how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</h4>
+<h3 id="how-does-uiwindow-handle-the-view-controllers">How does UIWindow handle the view controllers?</h3>
 
 <p>UIWindow has a rootViewController property. When a view controller is set as the window’s rootViewController, that view controller’s view gets added to the window’s view hierarchy. When this property is set, any existing subviews on the window are removed and the view controller’s view gets added to the window with the appropriate Auto Layout constraints.</p>
 
@@ -896,7 +1009,7 @@
 
 <p>The main interface for an application is set in the project settings. In the General tab of the project settings, find the Deployment Info section. Here you will see the Main Interface setting. If it is set to Main, for example, it corresponds to Main.storyboard.</p>
 
-<h4 id="tab-bar-controllers">Tab Bar Controllers</h4>
+<h3 id="tab-bar-controllers">Tab Bar Controllers</h3>
 
 <p>UITabBarController keeps an array of view controllers. It also maintains a tab bar at the bottom of the screen with a tab for each view controller in its array. Tapping on a tab results in the presentation of the view of the view controller associated with that tab.</p>
 
@@ -905,20 +1018,20 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <p><img src="/images/image-20190319114632381.png" alt="image-20190319114632381" /></p>
 
-<h4 id="tab-bar-items">Tab bar items</h4>
+<h3 id="tab-bar-items">Tab bar items</h3>
 
 <p>Each tab on the tab bar can display a title and an image, and each view controller maintains a tabBarItem property for this purpose. When a view controller is contained by a UITabBarController, its tab bar item appears in the tab bar.</p>
 
 <p>The order of the tabs is determined by the order of the view controllers within the tab bar controller’s viewControllers array.</p>
 
-<h4 id="accessing-subviews">Accessing subviews</h4>
+<h3 id="accessing-subviews">Accessing subviews</h3>
 
 <p>Often, you will want to do some extra initialization or configuration of subviews defined in Interface Builder before they appear to the user. So where can you access a subview? There are two main options, depending on what you need to do. The first option is the <code class="highlighter-rouge">viewDidLoad()</code> method. This method
  is called after the view controller’s interface file is loaded, at which point all of the view controller’s outlets will reference the appropriate objects. The second option is another UIViewController method, <code class="highlighter-rouge">viewWillAppear</code>. This method is called just before a view controller’s view is added to the window.</p>
 
 <p>Which should you choose? Override viewDidLoad() if the configuration only needs to be done once during the run of the app. Override <code class="highlighter-rouge">viewWillAppear</code> if you need the configuration to be done each time the view controller’s view appears onscreen.</p>
 
-<h4 id="interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</h4>
+<h3 id="interacting-with-view-controllers-and-their-views">Interacting with View Controllers and Their Views</h3>
 
 <p>Let’s look at some methods that are called during the lifecycle of a view controller and its view. Some of these methods you have already seen, and some are new.</p>
 
@@ -945,7 +1058,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
   </li>
 </ul>
 
-<h4 id="programmatic-view-composition">Programmatic View Composition</h4>
+<h3 id="programmatic-view-composition">Programmatic View Composition</h3>
 
 <p>UIView has an instance method <strong>addSubview(_:)</strong> which let’s you add a child view to its subviews collec4on. Other useful methods:</p>
 
@@ -959,7 +1072,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
   <p><strong><u>NOTE</u></strong>: When using bringSubview and sendSubview, remember that the view to be brought back or sent forward is also already loaded (no lazy loading here).</p>
 </blockquote>
 
-<h4 id="programmatic-constraints">Programmatic Constraints</h4>
+<h3 id="programmatic-constraints">Programmatic Constraints</h3>
 
 <blockquote>
   <p><strong><u>Note</u></strong>:</p>
@@ -982,7 +1095,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <p><img src="/images/image-20190319123127198.png" alt="image-20190319123127198" /></p>
 
-<h5 id="layout-margin-guides">Layout Margin Guides</h5>
+<h3 id="layout-margin-guides">Layout Margin Guides</h3>
 
 <p>Every view has a layoutMargins property that denotes the default spacing to use when laying out content. This property is an instance of UIEdgeInsets, which you can think of as a type of frame. When adding constraints, you will use the layoutMarginsGuide, which exposes anchors that are tied to the edges of the layoutMargins.</p>
 
@@ -994,7 +1107,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 <span class="n">constraint</span><span class="o">.</span><span class="n">isActive</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre></div></div>
 
-<h5 id="layout-safe-area-guides">Layout Safe Area Guides</h5>
+<h3 id="layout-safe-area-guides">Layout Safe Area Guides</h3>
 
 <p>View instances have a property to assist with layout content: the safeAreaLayoutGuide. This layout guide represents the rectangular extent to which the a view will be visible on screen. Using safeAreaLayoutGuide will allow your content to not underlap the status bar at the top of the screen or the tab bar at the bottom of the screen.</p>
 
@@ -1005,7 +1118,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 <span class="n">constraint</span><span class="o">.</span><span class="n">isActive</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre></div></div>
 
-<h5 id="controls">Controls</h5>
+<h3 id="controls">Controls</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadView</span><span class="p">()</span> <span class="p">{</span>
     <span class="o">...</span>
@@ -1022,7 +1135,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h5 id="control-events">Control Events</h5>
+<h3 id="control-events">Control Events</h3>
 
 <p><img src="/images/image-20190319124023164.png" alt="image-20190319124023164" /></p>
 
@@ -1058,7 +1171,7 @@ primary subviews: the tab bar and the view of the selected view controller</p>
 
 <p><img src="/images/image-20190319142952879.png" alt="image-20190319142952879" /></p>
 
-<h4 id="conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</h4>
+<h3 id="conforming-to-this-protocol-its-just-like-an-interface-in-java">Conforming to this Protocol (it’s just like an interface in Java)</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">MyViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span> <span class="p">{</span>
 <span class="p">}</span>
@@ -1086,7 +1199,7 @@ resignFirstResponder() on the text field.</p>
 
 <p><img src="/images/image-20190319151704807.png" alt="image-20190319151704807" /></p>
 
-<h4 id="some-formatters-to-keep-in-mind">Some formatters to keep in Mind</h4>
+<h3 id="some-formatters-to-keep-in-mind">Some formatters to keep in Mind</h3>
 
 <ul>
   <li>Date Formatters</li>
@@ -1111,7 +1224,7 @@ resignFirstResponder() on the text field.</p>
 
 <p>To simplify the process of localizing interface files, Xcode has a feature called base internationalization. Base internationalization creates the Base.lproj directory, which contains the main interface files. Localizing individual interface files can then be done by creating just the Localizable.strings files. It is still possible to create the full interface files, in case localization cannot be done by changing strings alone.</p>
 
-<h4 id="nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</h4>
+<h3 id="nslocalizedstring-and-strings-tables">NSLocalizedString and strings tables</h3>
 
 <p>In many places in your applications, you create String instances dynamically or display string literals to the user. To display translated versions of these strings, you must create a strings table. A strings table is a file containing a list of key-value pairs for all of the strings that your application uses and their associated translations. It is a resource file that you add to your application, but you do not need to do a lot of work to get data from it.</p>
 
@@ -1133,7 +1246,7 @@ resignFirstResponder() on the text field.</p>
 
 <p><img src="/images/image-20190320102625485.png" alt="image-20190320102625485" /></p>
 
-<h4 id="custom-initializers-for-classes">Custom Initializers for classes</h4>
+<h3 id="custom-initializers-for-classes">Custom Initializers for classes</h3>
 
 <p>Classes can have two kinds of initializers: <strong>designated initializers and convenience initializers.</strong></p>
 
@@ -1143,7 +1256,7 @@ resignFirstResponder() on the text field.</p>
 
 <p>Convenience initializers must call another initializer on the same type, whereas designated initializers must call a designated initializer on its superclass.</p>
 
-<h4 id="dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</h4>
+<h3 id="dependency-inversion-principle--vimp">Dependency Inversion Principle —&gt; V.IMP</h3>
 
 <ul>
   <li>
@@ -1166,11 +1279,11 @@ resignFirstResponder() on the text field.</p>
   <li>In our implementation of ItemsViewController, we used injection through a property to give it a store.</li>
 </ul>
 
-<h4 id="data-source-methods">Data Source Methods</h4>
+<h3 id="data-source-methods">Data Source Methods</h3>
 
 <p>When a UITableView wants to know what to display, it calls methods from the set of methods declared in the UITableViewDataSource protocol.</p>
 
-<h4 id="uitableviewcells">UITableViewCells</h4>
+<h3 id="uitableviewcells">UITableViewCells</h3>
 
 <ul>
   <li>Each row of a table view is a view. These views are instances of UITableViewCell.</li>
@@ -1181,7 +1294,7 @@ resignFirstResponder() on the text field.</p>
 
 <p><img src="/images/image-20190320110245577.png" alt="image-20190320110245577" /></p>
 
-<h4 id="reusing-uitableviewcells">Reusing UITableViewCells</h4>
+<h3 id="reusing-uitableviewcells">Reusing UITableViewCells</h3>
 
 <ul>
   <li>iOS devices have a limited amount of memory. If you were displaying a list with thousands of entries in a UITableView, you would have thousands of instances of UITableViewCell. Most of these cells would take up memory needlessly. After all, if the user cannot see a cell onscreen, then there is no reason for that cell to have a claim on memory.</li>
@@ -1192,11 +1305,11 @@ resignFirstResponder() on the text field.</p>
   <li>The method <code class="highlighter-rouge">dequeueReusableCell(withIdentifier:for:)</code> will check the pool, or queue, of cells to see whether a cell with the correct reuse identifier already exists. If so, it will “dequeue” that cell. <strong>If there is not an existing cell, a new cell will be created and returned.</strong></li>
 </ul>
 
-<h4 id="editing-table-views">Editing Table Views</h4>
+<h3 id="editing-table-views">Editing Table Views</h3>
 
 <p>One of the great feature of table views is their built-in support for editing. This includes inserting new rows, deleting existing rows, and rearranging rows. In this section, you will add in support for all three of those features to LootLogger.</p>
 
-<h5 id="editing-mode">Editing Mode</h5>
+<h4 id="editing-mode">Editing Mode</h4>
 
 <p>UITableView has an editing property, and when this property is set to true, the UITableView enters editing mode. Once the table view is in editing mode, the rows of the table can be manipulated by the user. Depending on how the table view is configured, the user can change the order of the rows, add rows, or remove rows. (Editing mode does not allow the user to edit the content of a row.)</p>
 
@@ -1206,7 +1319,7 @@ resignFirstResponder() on the text field.</p>
 
 <p>Remember that the role of a view object is to present model objects to the user; updating views without updating the model objects is not very useful.</p>
 
-<h4 id="design-patterns">Design Patterns</h4>
+<h3 id="design-patterns">Design Patterns</h3>
 
 <p>The consistent use of design patterns throughout the development process reduces the mental overhead in solving a problem so you can create complex applications more easily and rapidly. Here are some of the design patterns that Apple is very consistent with:</p>
 
@@ -1221,7 +1334,7 @@ resignFirstResponder() on the text field.</p>
 
 <p>A UITableView displays a list of UITableViewCell objects. For many applications, the basic cell with its textLabel, detailTextLabel, and imageView is sufficient. However, when you need a cell with more detail or a different layout, you subclass UITableViewCell.</p>
 
-<h4 id="customizing-the-cell">Customizing the Cell</h4>
+<h3 id="customizing-the-cell">Customizing the Cell</h3>
 
 <ul>
   <li>You customize the appearance of UITableViewCell subclasses by adding subviews to its contentView. Adding subviews to the contentView instead of directly to the cell itself is important because the cell will resize the contentView inside it at certain times.</li>
@@ -1230,7 +1343,7 @@ resignFirstResponder() on the text field.</p>
 
 <p><img src="/images/image-20190320120018562.png" alt="image-20190320120018562" /></p>
 
-<h4 id="dynamic-type">Dynamic Type</h4>
+<h3 id="dynamic-type">Dynamic Type</h3>
 
 <p>Creating an interface that appeals to everyone can be daunting. Some people prefer more compact interfaces so they can see more information at once. Others might want to be able to easily see information at a glance, or perhaps they have poor eyesight. In short: People have different needs. Good developers strive to make apps that meet those needs.</p>
 
@@ -1240,19 +1353,19 @@ resignFirstResponder() on the text field.</p>
 
 <p><img src="/images/image-20190320123003161.png" alt="image-20190320123003161" /></p>
 
-<h4 id="responding-to-user-changes">Responding to user changes</h4>
+<h3 id="responding-to-user-changes">Responding to user changes</h3>
 
 <p>When the user changes the preferred text size and returns to the application, the table view will get reloaded. Unfortunately, the labels will not know about the new preferred text size. To fix this, you need to have the labels automatically adjust to content size changes.</p>
 
 <p>Open Main.storyboard and select all three ItemCell labels. Open the attributes inspector, and check the box for <strong>Automatically Adjusts Font</strong></p>
 
-<h5 id="bad-cell-constraints">Bad Cell Constraints</h5>
+<h4 id="bad-cell-constraints">Bad Cell Constraints</h4>
 
 <p><img src="/images/image-20190320114956174.png" alt="image-20190320114956174" /></p>
 
 <p>Since there are are no vertical constraints, the label will be centered with height 0 and would thus, be invisible.</p>
 
-<h5 id="better-cell-constraints">Better Cell constraints</h5>
+<h4 id="better-cell-constraints">Better Cell constraints</h4>
 
 <p><img src="/images/image-20190320115129303.png" alt="image-20190320115129303" /></p>
 
@@ -1270,13 +1383,13 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
   <li>Can dynamically change any of the stack views properties</li>
 </ul>
 
-<h4 id="properties-of-stackview">Properties of StackView</h4>
+<h3 id="properties-of-stackview">Properties of StackView</h3>
 
 <p><img src="/images/image-20190320145501757.png" alt="image-20190320145501757" /></p>
 
 <p><img src="/images/image-20190320145526390.png" alt="image-20190320145526390" /></p>
 
-<h4 id="hiding-views-inside-stackview">Hiding Views inside Stackview</h4>
+<h3 id="hiding-views-inside-stackview">Hiding Views inside Stackview</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">hideViewTapped</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span> <span class="p">{</span>
@@ -1287,7 +1400,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="implicit-constraints">Implicit Constraints</h4>
+<h3 id="implicit-constraints">Implicit Constraints</h3>
 
 <p>A view has one of these priorities for each axis:</p>
 
@@ -1298,11 +1411,11 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
   <li>vertical content compression resistance priority</li>
 </ul>
 
-<h5 id="content-hugging-priorities">Content hugging priorities</h5>
+<h4 id="content-hugging-priorities">Content hugging priorities</h4>
 
 <p>The content hugging priority is like a rubber band that is placed around a view. The rubber band makes the view not want to be bigger than its intrinsic content size in that dimension. Each priority is associated with a value from 0 to 1000. A value of 1000 means that a view cannot get bigger than its intrinsic content size on that dimension.</p>
 
-<h5 id="content-compression-resistance-priorities">Content compression resistance priorities</h5>
+<h4 id="content-compression-resistance-priorities">Content compression resistance priorities</h4>
 
 <p>The content compression resistance priorities determine how much a view resists getting smaller than its intrinsic content size.</p>
 
@@ -1317,7 +1430,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
   <li>The identifier is used to programmatically access the segue. This is useful when you want to trigger a segue that does not come from an action item, like a shake or some other interface element that cannot be set up in the storyboard file.</li>
 </ul>
 
-<h4 id="passing-data-around">Passing Data Around</h4>
+<h3 id="passing-data-around">Passing Data Around</h3>
 
 <p>Whenever a segue is triggered, the prepare(for:sender:) method is called on the view controller initiating the segue. This method has two arguments: the UIStoryboardSegue, which gives you information about which segue is happening, and the sender, which is the object that triggered the segue (a UITableViewCell or a UIButton, for example).</p>
 
@@ -1352,7 +1465,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
 
 <p><img src="/images/image-20190320151348721.png" alt="image-20190320151348721" /></p>
 
-<h4 id="appearing-and-disappearing-views">Appearing and Disappearing Views</h4>
+<h3 id="appearing-and-disappearing-views">Appearing and Disappearing Views</h3>
 
 <ul>
   <li>Whenever a UINavigationController is about to swap views, it calls two methods: viewWillDisappear(<em>:) and viewWillAppear(</em>:). The UIViewController that is about to be popped off the stack has viewWillDisappear(<em>:) called. The UIViewController that will then be on top of the stack has viewWillAppear(</em>:) called on it.</li>
@@ -1360,7 +1473,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
  properties of its item to the contents of the text fields. When implementing these methods for views appearing and disappearing, <strong>it is important to call the superclass’s implementation – it might have some work to do and needs to be given the chance to do it.</strong></li>
 </ul>
 
-<h4 id="first-responder-status">First Responder Status</h4>
+<h3 id="first-responder-status">First Responder Status</h3>
 
 <ul>
   <li>For the shake and keyboard events, for example, there is no event location within your view hierarchy to determine which view will receive the event, so another mechanism must be used. This mechanism is the <strong>first responder status</strong>. Many views and controls can be a first responder within your view hierarchy – but only one at a time. Think of it as a flag that can be passed among views. Whichever view holds the flag will receive the shake or keyboard event.</li>
@@ -1368,7 +1481,7 @@ UIStackView that allows you to create a vertical or horizontal layout that is ea
   <li>This is a neat way to ensure that the keyboard input is delivered to the correct text field. The concept of a first responder is part of the broader topic of event handling in Cocoa Touch programming that includes the UIResponder class and the responder chain. <em><u>You can visit Apple’s Event Handling Guide for iOS for more information.</u></em></li>
 </ul>
 
-<h4 id="uinavigationbar">UINavigationBar</h4>
+<h3 id="uinavigationbar">UINavigationBar</h3>
 
 <ul>
   <li>
@@ -1433,7 +1546,7 @@ UIViewController is added to the navigation controller’s viewControllers array
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">Codable</span> <span class="o">=</span> <span class="kt">Decodable</span> <span class="o">&amp;</span> <span class="kt">Encodable</span> 
 </code></pre></div></div>
 
-<h4 id="property-lists">Property Lists</h4>
+<h3 id="property-lists">Property Lists</h3>
 
 <ul>
   <li>
@@ -1451,7 +1564,7 @@ UIViewController is added to the navigation controller’s viewControllers array
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h4 id="error-handling">Error Handling</h4>
+<h3 id="error-handling">Error Handling</h3>
 
 <ul>
   <li>Optionals provide a simple way to represent failure when you do not care about the reason for failure. When you need to know why something failed, an optional will not provide enough information.</li>
@@ -1473,13 +1586,13 @@ UIViewController is added to the navigation controller’s viewControllers array
 <span class="p">}</span> 
 </code></pre></div></div>
 
-<h4 id="application-sandbox">Application Sandbox</h4>
+<h3 id="application-sandbox">Application Sandbox</h3>
 
 <p>Every iOS application has its own application sandbox. An application sandbox is a directory on the filesystem that is barricaded from the rest of the filesystem. Your application must stay in its sandbox, and no other application can access its sandbox.</p>
 
 <p><img src="/images/image-20190321105354677.png" alt="image-20190321105354677" /></p>
 
-<h4 id="constructing-a-file-url">Constructing a file URL</h4>
+<h3 id="constructing-a-file-url">Constructing a file URL</h3>
 
 <p>The instances of our model objects will be saved to a single file in the Documents directory. The store will handle writing to and reading from that file. To do this, the store needs to construct a URL to this file.</p>
 
@@ -1502,7 +1615,7 @@ UIViewController is added to the navigation controller’s viewControllers array
   </li>
 </ul>
 
-<h4 id="persisting-the-items">Persisting the Items</h4>
+<h3 id="persisting-the-items">Persisting the Items</h3>
 
 <p>You have a place to save data on the filesystem and a model object that can be saved to the filesystem. How do you kick off the saving and loading processes, and when do you do it?</p>
 
@@ -1526,7 +1639,7 @@ UIViewController is added to the navigation controller’s viewControllers array
 applicationDidEnterBackground(_:) is sent to the AppDelegate.</p>
 </blockquote>
 
-<h4 id="loading-the-items">Loading the Items</h4>
+<h3 id="loading-the-items">Loading the Items</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">init</span><span class="p">()</span> <span class="p">{</span> 
     <span class="k">do</span> <span class="p">{</span> 
@@ -1552,19 +1665,19 @@ applicationDidEnterBackground(_:) is sent to the AppDelegate.</p>
 
 <p><strong>An application in the suspended state cannot execute code.</strong> You cannot see its interface, and any resources it does not need while suspended are destroyed. A suspended application is essentially flash-frozen and can be quickly thawed when the user relaunches it.</p>
 
-<h4 id="application-states-flow-chart">Application states flow chart</h4>
+<h3 id="application-states-flow-chart">Application states flow chart</h3>
 
 <p><img src="/images/image-20190321120841914.png" alt="image-20190321120841914" /></p>
 
-<h4 id="q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</h4>
+<h3 id="q-if-the-app-cannot-execute-any-code-when-in-the-suspended-state-how-do-chat-apps-receive-push-notifications">Q. If the app cannot execute any code when in the suspended state, how do chat apps receive push notifications?</h3>
 
 <p>These push notifications are generally coming from a web service. These web services push the data to Apple, and Apple then sends us the notification. The code for sending these push nontifications is not in our app.</p>
 
-<h4 id="q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</h4>
+<h3 id="q-how-can-we-reply-directly-from-the-notification-then">Q. How can we reply directly from the notification then?</h3>
 
 <p>Such actions in response to notifications is possible when we have a separate small “app” bundled with our app. This small app generally has a single view controller. When we reply from the notification window, we are basically using this small app, as opposed to our main application. This app has it’s own separae application state and transitions. So, our app need not be made active for such actions to be performed.</p>
 
-<h4 id="q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</h4>
+<h3 id="q-what-does-the-background-app-refresh-option-do">Q. What does the background app refresh option do?</h3>
 
 <p>When background app refresh is enabled, the OS may decide to enable the app to load or refresh it’s data for a brief period of time, when the OS is not busy doing other things. So for this brief period, the app may be made active, and then back to inactive and suspended.</p>
 
@@ -1587,11 +1700,11 @@ applicationDidEnterBackground(_:) is sent to the AppDelegate.</p>
 <p>Modally presented view controllers often occupy the entire screen, but in certain contexts they might only take up a
 portion of the screen. This is especially true on iPad where there is more space to work with. In either case, the user is expected to interact with the modally presented view controller before proceeding.</p>
 
-<h4 id="alert-controllers">Alert controllers</h4>
+<h3 id="alert-controllers">Alert controllers</h3>
 
 <p>To allow the user to choose a photo source, you will present an alert with the possible choices. Alerts are often used to display information to the user on which they must act. When you want to display an alert, you create an instance of UIAlertController with a preferred style. The two available styles are UIAlertControllerStyle.actionSheet and UIAlertControllerStyle.alert</p>
 
-<h5 id="presenting-programmatically">Presenting programmatically</h5>
+<h4 id="presenting-programmatically">Presenting programmatically</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">addNewEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="p">{</span>
@@ -1601,7 +1714,7 @@ portion of the screen. This is especially true on iPad where there is more space
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h5 id="dismissing">Dismissing</h5>
+<h4 id="dismissing">Dismissing</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">CalendarViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">cancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="p">)</span> <span class="p">{</span>
@@ -1614,7 +1727,7 @@ portion of the screen. This is especially true on iPad where there is more space
 
 <p><img src="/images/image-20190321112050259.png" alt="image-20190321112050259" /></p>
 
-<h5 id="completion-closure">Completion closure</h5>
+<h4 id="completion-closure">Completion closure</h4>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"View controller finished dismissing!"</span><span class="p">)</span>
@@ -1636,7 +1749,7 @@ portion of the screen. This is especially true on iPad where there is more space
 
 <p>For each of these, your application must supply a usage description that specifies the reason that your application wants to access this information. This description will be presented to the user whenever the application accesses that capability.</p>
 
-<h4 id="caching-in-the-data-store">Caching in the data store</h4>
+<h3 id="caching-in-the-data-store">Caching in the data store</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ImageStore</span> <span class="p">{</span> 
     <span class="k">let</span> <span class="nv">cache</span> <span class="o">=</span> <span class="kt">NSCache</span><span class="o">&lt;</span><span class="kt">NSString</span><span class="p">,</span><span class="kt">UIImage</span><span class="o">&gt;</span><span class="p">()</span>
@@ -1686,7 +1799,7 @@ String. Due to the way NSCache is implemented (it is an Objective-C class, like 
 
 <p>Notice that the size classes cover both screen sizes and orientations. <strong>Instead of thinking about interfaces in terms of orientation or device, it is better to think in terms of size classes.</strong></p>
 
-<h4 id="modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</h4>
+<h3 id="modifying-traits-for-a-specific-size-class">Modifying Traits for a Specific Size Class</h3>
 
 <p>When editing the interface for a specific size class combination, you are able to change:</p>
 
@@ -1702,7 +1815,7 @@ String. Due to the way NSCache is implemented (it is an Objective-C class, like 
   <p><strong><u>NOTE:</u></strong> To detect a change in device orientation, we can use <code class="highlighter-rouge">viewWillTransition(to:with:)</code>.</p>
 </blockquote>
 
-<h4 id="varying-constraints-for-different-size-classes">Varying constraints for different size classes</h4>
+<h3 id="varying-constraints-for-different-size-classes">Varying constraints for different size classes</h3>
 
 <ul>
   <li>
@@ -1715,11 +1828,11 @@ String. Due to the way NSCache is implemented (it is an Objective-C class, like 
 
 <h2 id="web-services">Web Services</h2>
 
-<h4 id="building-the-url">Building the URL</h4>
+<h3 id="building-the-url">Building the URL</h3>
 
 <p>Communication with servers is done via requests. A request encapsulates information about the interaction between the application and the server, and its most important piece of information is the destination URL.</p>
 
-<h4 id="access-control">Access Control</h4>
+<h3 id="access-control">Access Control</h3>
 
 <p>You can control what can access the properties and methods on your own types. There are five levels of access control that can be applied to types, properties, and methods:</p>
 
@@ -1731,7 +1844,7 @@ String. Due to the way NSCache is implemented (it is an Objective-C class, like 
   <li>private – Anything within the enclosing scope can access this type, property, or method.</li>
 </ul>
 
-<h4 id="sending-the-request">Sending the Request</h4>
+<h3 id="sending-the-request">Sending the Request</h3>
 
 <ul>
   <li>A URL request encapsulates information about the communication from the application to the server. Most
@@ -1749,7 +1862,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 <p><img src="/images/image-20190321165226836.png" alt="image-20190321165226836" /></p>
 
-<h4 id="the-main-thread">The Main Thread</h4>
+<h3 id="the-main-thread">The Main Thread</h3>
 
 <ul>
   <li>Modern iOS devices have multicore processors that enable them to run multiple chunks of code simultaneously. A common way to express this is by representing each computation with a different thread of control.</li>
@@ -1758,7 +1871,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 <h2 id="collection-views">Collection Views</h2>
 
-<h4 id="creating-a-uicollectionview">Creating a UICollectionView</h4>
+<h3 id="creating-a-uicollectionview">Creating a UICollectionView</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">layout</span> <span class="o">=</span> <span class="kt">UICollectionViewFlowLayout</span><span class="p">()</span>
 <span class="k">let</span> <span class="nv">cv</span> <span class="o">=</span> <span class="kt">UICollectionView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">,</span> <span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="n">layout</span><span class="p">)</span>
@@ -1766,7 +1879,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 <span class="n">cv</span><span class="o">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="k">self</span>
 </code></pre></div></div>
 
-<h4 id="uicollectionviewdatasource">UICollectionViewDataSource</h4>
+<h3 id="uicollectionviewdatasource">UICollectionViewDataSource</h3>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">photos</span><span class="p">:</span> <span class="p">[</span><span class="kt">Photos</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
 <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span>
@@ -1784,7 +1897,7 @@ importantly, it specifies the URL of the server for the request, but it also has
 <span class="p">}</span> 
 </code></pre></div></div>
 
-<h4 id="customizing-a-collection-layout">Customizing a Collection Layout</h4>
+<h3 id="customizing-a-collection-layout">Customizing a Collection Layout</h3>
 
 <p><img src="/images/image-20190322102944530.png" alt="image-20190322102944530" /></p>
 
@@ -1840,24 +1953,25 @@ importantly, it specifies the URL of the server for the request, but it also has
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=iOS+Notes%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Notes%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=parth94mehta&text=iOS+Development%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Development%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Notes%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Development%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Notes%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Development%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Notes%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2FiOS-Development%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/tech/Android-Notes/" class="pagination--pager" title="Android Notes
+      <a href="/tech/Pro-Git/" class="pagination--pager" title="Pro-Git
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/tech/ML-Tech-talk/" class="pagination--pager" title="Intro to ML by Parth Mehta
+">Next</a>
     
   </nav>
 
@@ -1881,7 +1995,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/tech/Android-Notes/" rel="permalink">Android Notes
+        <a href="/learning/Negotiations-Workshop/" rel="permalink">Negotiations Workshop
 </a>
       
     </h2>
@@ -1891,10 +2005,10 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 
 
-  6 minute read
+  less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Notes taken during ‘Grow with Google - Android Development course’ on Udacity (Work in Progress..)
+    <p class="archive__item-excerpt" itemprop="description">by Holly Schroth
 </p>
   </article>
 </div>
@@ -1908,7 +2022,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/tech/System-Design-and-Scalability/" rel="permalink">System Design and Scalability
+        <a href="/books/Getting-to-Yes/" rel="permalink">Getting to Yes
 </a>
       
     </h2>
@@ -1918,11 +2032,11 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 
 
-  3 minute read
+  44 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">
-  The idea of these questions is to have a discussion about the problem at hand. What’s important for the interviewer is the process, which you use to tackl...</p>
+    <p class="archive__item-excerpt" itemprop="description">Summary of the book ‘Getting to Yes’ on Negotiations
+</p>
   </article>
 </div>
         
@@ -1935,7 +2049,7 @@ importantly, it specifies the URL of the server for the request, but it also has
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/tech/Java-Trivia/" rel="permalink">Java Trivia Questions
+        <a href="/tech/ML-Tech-talk/" rel="permalink">Intro to ML by Parth Mehta
 </a>
       
     </h2>
@@ -1945,11 +2059,37 @@ importantly, it specifies the URL of the server for the request, but it also has
 
 
 
-  14 minute read
+  10 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Notes taken from: JavaTpoint
+    <p class="archive__item-excerpt" itemprop="description">Tech session conducted by me teaching ML basics to engineers at Yahoo
+</p>
+  </article>
+</div>
+        
+          
 
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/Pro-Git/" rel="permalink">Pro-Git
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A deep study of Git
 </p>
   </article>
 </div>
@@ -1983,7 +2123,7 @@ importantly, it specifies the URL of the server for the request, but it also has
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2019 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2020 Parth Mehta. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
