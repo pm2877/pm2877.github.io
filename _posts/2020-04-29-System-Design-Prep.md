@@ -1,6 +1,16 @@
-# System Design Prep
+---
+title:  "System Design prep notes"
+date:   2019-12-08 10:00:00 -0500
+categories: Learning
+toc: true
+toc_label: "On this page"
+toc_icon: "list"
+excerpt: "Notes taken from educative.io and other web resources"
+---
 
-[TOC]
+
+
+# System Design Prep
 
 ## Outline
 
