@@ -69,7 +69,7 @@ excerpt: "Notes taken from educative.io and other web resources"
 9. Detailed component design
 10. Front-end connection with the backend
 
-![../images/IMG_5604.jpg](../images/IMG_5604.jpg)
+![Thought process during the interview](/images/IMG_5604.jpg)
 
 Thought process
 
