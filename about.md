@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am an experienced software developer currently working as an SDE II at Yahoo Mail. I have a strong foundation in Computer Science, having completed my MS in CS from Columbia University, with a focus in Machine Learning. My projects showcase my skills across the stack.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a passionate person who is extremely passionate about software engineering, loves collaborating in a team, and thrives on taking up new challenges and responsibilities.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+More than anything, I love solving problems and building great products that make people's lives better. I have an inclination towards learning more about Machine Learning and Virtual/Augmented Reality.
 
-
-[jekyll-organization]: https://github.com/jekyll
+Music is a big part of my life. I am trained in Western Classical Music theory and piano. I am also learning to sing and play the Guitar.

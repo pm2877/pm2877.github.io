@@ -27,13 +27,13 @@ locale                   : "en-US"
 title                    : "Techie Notes"
 title_separator          : "-"
 name                     : "Parth Mehta"
-description              : "A little something about Parth Mehta"
+description              : "Learning to solve problems better"
 url                      : "https://pm2877.github.io"
 baseurl                  : ""
 repository               : "pm2877/pm2877.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "images/avatar.jpg"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs            : true
-words_per_minute         : 200
+words_per_minute         : 150
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
@@ -103,7 +103,7 @@ author:
   avatar           : "/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Developer @ Yahoo | Machine Learning | Columbia University"
   location         : "SF Bay Area, California"
-  email            : parth.mehta@columbia.edu
+  email            : pm2877@columbia.edu
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -195,7 +195,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

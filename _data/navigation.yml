@@ -1,11 +1,11 @@
 main:
-  - title: "Portfolio"
-    url: /portfolio/
-    description: "My projects"
-  - title: "Resume"
-    url: https://bit.ly/parthmehta
-    description: "Download resume"
-  - title: "Notes"
-    url: /notes/
-  - title: "About"
-    url: /about/
+    # - title: "Portfolio"
+    #   url: /portfolio/
+    #   description: "My projects"
+    - title: 'Resume'
+      url: https://bit.ly/parthmehta
+      description: 'Download resume'
+    # - title: "Notes"
+    #   url: /notes/
+    - title: 'About'
+      url: /about/
