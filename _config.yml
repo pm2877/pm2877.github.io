@@ -27,11 +27,11 @@ locale                   : "en-US"
 title                    : "Techie Notes"
 title_separator          : "-"
 name                     : "Parth Mehta"
-description              : "Learning to solve problems better"
+description              : "Learning to solve problems quicker and better"
 url                      : "https://pm2877.github.io"
 baseurl                  : ""
 repository               : "pm2877/pm2877.github.io"
-teaser                   : "images/avatar.jpg"# path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "images/avatar.jpg"
 breadcrumbs            : true
 words_per_minute         : 150
 comments:
