@@ -43,7 +43,7 @@ excerpt: "Tech session conducted by me teaching ML basics to engineers at Yahoo"
 - Most common type of ML in industry and research currently.
 
 - A common example is spam filtering.
-![data-table.png](./data-table.png)
+![data-table](/images/data-table.jpeg)
 
 # Mathematically Speaking
 
@@ -121,7 +121,7 @@ for index, (image, label) in enumerate(images_and_labels[:8]):
 ```
 
 
-![png](ML_BOF_TALK_files/ML_BOF_TALK_14_0.png)
+![output](/images/ML_BOF_TALK_14_0.png)
 
 
 Let's see how a single image looks like in code.
@@ -269,7 +269,7 @@ print('label of the new image \n{}\n'.format(y_test[0]))
 
 
 
-![png](ML_BOF_TALK_files/ML_BOF_TALK_25_1.png)
+![output](/images/ML_BOF_TALK_25_1.png)
 
 
 
@@ -309,7 +309,7 @@ Example: Predicting a person’s annual income from their education, their age, 
 # ML Workflow
 
 
-![ML workflow chart](./ml-workflow.png)
+![ML workflow chart](/images/ml-workflow.png)
 
 # Focus today - Building Supervised Learning Models
 
@@ -320,7 +320,7 @@ Example: Predicting a person’s annual income from their education, their age, 
 - You don't explicitly program the algorithm to answer for the new input. You help it learn from the data samples, and it tries and generalizes it to predict the answer to the new input.
 
 # Model Complexity, Overfitting and Underfitting
-![generalization_curve.png](./generalization_curve.png)
+![generalization_curve](/images/generalization_curve.jpeg)
 
 # Linear Models for Classification
 
